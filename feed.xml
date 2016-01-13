@@ -827,7 +827,7 @@ curl -D -s -L  "Accept: text/html;charset=UTF-8" "http://dx.doi.org/10.1002/asi.
     <link rel="alternate" href="http://blog.url.com/blog/2014/09/25/Graph-diagram-of-professors-at-uottawa/"/>
     <id>http://blog.url.com/blog/2014/09/25/Graph-diagram-of-professors-at-uottawa/</id>
     <published>2014-09-25T18:12:00-04:00</published>
-    <updated>2016-01-13T13:43:35-05:00</updated>
+    <updated>2016-01-13T13:47:22-05:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -857,8 +857,9 @@ curl -D -s -L  "Accept: text/html;charset=UTF-8" "http://dx.doi.org/10.1002/asi.
 		}
 
 body{
-    background: url("http://subtlepatterns.com/patterns/congruent_outline.png") repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    background-image: url("http://subtlepatterns.com/patterns/congruent_outline.png"); 
 }	
+
 .preambule{
   color: white;
 }
