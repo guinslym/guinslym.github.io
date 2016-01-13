@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guinsly Mondésir</title>
+<meta name="description" content="Powerful website full of best practices and keywords" />
+<meta name="site" content="Guinsly Mondésir" />
+  <title>Introduction aux Métadonnées d'une image — Blog de Guinsly Mondésir</title>
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+  <meta name="keywords" content="blog guinsly">
+ <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> 
+ <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+ <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed|Merriweather|Francois+One|Shadows+Into+Light|Bree+Serif' rel='stylesheet' type='text/css'>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
+  <link href="/stylesheets/2015/styles-864fbf6e.css" rel="stylesheet" />
+  <link href="/stylesheets/2015/homer-3227b47b.css" rel="stylesheet" />
+
+<style type="text/css">
+section.header_name h1{
+  font-family: 'Francois One', sans-serif;
+}
+section.header_name h1 span{
+  font-family: 'Shadows Into Light', cursive;
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js"></script><script src="/javascripts/scrollReveal.min-890fa766.js"></script><script src="/javascripts/jquery.particleground.min-e863295a.js"></script><script src="/javascripts/particle-71048f94.js"></script>
+
+
+</head>
+
+<body>
+
+<section class="header_name">
+	<div class="container">
+		<h1><a href="/" style="text-decoration:none;color:black;">Guinslym::<span>&nbsp;My Blog</span></a></h1>
+	</div>
+</section>
+
+
+
+<div id="particles-js"></div>
+
+
+<style type="text/css">
+    pre{
+        margin: 18px 0; 
+    }
+    p{
+        margin: 18px 0;
+    }
+    .article_title{
+        color:#B61924;text-transform: capitalize;
+        padding: 20px 0 40px 0;
+    }
+    p.prerequis{
+        font-weight: bolder;
+    }
+    ul.references li{
+      list-style: circle !important;
+    }
+    thead tr td{
+      font-weight: bolder;
+    }
+    blockquote{
+        background-color: #FBFAF7;
+    }
+    img{
+        margin: 0 auto;
+    }
+</style>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=desert"></script>
+<div class="container article_index">
+
+<div class="row">
+  <div class="col-lg-9 col-lg-offset-1">
+    <div class="row text-center">
+    <h1 style="color:#B61924;text-transform: capitalize;  ">Introduction aux Métadonnées d'une image</h1>
+    </div>
+
+    <div class="post-desc">
+
+    <p>Je me suis intéressé aux métadonnées des images parce que le <a href="http://museestc.techno-science.ca/fr/">Musée des Sciences et de la Technologie du Canada</a> a mis disponible sur leur <a href="http://techno-science.ca/fr/donnees.php">portail</a> un ensemble de photographie en donnée ouverte (open source) et j'ai voulu savoir ce que ces métadonnées contiennent comme information.</p>
+      
+    <h3><strong>Définition:</strong></h3>
+
+    <p><strong>Métadonnée: </strong>Ce sont des informations permettant de décrire une ressource. Ces informations sont soit <strong>internes</strong> ou <strong>externes</strong>. Interne veux dire que la ressource elle-même contient des métadonnées par exemple, toute cellule contient <strong>l'acide désoxyribonucléique (ADN)</strong>. L'ADN est en soit une métadonnée décrivant le bagage génétique de l'organisme qui le porte (un être humain, une plante...). </p>
+
+<br/>
+  
+        
+    <img src="http://www.dailyartfixx.com/wp-content/uploads/2009/04/dale-chihuly-sea-blue-and-green-tower.jpg" class="thumbnail">
+  
+
+
+    <p>Ceci est une &#156;uvre de <a href="http://www.chihuly.com/">Dale Chihuly</a>. Alors, j'ai moi-même associé une information (une étiquette) à cette image donc, c'est une métadonnée externe. Que l'information soit vraie ou fausse le fait de l'associée à un objet( ex: une image) me permet de caractériser cette image dans le but de le catégoriser.</p>
+
+    <br/>
+    <h4><strong>Autres définitions utiles:</strong></h4>
+    <br/>
+
+        <blockquote>L’<strong>Exchangeable image file format</strong> ou <strong>Exif</strong> est une spécification de format de fichier pour les images utilisées par les appareils photographiques numériques. Il a été établi par le Japan Electronic Industry Development Association (JEIDA). Cette spécification repose sur des formats existants tels que JPEG, TIFF version 6.0 et RIFF format de fichier audio WAVE, en y ajoutant des balises de métadonnées. L’Exif n’est pas supporté avec les formats JPEG 2000 ou PNG. <a href="https://fr.wikipedia.org/wiki/Exchangeable_image_file_format">source</a></blockquote>
+
+    <blockquote><strong>IPTC</strong>: L'Information Interchange Model (IIM) est une structure et un jeu d'attributs de métadonnées applicable à des fichiers texte, des images et d'autres types de média. <a href="https://fr.wikipedia.org/wiki/IPTC_Information_Interchange_Model">source</a> </blockquote>
+
+
+    <p>La différence entre les deux c'est que L'EXIF est un ensemble d'informations crées par l'appareil de photographie numérique ou par un logiciel lors de la création de l'image. Donc la création de métadonnées avec le standard EXIF est automatique et obligatoire, surtout pour les appareils de photographie numérique. Les métadonnées de l'IPTC dépendent de l'auteur de l'image : Est-ce que je veux ajouter les coordonnées géographiques, un droit d'auteur (copyright)... L'IPTC dépend aussi du logiciel utilisé pour créer l'image. Par exemple, un logiciel de photographie insère des métadonnées lors de la création de l'image ou de l'édition de celle-ci.</p>
+
+    <p> Pour ajouter un peu plus de confusion :) certains logiciels ont leur propre standard de métadonnées par exemple XMP (<strong>Extensible Metadata Platform</strong>) dans le cas d'Adobe Photoshop. Alors en plus de l'EXIF et de l'IPTC il peut y avoir d'autres standards de métadonnées.  </p>
+
+    <p>Puisse que chaque standard à sa version par exemple EXIF (version 2.1.0), à chaque version ils ajoutent des métadonnées qui peuvent rentrer en conflit avec d'autres standard par exemple <strong>copyright, description, l'orientation de l'image (portrait ou paysage)</strong> peuvent se retrouver dans 'EXIF, l'XMP et l'IPTC alors pour ne pas faire de redondance, lors de la création du fichier numérique, le logiciel choisi la métadonnée qu'il veut, dans le cas d'Adobe Photoshop il priorisera sûrement sa version de <strong>copyright</strong> pour créer le fichier.</p>
+
+
+    <hr/>
+
+    <h3 class="text-center"><strong>Quelles sont les métadonnées d'une image.</strong></h3>
+
+    <br/>
+
+    <img src="http://www.myriad-online.com/images/forum/IMG_4692.jpg"  width="100%" style="margin: 0 auto;">
+
+    <hr/>
+     <p>J'aimerais savoir comment est-ce que je peux reproduire cette image le plus fidèlement que possible. Alors j'aimerais savoir que contiennent les métadonnées de cette image. </p>
+
+     <p>Il y a plusieurs métadonnées qui peuvent se retrouver sur une image. C'est difficile d'en déterminer le nombre, cela dépend de l'appareil ou du logiciel utilisé lors de la création de l'image. Voici les métadonnées de l'image ci-haut (les cyclistes):</p>
+
+
+     <script src="https://gist.github.com/guinslym/72ba498c4ddb27c034d7.js"></script>
+
+     <p>J'ai utilisé le logiciel <a href="http://www.sno.phy.queensu.ca/~phil/exiftool/"><strong>Exiftool</strong></a> pour me permettre d'afficher les métadonnées mais il y existe plusieurs logiciels gratuit sur la toile qui vous permettra d'afficher les métadonnées par contre mais je vous recommande exiftool. </p>
+
+     <p>Des métadonnées affichées ci-haut dans le cadre, il y a des informations intéressantes pour tout le monde. Il contient des informations sur (<strong>Le modèle de la caméra, le logiciel utilisé pour éditer l'image, la version de l'EXIF, des informations géographiques, la miniature ou vignette (thumbnail) qui apparait le dossier où est placé l'image.</strong>). J'ai spécialement choisi cette image parce qu'il contient plusieurs métadonnées et de standard de métadonnées (XMP, IPTC et EXIF) juste pour démontrer que la liste peut être très longue. Mais, comme je l'ai mentionné plus haut le nombre de métadonnées que peuvent inclure une photo varie énormément. Voici un autre exemple celui-ci pris des données ouvertes qu'offre le <a href="http://techno-science.ca/fr/donnees.php">Musée des Sciences et de la Technologie du Canada</a>. </p>
+
+     <img src="http://source.techno-science.ca/images/1971.0261.001.aa.cs.jpg">
+     <br/>
+
+     <script src="https://gist.github.com/guinslym/361ee3feb0ba1b633fa2.js"></script>
+
+     <p>Donc, il y a vraiment peu de métadonnées pour la photo de la caisse enregistreuse.</p>
+
+     <hr/>
+     <br/>
+     <h3><strong>Limite</strong></h3>
+     <p>Une image <strong>jpg</strong> peut contenir <strong>un maximum de 64kb</strong> de métadonnées. Alors on peut pas ajouter des métadonnées à l'infini. C'est sûr qu'il y a moyen de contourner la limite de 64kb imposée... Mais je ne veux pas entrer dans cette discussion. Ce qui est important de savoir c'est que L'EXIF et l'IPTC spécifient chacun quels sont les métadonnées qu'il faut <strong>absolument</strong> qu'une image contiennent, ensuite il appartient à la caméra numérique ou au logiciel, voire aussi l'utilisateur, d'ajouter des métadonnées. Donc, il y a un minimum de métadonnée à avoir et un maximum de métadonnée (en taille = 64kb), qu'une image pourra contenir. </p>
+
+<hr/>
+<br/>
+     <h3 class="text-center"><strong>Métadonnée et conversion du format de l'image</strong></h3>
+
+     <p>Je vais utiliser un logiciel en ligne de commande: <a href="http://www.imagemagick.org/script/convert.php">imagemagick</a>. Je vais convertir l'image des <strong>cyclistes</strong> de <strong>jpg en png</strong>. Voici les métadonnées après la conversion:</p>
+
+     <script src="https://gist.github.com/guinslym/6bc40fe79e621c533ba3.js"></script>
+
+     <p><strong>jpg en gif</strong></p>
+     <script src="https://gist.github.com/guinslym/ba84864feeaaeb4b71ad.js"></script>
+
+     <p><strong>jpg en pdf</strong></p>
+     <script src="https://gist.github.com/guinslym/8a18251ddbbb84ca4dae.js"></script>
+
+     <p><strong>jpg en tiff</strong>: Presque le même résultat que de <strong>jpg en png</strong></p>
+     <script src="https://gist.github.com/guinslym/611fc8ee1c3f8249414e.js"></script>
+
+     <!-- note: diff fichier.txt autre_fichier.txt | grep ">"
+           ou
+           grep -Fxvf fichier.txt autre_fichier.txt
+      -->
+      <p>Pour comparer la différence des fichiers ci-haut, vous pouvez les télécharger et ensuite exécuter en ligne de commande (Unix/Linux)</p>
+
+      <div class="row ">
+
+        <pre class="prettyprint lang-python">
+         diff premier_fichier.txt autre_fichier.txt | grep ">"
+        </pre>
+
+
+        </div>
+
+     <p>Parmi les différences; pas de métadonnées concernant les coordonnées géographique (GPSInfo) ni du modèle de caméra utilisé. Par contre, si vous répétez la conversion avec un autre logiciel (i.e. PaintShop pro) le résultat peut être différent.</p>
+
+     <p> Aussi quand vous téléversez des photos sur certains médias sociaux, par exemple <a href="https://www.facebook.com/">Facebook</a>, certaines métadonnées peuvent être supprimées, par exemple les coordonnées géographiques.</p>
+
+     <hr/>
+
+     <p>Voici ce qui conclut une introduction pratique aux métadonnées d'une image. Il y a beaucoup plus d'informations concernant l'EXIF et autres standards de métadonnées d'image que je n'ai pas couvert dans cette article, je vous conseille, si voulez en savoir plus, d'aller sur la page web de <a href="http://www.sno.phy.queensu.ca/~phil/exiftool/"> Phil Harvey</a>. Malgré le design un peu archa&#239;que, il contient plus d'information que wikipedia :)</p>
+    
+
+
+      <p class="prerequis" style="margin-top:60px;"><strong>References:</strong></p>
+    <ul class="references">
+      <li><a href="http://www.vcode.no/web/resource.nsf/ii2lnug/643.htm">http://www.vcode.no/web/resource.nsf/ii2lnug/643.htm</a></li>
+      <li><a href="http://libiptcdata.sourceforge.net/docs/libiptcdata-tag.html">http://libiptcdata.sourceforge.net/docs/libiptcdata-tag.html</a></li>
+      <li><a href="http://www.iptc.org/std/IIM/4.1/specification/IIMV4.1.pdf">IPTC-NAA  Information Interchange Model Version</a></li>
+      <li><a href="http://marthachristopherson.net/storage/dale%20glass%201.jpg?__SQUARESPACE_CACHEVERSION=1242177012926">Image de l'oeuvre en verre de Dave Chihuly</a></li>
+      <li><a href="http://www.myriad-online.com/images/forum/IMG_4692.jpg">Images des cyclistes</a></li>
+      <li><a href="http://www.foto-biz.com/Lightroom/Exif-vs-iptc-vs-xmp.html">http://www.foto-biz.com/Lightroom/Exif-vs-iptc-vs-xmp.html</a></li>
+    </ul>
+
+    </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<style type="text/css">
+	   .media
+    {
+        /*box-shadow:0px 0px 4px -2px #000;*/
+        margin: 20px 0;
+        padding:30px;
+    }
+    .dp
+    {
+        border:10px solid #eee;
+        transition: all 0.2s ease-in-out;
+    }
+    .dp:hover
+    {
+        border:2px solid #eee;
+        transform:rotate(360deg);
+        -ms-transform:rotate(360deg);  
+        -webkit-transform:rotate(360deg);  
+        /*-webkit-font-smoothing:antialiased;*/
+    }
+</style>
+<div class="row">
+
+
+    <div class="col-lg-6 col-lg-offset-1">
+        <div class="media">
+            <a class="pull-left" href="#">
+                <img class="media-object dp img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/guinslym/128.jpg" style="width: 100px;height:100px;">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">Guinsly Mondésir <small> Ottawa </i></small></h4>
+                <h5>Web developer - Pythonist - Rubyist</h5>
+                <a href="https://twitter.com/guinslym"><i class="fa fa-twitter fa-2x"></i></a>
+                <a href="https://github.com/guinslym"><i class="fa fa-github fa-2x"></i></a>
+                <hr style="margin:8px auto">
+
+                <span class="label label-default">EXIF</span>
+                <span class="label label-default">XMP</span>
+                <span class="label label-info">Metadata</span>
+                <span class="label label-default">IPTC</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+   <footer>
+  <div class="row text-center">
+    
+  <h1>Au revoir!!!</h1>
+  <h4><a href="/" class="blog">-- retour au blog --</a></h4>
+  </div>
+</footer>
+
+
+
+      <script>
+
+       (function($) {
+
+        'use strict';
+
+        window.sr= new scrollReveal({
+          reset: false,
+          move: '50px',
+          mobile: true
+        });
+
+
+      })();
+
+    </script>
+
+    <script type="text/javascript">
+  $('a').each(function() {
+   var a = new RegExp('/' + window.location.host + '/');
+   if (!a.test(this.href)) {
+      $(this).attr("target","_blank");
+   }
+});
+</script>
+
+
+
+<div id="homer">
+  <div class="head">
+            
+          <!-- Hair and top of head -->
+          <div class="hair1"></div>
+          <div class="hair2"></div>
+          <div class="body head-top"></div>
+          <div class="no-border body head-main"></div>
+
+          <!-- The 'M' above the ear -->
+          <div class="no-border m1"></div>
+          <div class="no-border m2"></div>
+          <div class="no-border m3"></div>
+          <div class="no-border m4"></div>
+
+          <!-- The neck parts -->
+          <div class="no-border neck1"></div>
+          <div class="body neck2"></div>
+
+          <!-- The ear -->
+          <div class="body ear">
+        <div class="no-border inner1"></div>
+        <div class="no-border inner2"></div>
+        <div class="no-border body clip"></div>
+          </div>
+
+          <!-- The mouth -->
+          <div class="mouth">
+        <div class="mouth5"></div>
+        <div class="mouth2"></div>
+        <div class="mouth1"></div>
+        <div class="mouth7"></div>
+        <div class="no-border mouth3"></div>
+        <div class="no-border mouth4"></div>
+        <div class="no-border mouth6"></div>
+        <div class="no-border mouth8"></div>
+          </div>
+
+          <!-- The right eye -->
+          <div class="right-eye">
+        <div class="no-border right-eye-pupil"></div>
+        <div class="no-border body eyelid-top"></div>
+        <div class="no-border body eyelid-bottom"></div>
+          </div>
+
+          <!-- The nose -->
+          <div class="body nose"></div>
+          <div class="body nose-tip"></div>
+
+          <!-- The left eye -->
+          <div class="left-eye">
+        <div class="no-border left-eye-pupil"></div>
+        <div class="no-border body eyelid-top"></div>
+        <div class="no-border body eyelid-bottom"></div>
+          </div>
+      </div>
+</div>
+</body>
+<script type="text/javascript">
+function pJS_desktop(){
+  particlesJS('particles-js', {
+    particles: {
+      color: '#fff',
+      shape: 'circle',
+      opacity: 1,
+      size: 2.5,
+      size_random: true,
+      nb: 100,
+      line_linked: {
+        enable_auto: true,
+        distance: 250,
+        color: '#fff',
+        opacity: 0.5,
+        width: 1,
+        condensed_mode: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 600
+        }
+      },
+      anim: {
+        enable: true,
+        speed: 3
+      }
+    },
+    interactivity: {
+      enable: true,
+      mouse: {
+        distance: 200
+      },
+      detect_on: 'canvas',
+      mode: 'grab',
+      line_linked: {
+        opacity: .5
+      },
+      events: {
+        onclick: {
+          enable: true,
+          mode: 'push',
+          nb: 4
+        }
+      }
+    },
+    retina_detect: true
+  });
+}
+
+
+if(window.innerWidth > 1100){
+  pJS_desktop();
+}else{
+  pJS_mobile();
+}
+
+/* on resize */
+
+window.addEventListener('resize', function() {
+  checkOnResize();
+}, true);
+
+function checkOnResize(){
+  if(window.innerWidth > 1100){
+    if(pJS.particles.nb != 150){
+      console.log('desktop mode')
+      pJS.fn.vendors.destroy();
+      pJS_desktop();
+    }
+  }else{
+    if(pJS.particles.nb == 150){
+      console.log('mobile mode');
+      pJS.fn.vendors.destroy();
+      pJS_mobile();
+    }
+  }
+}
+</script>
+
+
+
+</html>

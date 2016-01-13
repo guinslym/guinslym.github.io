@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Graph diagram of all professors from MIS program at UOttawa — Blog de Guinsly Mondésir</title>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="d3,js, graph network of Ottawa University proffessor, data visualization, Library and Information Studies at Universtiy of Ottawa">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" rel="stylesheet" />
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
+  <link href="/stylesheets/migration_interprovinciale/homer-3227b47b.css" rel="stylesheet" />
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+
+
+</head>
+
+<body>
+
+ <style>
+    .popover {
+      color: #333;
+    }
+    .node {
+      stroke: #ccc;
+      stroke-width: 1.5px;
+    }
+    .link {
+      stroke: #fff;
+      stroke-opacity: .8;
+    }
+
+	#main {
+		margin:0 auto;
+		width:960px;
+		color:#FFF;
+		border: 1px dashed #333;
+		fill: #000;
+		}		
+	
+  line {
+		stroke: #666;
+		}
+
+body{
+    background: url("http://subtlepatterns.com/patterns/congruent_outline.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}	
+.preambule{
+  color: white;
+}
+.color-yellow{
+  background-color: #FFF000;
+  padding-right:20px;
+}
+.color-green{
+  background-color:#7CA721; 
+  padding-right:20px;
+}
+.color-red{
+  background-color: #8F4139;
+  padding-right:20px;
+}
+.color-orange{
+  background-color: #DA991C;
+  padding-right:20px;
+}
+    </style>
+
+  <div class="container">
+<div class="row">
+ <!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Information
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Network Analysis of University of Ottawa MIS's professors</h4>
+      </div>
+      <div class="modal-body">
+        <h2>Preambule</h2>
+        <p>This is a <a href="https://github.com/mbostock/d3/wiki/Force-Layout" target='_blank'> network or a graph diagram</a> that shows which university each professors went to, either they are regular full-time, adjunct or part-time and cross-appointed professors</p>
+        <h3>How does it Work ?</h3>
+        <p>As you can see, there is a set of nodes of different size and colors.</p>  
+        <ul>
+                <li><span class="color-yellow">&nbsp;&nbsp;</span> This color represents the university that most professors have in common. (UWO)</li>
+                <li><span class="color-orange">&nbsp;&nbsp;</span> This color represents  a canadian university that offers a Master in Library and Information Studies program</li>
+                <li><span class="color-green">&nbsp;&nbsp;</span> This color represents a university (canadian or not). In fact all the <strong>bigger nodes represents universities</strong>. </li>
+                <li><span class="color-red">&nbsp;&nbsp;</span> This colors represents all professors for 2014-2015 year</li>
+              </ul>      
+        <p>As you can see (the yellow node) 5 professors went to the University of Western Ontario. Following up for 4 professors that attends McGill University. </p>
+        <p>What I do like about diagram it's that it will trigger questions. Why does <a href="http://www.fims.uwo.ca/" target="_blank">UWO</a> have the most attendances? Is UWO is the best school in IS in Canada? Where is <a href="http://slais.ubc.ca/" target="_blank">UBC</a>? Did UWO was the first university that offers MLIS program in Canada? If I add up all the professors that teaches in a Masters of Information Studies in Canada, will UWO will still be the one that most professors went to?</p>
+        <p>Keep in mind that <a href="http://en.wikipedia.org/wiki/Correlation_does_not_imply_causation" target="_blank"> Correlation does not imply causation</a>. This visualization does not imply that UWO or <a href="http://www.mcgill.ca/sis/" target="_blank">McGill</a> are the best university for a MLIS program neither that I'll have a better chance to get a job as a professor.</p>
+        <h3>Gihub</h3>
+        <p>The program is available on my <a href="https://github.com/guinslym/uottawa_lis_teacher_network" target='_blank'> github</a> if you would like to play with it</p>
+        <h3>Hack Safe!!! :)</h3>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> 
+</div>    
+
+
+
+
+ <div class="row preambule">
+ </div> 
+
+  </div>
+    <div class="row">
+      <div id="main" class="col-md-12"></div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script>
+      var width = 960, height = 700;
+
+      var color = d3.scale.ordinal().range(['#3d4f53', '#8f4139', '#ab987a']);
+
+      var force = d3.layout.force()
+          .charge(-150)
+          .linkDistance(40)
+          .gravity(.05)
+          .size([width, height]);
+
+      var svg = d3.select("#main").append("svg")
+          .attr("id", "main-svg")
+          .attr("width", width)
+          .attr("height", height);
+
+      d3.json("https://gist.githubusercontent.com/guinslym/5fd33b30b8cb60feb0fe/raw/ca85f099cc8b69e616cb66fdcb6511758a50a820/professeurs.json", function(error, graph) {
+      
+        force.nodes(graph.nodes)
+          .links(graph.links)
+          .start();
+
+        var drag = force.drag()
+          .on("dragstart", dragstart);
+
+        var link = svg.selectAll(".link")
+            .data(graph.links)
+          .enter().append("line")
+            .attr("class", "link")
+            .attr("stroke-opacity", function(d) { if(d.label == 'is a') { return '0.8';} else{ return '0.2'; }; })
+            .attr("stroke-width","3")
+            .on("mouseover", function(){d3.select(this).style("stroke", "#999999").attr("stroke-opacity", "1.0");})
+            .on("mouseout", function(){d3.select(this).style("stroke", "#fff").attr("stroke-opacity", "1.0");});
+
+            link.append('title').text(function(d){
+              //console.log(d.name);
+            });
+
+        var node = svg.selectAll("g.node")
+              .data(graph.nodes)
+            .enter().append("svg:g")
+              .attr("class", "node")
+              .on("trigger_me", trigger_me)
+              .call(force.drag);
+
+        node.append("circle")
+          .attr("class",function (d) { return d.type + " nodecircle" })
+          .attr("r", function(d){if (d.mls){
+            return d.size;
+          }else if (d.type == 'school'){
+            return d.size;
+          }else{
+            return d.size;
+          }})
+          .style("fill", function (d) { 
+            if(d.name == 'University of Western Ontario'){
+              return '#fff000';
+            }else{
+              return d.color;
+            }
+             })
+          .on("mouseover", showPopover)
+          .on("mouseout", removePopovers);
+
+        
+
+
+        force.on("tick", function() {
+          link.attr("x1", function (d) { return d.source.x; })
+              .attr("y1", function (d) { return d.source.y; })
+              .attr("x2", function (d) { return d.target.x; })
+              .attr("y2", function (d) { return d.target.y; });
+
+          node.attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
+        })
+        .attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; });
+
+        function trigger_me(d) {
+          force.start();
+        }
+
+        function dragstart(d) {
+          d3.select(this).classed("fixed", d.fixed = true);
+        }
+      });
+
+      function removePopovers () {
+        //bootstrap javascript
+        $('.popover').each(function() {
+          $(this).remove();
+        }); 
+      }
+
+      function showPopover (d) {
+        //bootstrap javascript
+        $(this).popover({
+          placement: 'auto top',
+          container: 'body',
+          trigger: 'manual',
+          html : true,
+          content: function() {
+            if (d.type == 'teacher'){
+              return 'Professor' + ": " + d.name 
+            }else{
+              return d.name;
+            }
+         }  
+        });
+        $(this).popover('show')
+      }
+
+    </script>
+    <script type="text/javascript">
+
+
+      function resize_the_svg_window () {
+        var chart = $("#main-svg");
+        chart.attr("width", chart.parent().width());
+        chart.attr("height", chart.parent().height());
+        force.size([chart.parent().width(), chart.parent().height()]);
+        force.start(); 
+      }
+
+      $(document).ready(function() {
+        resize_the_svg_window();
+
+      });
+
+      $(window).on("resize_the_svg_window", function() {
+        resize_the_svg_window();
+      });
+    </script>
+ 
+
+
+</body>
+
+
+
+</html>

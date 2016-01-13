@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog Name</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://blog.url.com/blog</id>
+  <link href="http://blog.url.com/blog"/>
+  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <updated>2015-01-30T18:49:00-05:00</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>Introduction aux Métadonnées d'une image</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2015/01/30/introduction-aux-metadonnees-d-une-image/"/>
+    <id>http://blog.url.com/blog/2015/01/30/introduction-aux-metadonnees-d-une-image/</id>
+    <published>2015-01-30T18:49:00-05:00</published>
+    <updated>2015-12-12T17:02:58-05:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;style type="text/css"&gt;
+    pre{
+        margin: 18px 0; 
+    }
+    p{
+        margin: 18px 0;
+    }
+    .article_title{
+        color:#B61924;text-transform: capitalize;
+        padding: 20px 0 40px 0;
+    }
+    p.prerequis{
+        font-weight: bolder;
+    }
+    ul.references li{
+      list-style: circle !important;
+    }
+    thead tr td{
+      font-weight: bolder;
+    }
+    blockquote{
+        background-color: #FBFAF7;
+    }
+    img{
+        margin: 0 auto;
+    }
+&lt;/style&gt;
+&lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&amp;skin=desert"&gt;&lt;/script&gt;
+&lt;div class="container article_index"&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="col-lg-9 col-lg-offset-1"&gt;
+    &lt;div class="row text-center"&gt;
+    &lt;h1 style="color:#B61924;text-transform: capitalize;  "&gt;Introduction aux Métadonnées d'une image&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;div class="post-desc"&gt;
+
+    &lt;p&gt;Je me suis intéressé aux métadonnées des images parce que le &lt;a href="http://museestc.techno-science.ca/fr/"&gt;Musée des Sciences et de la Technologie du Canada&lt;/a&gt; a mis disponible sur leur &lt;a href="http://techno-science.ca/fr/donnees.php"&gt;portail&lt;/a&gt; un ensemble de photographie en donnée ouverte (open source) et j'ai voulu savoir ce que ces métadonnées contiennent comme information.&lt;/p&gt;
+      
+    &lt;h3&gt;&lt;strong&gt;Définition:&lt;/strong&gt;&lt;/h3&gt;
+
+    &lt;p&gt;&lt;strong&gt;Métadonnée: &lt;/strong&gt;Ce sont des informations permettant de décrire une ressource. Ces informations sont soit &lt;strong&gt;internes&lt;/strong&gt; ou &lt;strong&gt;externes&lt;/strong&gt;. Interne veux dire que la ressource elle-même contient des métadonnées par exemple, toute cellule contient &lt;strong&gt;l'acide désoxyribonucléique (ADN)&lt;/strong&gt;. L'ADN est en soit une métadonnée décrivant le bagage génétique de l'organisme qui le porte (un être humain, une plante...). &lt;/p&gt;
+
+&lt;br/&gt;
+  
+        
+    &lt;img src="http://www.dailyartfixx.com/wp-content/uploads/2009/04/dale-chihuly-sea-blue-and-green-tower.jpg" class="thumbnail"&gt;
+  
+
+
+    &lt;p&gt;Ceci est une &amp;#156;uvre de &lt;a href="http://www.chihuly.com/"&gt;Dale Chihuly&lt;/a&gt;. Alors, j'ai moi-même associé une information (une étiquette) à cette image donc, c'est une métadonnée externe. Que l'information soit vraie ou fausse le fait de l'associée à un objet( ex: une image) me permet de caractériser cette image dans le but de le catégoriser.&lt;/p&gt;
+
+    &lt;br/&gt;
+    &lt;h4&gt;&lt;strong&gt;Autres définitions utiles:&lt;/strong&gt;&lt;/h4&gt;
+    &lt;br/&gt;
+
+        &lt;blockquote&gt;L’&lt;strong&gt;Exchangeable image file format&lt;/strong&gt; ou &lt;strong&gt;Exif&lt;/strong&gt; est une spécification de format de fichier pour les images utilisées par les appareils photographiques numériques. Il a été établi par le Japan Electronic Industry Development Association (JEIDA). Cette spécification repose sur des formats existants tels que JPEG, TIFF version 6.0 et RIFF format de fichier audio WAVE, en y ajoutant des balises de métadonnées. L’Exif n’est pas supporté avec les formats JPEG 2000 ou PNG. &lt;a href="https://fr.wikipedia.org/wiki/Exchangeable_image_file_format"&gt;source&lt;/a&gt;&lt;/blockquote&gt;
+
+    &lt;blockquote&gt;&lt;strong&gt;IPTC&lt;/strong&gt;: L'Information Interchange Model (IIM) est une structure et un jeu d'attributs de métadonnées applicable à des fichiers texte, des images et d'autres types de média. &lt;a href="https://fr.wikipedia.org/wiki/IPTC_Information_Interchange_Model"&gt;source&lt;/a&gt; &lt;/blockquote&gt;
+
+
+    &lt;p&gt;La différence entre les deux c'est que L'EXIF est un ensemble d'informations crées par l'appareil de photographie numérique ou par un logiciel lors de la création de l'image. Donc la création de métadonnées avec le standard EXIF est automatique et obligatoire, surtout pour les appareils de photographie numérique. Les métadonnées de l'IPTC dépendent de l'auteur de l'image : Est-ce que je veux ajouter les coordonnées géographiques, un droit d'auteur (copyright)... L'IPTC dépend aussi du logiciel utilisé pour créer l'image. Par exemple, un logiciel de photographie insère des métadonnées lors de la création de l'image ou de l'édition de celle-ci.&lt;/p&gt;
+
+    &lt;p&gt; Pour ajouter un peu plus de confusion :) certains logiciels ont leur propre standard de métadonnées par exemple XMP (&lt;strong&gt;Extensible Metadata Platform&lt;/strong&gt;) dans le cas d'Adobe Photoshop. Alors en plus de l'EXIF et de l'IPTC il peut y avoir d'autres standards de métadonnées.  &lt;/p&gt;
+
+    &lt;p&gt;Puisse que chaque standard à sa version par exemple EXIF (version 2.1.0), à chaque version ils ajoutent des métadonnées qui peuvent rentrer en conflit avec d'autres standard par exemple &lt;strong&gt;copyright, description, l'orientation de l'image (portrait ou paysage)&lt;/strong&gt; peuvent se retrouver dans 'EXIF, l'XMP et l'IPTC alors pour ne pas faire de redondance, lors de la création du fichier numérique, le logiciel choisi la métadonnée qu'il veut, dans le cas d'Adobe Photoshop il priorisera sûrement sa version de &lt;strong&gt;copyright&lt;/strong&gt; pour créer le fichier.&lt;/p&gt;
+
+
+    &lt;hr/&gt;
+
+    &lt;h3 class="text-center"&gt;&lt;strong&gt;Quelles sont les métadonnées d'une image.&lt;/strong&gt;&lt;/h3&gt;
+
+    &lt;br/&gt;
+
+    &lt;img src="http://www.myriad-online.com/images/forum/IMG_4692.jpg"  width="100%" style="margin: 0 auto;"&gt;
+
+    &lt;hr/&gt;
+     &lt;p&gt;J'aimerais savoir comment est-ce que je peux reproduire cette image le plus fidèlement que possible. Alors j'aimerais savoir que contiennent les métadonnées de cette image. &lt;/p&gt;
+
+     &lt;p&gt;Il y a plusieurs métadonnées qui peuvent se retrouver sur une image. C'est difficile d'en déterminer le nombre, cela dépend de l'appareil ou du logiciel utilisé lors de la création de l'image. Voici les métadonnées de l'image ci-haut (les cyclistes):&lt;/p&gt;
+
+
+     &lt;script src="https://gist.github.com/guinslym/72ba498c4ddb27c034d7.js"&gt;&lt;/script&gt;
+
+     &lt;p&gt;J'ai utilisé le logiciel &lt;a href="http://www.sno.phy.queensu.ca/~phil/exiftool/"&gt;&lt;strong&gt;Exiftool&lt;/strong&gt;&lt;/a&gt; pour me permettre d'afficher les métadonnées mais il y existe plusieurs logiciels gratuit sur la toile qui vous permettra d'afficher les métadonnées par contre mais je vous recommande exiftool. &lt;/p&gt;
+
+     &lt;p&gt;Des métadonnées affichées ci-haut dans le cadre, il y a des informations intéressantes pour tout le monde. Il contient des informations sur (&lt;strong&gt;Le modèle de la caméra, le logiciel utilisé pour éditer l'image, la version de l'EXIF, des informations géographiques, la miniature ou vignette (thumbnail) qui apparait le dossier où est placé l'image.&lt;/strong&gt;). J'ai spécialement choisi cette image parce qu'il contient plusieurs métadonnées et de standard de métadonnées (XMP, IPTC et EXIF) juste pour démontrer que la liste peut être très longue. Mais, comme je l'ai mentionné plus haut le nombre de métadonnées que peuvent inclure une photo varie énormément. Voici un autre exemple celui-ci pris des données ouvertes qu'offre le &lt;a href="http://techno-science.ca/fr/donnees.php"&gt;Musée des Sciences et de la Technologie du Canada&lt;/a&gt;. &lt;/p&gt;
+
+     &lt;img src="http://source.techno-science.ca/images/1971.0261.001.aa.cs.jpg"&gt;
+     &lt;br/&gt;
+
+     &lt;script src="https://gist.github.com/guinslym/361ee3feb0ba1b633fa2.js"&gt;&lt;/script&gt;
+
+     &lt;p&gt;Donc, il y a vraiment peu de métadonnées pour la photo de la caisse enregistreuse.&lt;/p&gt;
+
+     &lt;hr/&gt;
+     &lt;br/&gt;
+     &lt;h3&gt;&lt;strong&gt;Limite&lt;/strong&gt;&lt;/h3&gt;
+     &lt;p&gt;Une image &lt;strong&gt;jpg&lt;/strong&gt; peut contenir &lt;strong&gt;un maximum de 64kb&lt;/strong&gt; de métadonnées. Alors on peut pas ajouter des métadonnées à l'infini. C'est sûr qu'il y a moyen de contourner la limite de 64kb imposée... Mais je ne veux pas entrer dans cette discussion. Ce qui est important de savoir c'est que L'EXIF et l'IPTC spécifient chacun quels sont les métadonnées qu'il faut &lt;strong&gt;absolument&lt;/strong&gt; qu'une image contiennent, ensuite il appartient à la caméra numérique ou au logiciel, voire aussi l'utilisateur, d'ajouter des métadonnées. Donc, il y a un minimum de métadonnée à avoir et un maximum de métadonnée (en taille = 64kb), qu'une image pourra contenir. &lt;/p&gt;
+
+&lt;hr/&gt;
+&lt;br/&gt;
+     &lt;h3 class="text-center"&gt;&lt;strong&gt;Métadonnée et conversion du format de l'image&lt;/strong&gt;&lt;/h3&gt;
+
+     &lt;p&gt;Je vais utiliser un logiciel en ligne de commande: &lt;a href="http://www.imagemagick.org/script/convert.php"&gt;imagemagick&lt;/a&gt;. Je vais convertir l'image des &lt;strong&gt;cyclistes&lt;/strong&gt; de &lt;strong&gt;jpg en png&lt;/strong&gt;. Voici les métadonnées après la conversion:&lt;/p&gt;
+
+     &lt;script src="https://gist.github.com/guinslym/6bc40fe79e621c533ba3.js"&gt;&lt;/script&gt;
+
+     &lt;p&gt;&lt;strong&gt;jpg en gif&lt;/strong&gt;&lt;/p&gt;
+     &lt;script src="https://gist.github.com/guinslym/ba84864feeaaeb4b71ad.js"&gt;&lt;/script&gt;
+
+     &lt;p&gt;&lt;strong&gt;jpg en pdf&lt;/strong&gt;&lt;/p&gt;
+     &lt;script src="https://gist.github.com/guinslym/8a18251ddbbb84ca4dae.js"&gt;&lt;/script&gt;
+
+     &lt;p&gt;&lt;strong&gt;jpg en tiff&lt;/strong&gt;: Presque le même résultat que de &lt;strong&gt;jpg en png&lt;/strong&gt;&lt;/p&gt;
+     &lt;script src="https://gist.github.com/guinslym/611fc8ee1c3f8249414e.js"&gt;&lt;/script&gt;
+
+     &lt;!-- note: diff fichier.txt autre_fichier.txt | grep "&gt;"
+           ou
+           grep -Fxvf fichier.txt autre_fichier.txt
+      --&gt;
+      &lt;p&gt;Pour comparer la différence des fichiers ci-haut, vous pouvez les télécharger et ensuite exécuter en ligne de commande (Unix/Linux)&lt;/p&gt;
+
+      &lt;div class="row "&gt;
+
+        &lt;pre class="prettyprint lang-python"&gt;
+         diff premier_fichier.txt autre_fichier.txt | grep "&gt;"
+        &lt;/pre&gt;
+
+
+        &lt;/div&gt;
+
+     &lt;p&gt;Parmi les différences; pas de métadonnées concernant les coordonnées géographique (GPSInfo) ni du modèle de caméra utilisé. Par contre, si vous répétez la conversion avec un autre logiciel (i.e. PaintShop pro) le résultat peut être différent.&lt;/p&gt;
+
+     &lt;p&gt; Aussi quand vous téléversez des photos sur certains médias sociaux, par exemple &lt;a href="https://www.facebook.com/"&gt;Facebook&lt;/a&gt;, certaines métadonnées peuvent être supprimées, par exemple les coordonnées géographiques.&lt;/p&gt;
+
+     &lt;hr/&gt;
+
+     &lt;p&gt;Voici ce qui conclut une introduction pratique aux métadonnées d'une image. Il y a beaucoup plus d'informations concernant l'EXIF et autres standards de métadonnées d'image que je n'ai pas couvert dans cette article, je vous conseille, si voulez en savoir plus, d'aller sur la page web de &lt;a href="http://www.sno.phy.queensu.ca/~phil/exiftool/"&gt; Phil Harvey&lt;/a&gt;. Malgré le design un peu archa&amp;#239;que, il contient plus d'information que wikipedia :)&lt;/p&gt;
+    
+
+
+      &lt;p class="prerequis" style="margin-top:60px;"&gt;&lt;strong&gt;References:&lt;/strong&gt;&lt;/p&gt;
+    &lt;ul class="references"&gt;
+      &lt;li&gt;&lt;a href="http://www.vcode.no/web/resource.nsf/ii2lnug/643.htm"&gt;http://www.vcode.no/web/resource.nsf/ii2lnug/643.htm&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="http://libiptcdata.sourceforge.net/docs/libiptcdata-tag.html"&gt;http://libiptcdata.sourceforge.net/docs/libiptcdata-tag.html&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="http://www.iptc.org/std/IIM/4.1/specification/IIMV4.1.pdf"&gt;IPTC-NAA  Information Interchange Model Version&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="http://marthachristopherson.net/storage/dale%20glass%201.jpg?__SQUARESPACE_CACHEVERSION=1242177012926"&gt;Image de l'oeuvre en verre de Dave Chihuly&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="http://www.myriad-online.com/images/forum/IMG_4692.jpg"&gt;Images des cyclistes&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="http://www.foto-biz.com/Lightroom/Exif-vs-iptc-vs-xmp.html"&gt;http://www.foto-biz.com/Lightroom/Exif-vs-iptc-vs-xmp.html&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;style type="text/css"&gt;
+	   .media
+    {
+        /*box-shadow:0px 0px 4px -2px #000;*/
+        margin: 20px 0;
+        padding:30px;
+    }
+    .dp
+    {
+        border:10px solid #eee;
+        transition: all 0.2s ease-in-out;
+    }
+    .dp:hover
+    {
+        border:2px solid #eee;
+        transform:rotate(360deg);
+        -ms-transform:rotate(360deg);  
+        -webkit-transform:rotate(360deg);  
+        /*-webkit-font-smoothing:antialiased;*/
+    }
+&lt;/style&gt;
+&lt;div class="row"&gt;
+
+
+    &lt;div class="col-lg-6 col-lg-offset-1"&gt;
+        &lt;div class="media"&gt;
+            &lt;a class="pull-left" href="#"&gt;
+                &lt;img class="media-object dp img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/guinslym/128.jpg" style="width: 100px;height:100px;"&gt;
+            &lt;/a&gt;
+            &lt;div class="media-body"&gt;
+                &lt;h4 class="media-heading"&gt;Guinsly Mondésir &lt;small&gt; Ottawa &lt;/i&gt;&lt;/small&gt;&lt;/h4&gt;
+                &lt;h5&gt;Web developer - Pythonist - Rubyist&lt;/h5&gt;
+                &lt;a href="https://twitter.com/guinslym"&gt;&lt;i class="fa fa-twitter fa-2x"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href="https://github.com/guinslym"&gt;&lt;i class="fa fa-github fa-2x"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;hr style="margin:8px auto"&gt;
+
+                &lt;span class="label label-default"&gt;EXIF&lt;/span&gt;
+                &lt;span class="label label-default"&gt;XMP&lt;/span&gt;
+                &lt;span class="label label-info"&gt;Metadata&lt;/span&gt;
+                &lt;span class="label label-default"&gt;IPTC&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+   &lt;footer&gt;
+  &lt;div class="row text-center"&gt;
+    
+  &lt;h1&gt;Au revoir!!!&lt;/h1&gt;
+  &lt;h4&gt;&lt;a href="/" class="blog"&gt;-- retour au blog --&lt;/a&gt;&lt;/h4&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+
+
+
+      &lt;script&gt;
+
+       (function($) {
+
+        'use strict';
+
+        window.sr= new scrollReveal({
+          reset: false,
+          move: '50px',
+          mobile: true
+        });
+
+
+      })();
+
+    &lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+  $('a').each(function() {
+   var a = new RegExp('/' + window.location.host + '/');
+   if (!a.test(this.href)) {
+      $(this).attr("target","_blank");
+   }
+});
+&lt;/script&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>How to find a DOI and create a permanent link using curl</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2015/01/26/How-to-find-a-DOI-and-create-a-permanent-link-using-curl/"/>
+    <id>http://blog.url.com/blog/2015/01/26/How-to-find-a-DOI-and-create-a-permanent-link-using-curl/</id>
+    <published>2015-01-25T21:12:00-05:00</published>
+    <updated>2015-12-12T17:02:58-05:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">  &lt;link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"&gt;
+&lt;style type="text/css"&gt;
+	pre{
+		margin: 18px 0; 
+	}
+    p{
+        margin: 18px 0;
+    }
+    .article_title{
+        color:#B61924;text-transform: capitalize;
+        padding: 20px 0 40px 0;
+    }
+    p.prerequis{
+        font-weight: bolder;
+    }
+    ul.references li{
+      list-style: circle !important;
+    }
+    thead tr td{
+      font-weight: bolder;
+    }
+&lt;/style&gt;
+&lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&amp;skin=desert"&gt;&lt;/script&gt;
+
+&lt;div class="container article_index"&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="col-lg-9 col-lg-offset-1"&gt;
+    &lt;div class="row text-center"&gt;
+    &lt;h1 class="article_title" style="  "&gt;how to find a DOI and create a permanent link using curl&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;div class="post-desc"&gt;
+      &lt;p&gt;DOI (Digital Object Identifier) is a system to identify and to find an Object (document) on a network. This document may be an audio file, an image, a paper, a video ... The &lt;a href="http://www.doi.org/doi_handbook/7_IDF.html"&gt;International DOI Foundation&lt;/a&gt; assigns an unique identifyer (DOI) to an object so that it can be retrieved even if its location (uri) changes.&lt;/p&gt;
+
+      &lt;table class="table  table-bordered" style="width:50%"&gt;
+        &lt;caption&gt;DOI &lt;/caption&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;td&gt;DOI translator&lt;/td&gt;
+            &lt;td&gt;Naming Authority (prefix)&lt;/td&gt;
+            &lt;td&gt;suffix&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;td&gt;http://dx.doi.org/&lt;/td&gt;
+          &lt;td&gt;10.1002&lt;/td&gt;
+          &lt;td&gt;asi.23179&lt;/td&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+
+
+    &lt;p class="prerequis"&gt;&lt;strong&gt;Prerequisite&lt;/strong&gt;&lt;/p&gt;
+    &lt;p style="text-indent:40px;"&gt;A command line interface (shell/terminal) (For Windows: download &lt;a href="http://curl.haxx.se/download.html"&gt;curl&lt;/a&gt; and &lt;a href="http://www.cygwin.com/"&gt;cygwin&lt;/a&gt;)&lt;/p&gt;
+     &lt;p style="text-indent:40px;"&gt;A doi: I will use this one: &lt;a href="http://doi.wiley.com/10.1002/asi.23179"&gt;10.1002/asi.23179&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;Curl is a program available on pretty much all the operating system and linux distros (Windows, Unix, Mac OS X ...). What does it really do? &lt;/p&gt;
+    &lt;p class="note"&gt;In your terminal type the following: (Note: &lt;strong&gt;please don't type '-&gt; %'&lt;/strong&gt;)&lt;/p&gt;
+&lt;div class="row "&gt;
+
+&lt;pre class="prettyprint"&gt;
+ -&gt; %  whatis curl
+    curl (1)             - transfer a URL
+&lt;/pre&gt;
+
+&lt;/div&gt;
+
+    &lt;p&gt;It doesn't say much :) but it actually does a lot of things, it will transfer or retrieve data to or from an url. &lt;/p&gt;
+
+&lt;div class="row "&gt;
+
+&lt;pre class="prettyprint lang-ruby"&gt;
+ -&gt; %  man curl | less
+&lt;/pre&gt;
+
+&lt;pre class="prettyprint linenums "&gt;
+ curl  is  a tool to transfer data from or to a server, using one of the
+ supported protocols (DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS,  IMAP,
+ IMAPS,  LDAP,  LDAPS,  POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMTP, SMTPS,
+ TELNET and TFTP).  
+&lt;/pre&gt;
+
+&lt;/div&gt;
+
+    &lt;p&gt;(press 'q' to exit ). So we will use this tool to retrieve the url and as it is written further down in the man, we can pass switches or paremeters to the curl command. We will pass one parameter  '--head'. This parameter (--head) allows you to view the HTTP response headers that the web server returns when requesting a URL..&lt;/p&gt;
+
+    &lt;div class="row "&gt;
+
+        &lt;pre class="prettyprint  lang-ruby"&gt;
+-&gt; %  curl --head http://dx.doi.org/10.1002/asi.23179
+        &lt;/pre&gt;
+        &lt;pre class="prettyprint linenums"&gt;
+HTTP/1.1 303 See Other
+Server: Apache-Coyote/1.1
+Vary: Accept
+Location: http://doi.wiley.com/10.1002/asi.23179
+Expires: Fri, 30 Jan 2015 20:49:19 GMT
+Content-Type: text/html;charset=utf-8
+Content-Length: 162
+Date: Fri, 30 Jan 2015 04:46:21 GMT
+        &lt;/pre&gt;
+
+    &lt;/div&gt;
+
+    &lt;p&gt;Curl went to this address and the server send a '303' response code.
+  &lt;/p&gt;
+  &lt;blockquote&gt;303: 'The response to the request can be found under a different URI and SHOULD be retrieved using a GET method on that resource. source: &lt;a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html"&gt;w3.org&lt;/a&gt;&lt;/blockquote&gt;
+  &lt;p&gt;
+  	Now that you have the URI let's remove from the output all the line that are unnecessary because we only need to print the URI. We will use grep, it will search only for the pattern that I need. I want grep to look for a line that start with 'Location'. We will also use an other parameter: '-s' 
+  &lt;/p&gt;
+
+ &lt;div class="row "&gt;
+          &lt;pre class="prettyprint"&gt;
+-s, --silent
+        Silent  or  quiet  mode. Don't show progress meter or error mes‐
+        sages.  Makes Curl mute. It will still output the data  you  ask
+        for, potentially even to the terminal/stdout unless you redirect
+        it.
+
+        &lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Now you can type the following:&lt;/p&gt;
+    &lt;div class="row "&gt;
+
+        &lt;pre class="prettyprint lang-ruby"&gt;
+-&gt; % curl --head -s http://dx.doi.org/10.1002/asi.23179  | grep "Location"
+
+Location: http://doi.wiley.com/10.1002/asi.23179
+        &lt;/pre&gt;
+
+    &lt;/div&gt;
+
+    &lt;p&gt;Not bad but we can do better. We can remove the word 'location' from the output using a regular expression. &lt;/p&gt;
+
+    &lt;div class="row "&gt;
+
+        &lt;pre class="prettyprint linenums lang-ruby"&gt;
+-&gt; % curl --head -s http://dx.doi.org/10.1002/asi.23179  | grep -Po  '(\b(([\w-]+://?|www[.])[^\s()&lt;&gt;]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))))'
+ 
+ http://doi.wiley.com/10.1002/asi.23179
+        &lt;/pre&gt;
+
+    &lt;/div&gt;
+
+    &lt;p&gt;Let's take this a little bit further let's say that we want to retrieve the title of this paper, along with the authors and so on as if it was dtyled in a APA style. For that I will dump the HTTP response header (-D) that may contains cookies. I also want curl to take theses informations (cookies) and go to the redirection link (-L). I also want the information in plain text and within this text I want to retrieve all the lines that start with 'doi'.&lt;/p&gt;
+
+
+     &lt;div class="row "&gt;
+
+        &lt;pre class="prettyprint lang-ruby"&gt;
+-D, --dump-header &lt;file&gt;
+    This  option  is  handy to use when you want to store
+    the headers that an HTTP site sends to  you.  Cookies
+    from  the headers could then be read in a second curl
+    ... 
+
+-H, --header &lt;header&gt;
+    (HTTP) Extra header to use when getting a  web  page.
+    You  may  specify  any  number of extra headers....
+
+-L, --location
+    (HTTP/HTTPS) If the server reports that the requested
+    page has moved to  a  different  location  (indicated
+    with  a  Location:  header  and a 3XX response code),
+    this option will make curl redo the  request  on  the
+    new place. 
+        &lt;/pre&gt;
+
+    &lt;/div&gt;
+
+     &lt;div class="row "&gt;
+
+        &lt;pre class="prettyprint linenums lang-ruby"&gt;
+-&gt; % curl -s -D --next -L -H "Accept: text/plain" "http://dx.doi.org/10.1002/asi.23179" | grep  "doi:"
+
+Zhu, X., Turney, P., Lemire, D., &amp; Vellino, A. (2014). Measuring academic influence: Not all citations are equal. J Assn Inf Sci Tec, 66(2), 408–427. doi:10.1002/asi.23179
+        &lt;/pre&gt;
+
+    &lt;/div&gt;
+
+
+     &lt;p&gt;Let's say that we want to see the webpage locally like it's suppose to look in Willey' website. We will dump the webpage in a file call doi.html and than opens it in Firefox. &lt;strong&gt;Notes: &lt;/strong&gt; as I'm not quite sure what is the command to open a browser in Mac OS X and Windows, you can run the first command bellow and than go to your directory and open in your browser the file named doi.html &lt;/p&gt;
+
+         &lt;div class="row "&gt;
+
+        &lt;pre class="prettyprint linenums lang-ruby"&gt;
+-&gt; % #IMPORTANT for MAC OS and Windows user: 
+curl -D -s -L  "Accept: text/html;charset=UTF-8" "http://dx.doi.org/10.1002/asi.23179" &gt; doi.html
+
+
+-&gt; % #Linux distro
+curl -D -s -L  "Accept: text/html;charset=UTF-8" "http://dx.doi.org/10.1002/asi.23179" &gt; /tmp/doi.html &amp;&amp; firefox /tmp/doi.html
+        &lt;/pre&gt;
+        &lt;!-- I need the -s because otherwise it will output the header response in the html page --&gt;
+
+    &lt;/div&gt;
+
+
+    &lt;p&gt;Lets retrieve the turtle instead of a plain text or an html file.&lt;/p&gt;
+    
+       &lt;div class="row "&gt;
+
+        &lt;pre class="prettyprint lang-ruby"&gt;
+-&gt; % curl -D - -L -H  "Accept: text/turtle" "http://dx.doi.org/10.1002/asi.23179"
+
+        &lt;/pre&gt;
+
+    &lt;/div&gt;
+&lt;script src="https://gist.github.com/guinslym/cd917a60c6e649410128.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;Wait a minute!&lt;/strong&gt; Something is really interesting here: Whitin the header section the location have changed for &lt;strong&gt;Location: http://data.crossref.org/10.1002%2Fasi.23179&lt;/strong&gt; this wasn't the location that we had in the previous HTTP response header &lt;em&gt;Location: http://doi.wiley.com/10.1002/asi.23179&lt;/em&gt;. So the redirection have been process by &lt;a href="http://data.crossref.org/"&gt;&lt;strong&gt;http://data.crossref.org/&lt;/strong&gt;&lt;/a&gt;. By following this link I realized that &lt;strong&gt;crosscite.org&lt;/strong&gt; provides an API to GET a DOI resource and their documentation is pretty neat. &lt;/p&gt;
+
+&lt;p&gt;So all the steps I did above to retrieved the resource associated with the DOI was done from scratch. I realized that I could have get the result faster if I knew about &lt;strong&gt;crosscite&lt;/strong&gt;. For the last example I will use their doc instead and as I don't know much about RDF, I do prefer retrieving the resource in json instead of turtle :)&lt;/p&gt;
+
+&lt;div class="row "&gt;
+&lt;pre class="prettyprint  lang-javascript"&gt;
+-&gt; % curl -LH "Accept: application/rdf+xml;q=0.5, application/vnd.citationstyles.csl+json;q=1.0" http://dx.doi.org/10.1002/asi.23179
+
+#IMPORTANT if you have Python and you want to format the output like in this example
+#for Node.js if you have npm json installed instead of 'python -mjson.tool' use | json 
+-&gt; % curl -LH "Accept: application/rdf+xml;q=0.5, application/vnd.citationstyles.csl+json;q=1.0" http://dx.doi.org/10.1002/asi.23179 | python -mjson.tool
+
+{  
+   "subtitle":[  
+      "Measuring Academic Influence"
+   ],
+   "issued":{  
+      "date-parts":[  
+         [  
+            2014,
+            5,
+            21
+         ]
+      ]
+   },
+   "score":1.0,
+   "prefix":"http:\/\/id.crossref.org\/prefix\/10.1002",
+   "author":[  
+      {  
+         "family":"Zhu",
+         "given":"Xiaodan"
+      },
+      {  
+         "family":"Turney",
+         "given":"Peter"
+      },
+      {  
+         "family":"Lemire",
+         "given":"Daniel"
+      },
+      {  
+         "family":"Vellino",
+         "given":"Andr\u00e9"
+      }
+   ],
+   "container-title":"Journal of the Association for Information Science and Technology",
+   "reference-count":79,
+   "page":"408-427",
+   "deposited":{  
+      "date-parts":[  
+         [  
+            2015,
+            1,
+            20
+         ]
+      ],
+      "timestamp":1421712000000
+   },
+   "issue":"2",
+   "funder":[  
+      {  
+         "award":[  
+            "26143"
+         ],
+         "name":"Natural Sciences and Engineering Research Council of Canada",
+         "DOI":"10.13039\/501100000038"
+      }
+   ],
+   "title":"Measuring academic influence: Not all citations are equal",
+   "type":"journal-article",
+   "DOI":"10.1002\/asi.23179",
+   "ISSN":[  
+      "2330-1635"
+   ],
+   "URL":"http:\/\/dx.doi.org\/10.1002\/asi.23179",
+   "source":"CrossRef",
+   "publisher":"Wiley-Blackwell",
+   "indexed":{  
+      "date-parts":[  
+         [  
+            2015,
+            1,
+            23
+         ]
+      ],
+      "timestamp":1421971998759
+   },
+   "volume":"66",
+   "member":"http:\/\/id.crossref.org\/member\/311"
+}
+
+&lt;/pre&gt;
+&lt;/div&gt;
+
+
+    &lt;p&gt;Voilà!!! This was my long journey to find out how to retrieve a DOI resource. &lt;/p&gt;
+
+    &lt;p class="prerequis"&gt;&lt;strong&gt;Challenge:&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;From the previous example. Try to retrieve the &lt;strong&gt;xml&lt;/strong&gt; version instead. But you must only output the lines that include the name 'Vellino' or 'vellino' along with their line number.
+    &lt;/p&gt;
+
+
+    &lt;h4&gt;Hack safe! :)&lt;/h4&gt;
+    &lt;hr/&gt;
+
+    
+    &lt;p class="prerequis" style="margin-top:60px;"&gt;&lt;strong&gt;References:&lt;/strong&gt;&lt;/p&gt;
+    &lt;ul class="references"&gt;
+      &lt;li&gt;&lt;a href="http://www.doi.org/doi_handbook/7_IDF.html"&gt;International DOI Foundation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://fr.wikipedia.org/wiki/Digital_Object_Identifier"&gt;wikipedia (en)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://pt.wikipedia.org/wiki/Digital_object_identifier"&gt;wikipedia (pt)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="http://curl.haxx.se/docs/manpage.html"&gt;Unix man curl&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?grep"&gt;Unix man grep&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="http://crosscite.org/cn/"&gt;DOI content negociation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md"&gt;Crossref API&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html"&gt;HTTP/1.1: Header Field Definitions&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+     &lt;hr/&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;style type="text/css"&gt;
+	   .media
+    {
+        /*box-shadow:0px 0px 4px -2px #000;*/
+        margin: 20px 0;
+        padding:30px;
+    }
+    .dp
+    {
+        border:10px solid #eee;
+        transition: all 0.2s ease-in-out;
+    }
+    .dp:hover
+    {
+        border:2px solid #eee;
+        transform:rotate(360deg);
+        -ms-transform:rotate(360deg);  
+        -webkit-transform:rotate(360deg);  
+        /*-webkit-font-smoothing:antialiased;*/
+    }
+&lt;/style&gt;
+&lt;div class="row"&gt;
+
+
+    &lt;div class="col-lg-6 col-lg-offset-1"&gt;
+        &lt;div class="media"&gt;
+            &lt;a class="pull-left" href="#"&gt;
+                &lt;img class="media-object dp img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/guinslym/128.jpg" style="width: 100px;height:100px;"&gt;
+            &lt;/a&gt;
+            &lt;div class="media-body"&gt;
+                &lt;h4 class="media-heading"&gt;Guinsly Mondésir &lt;small&gt; Ottawa &lt;/i&gt;&lt;/small&gt;&lt;/h4&gt;
+                &lt;h5&gt;Web developer - Pythonist - Rubyist&lt;/h5&gt;
+                &lt;a href="https://twitter.com/guinslym"&gt;&lt;i class="fa fa-twitter fa-2x"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href="https://github.com/guinslym"&gt;&lt;i class="fa fa-github fa-2x"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;hr style="margin:8px auto"&gt;
+
+                &lt;span class="label label-default"&gt;doi&lt;/span&gt;
+                &lt;span class="label label-default"&gt;cli&lt;/span&gt;
+                &lt;span class="label label-info"&gt;curl&lt;/span&gt;
+                &lt;span class="label label-default"&gt;HTTP&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+   &lt;footer&gt;
+  &lt;div class="row text-center"&gt;
+    
+  &lt;h1&gt;Au revoir!!!&lt;/h1&gt;
+  &lt;h4&gt;&lt;a href="/" class="blog"&gt;-- retour au blog --&lt;/a&gt;&lt;/h4&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+
+&lt;script type="text/javascript"&gt;
+  $('a').each(function() {
+   var a = new RegExp('/' + window.location.host + '/');
+   if (!a.test(this.href)) {
+      $(this).attr("target","_blank");
+   }
+});
+&lt;/script&gt;</content>
+  </entry>
+  <entry>
+    <title>l'Open Access en question</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2014/10/26/open-access-en-question/"/>
+    <id>http://blog.url.com/blog/2014/10/26/open-access-en-question/</id>
+    <published>2014-10-25T22:01:00-04:00</published>
+    <updated>2015-12-12T17:02:58-05:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">   &lt;!-- Main jumbotron for a primary marketing message or call to action --&gt;
+    &lt;div class="jumbotron"&gt;
+    &lt;!--
+    &lt;canvas class="pg-canvas" width="1301" height="359"&gt;&lt;/canvas&gt;
+    --&gt;
+      &lt;div class="containeri Text-center"&gt;
+        &lt;h1 class="title" data-sr="enter from the top and hustle 50px over 1.5s"&gt;Open Access  &lt;small&gt;8 questions que je me suis pos&amp;eacute;&lt;/small&gt;&lt;/h1&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+      &lt;!-- Example row of columns --&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-lg-12" data-sr="enter top wait 2s"&gt;
+          &lt;p&gt;Je me suis pos&amp;eacute; plusieurs questions dont je tenterai d'avoir les r&amp;eacute;ponses pendant la semaine de promotion de l'Open Access.&lt;/p&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+
+      &lt;hr&gt;
+
+          &lt;div class="row"&gt;
+        &lt;div class="col-lg-12 text-center"&gt;
+        &lt;h1 class="question"&gt;Est-ce que l'Open Access fait qu'on embauche plus de bibliothécaire ou si tout devient automatisé?  &lt;/h1&gt;&lt;/div&gt;
+        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s "&gt;
+         &lt;iframe src="//giphy.com/embed/7qTGRW3LyydIQ" width="724" height="303" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+
+      &lt;div class="row"&gt;
+        &lt;div class="col-lg-12 text-center"&gt;
+        &lt;h1 class="question"&gt;Est-ce que l'Open Access augmente notre dépendance à l'internet.?  &lt;/h1&gt;&lt;/div&gt;
+        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s "&gt;
+         &lt;iframe src="//giphy.com/embed/bI9iVGCXzsllC" width="711" height="400" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+            &lt;div class="row"&gt;
+        &lt;div class="col-lg-12 text-center"&gt;
+        &lt;h1 class="question"&gt;L'accès est Ouvert &amp;agrave; tous!  Ah Oui? Combien de gens sont au courant?  &lt;/h1&gt;&lt;/div&gt;
+        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s"&gt;
+         &lt;iframe src="//giphy.com/embed/14iokwptQPxSMw" width="711" height="400" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+                  &lt;div class="row"&gt;
+        &lt;div class="col-lg-12 text-center"&gt;
+        &lt;h1 class="question"&gt;L'accès est Ouvert &amp;agrave; tous, combien de gens ont la capacité de l'utiliser?  &lt;/h1&gt;&lt;/div&gt;
+        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s"&gt;
+         &lt;img src="http://i121.photobucket.com/albums/o205/guinslym/totrash/5232012052424iwsmt_zps78b8f3a5.jpeg" alt="image: for a fair selection everybody has to take the same exam: représentant l'inégalité" class="img-thumbnail"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+            &lt;div class="row"&gt;
+        &lt;div class="col-lg-12 text-center"&gt;
+        &lt;h1 class="question"&gt; Do people really reads it? Quel est leur niveau d'int&amp;eacute;r&amp;ecirc;t? &lt;/h1&gt;&lt;/div&gt;
+        &lt;div class="col-lg-12 text-center"  data-sr="enter bottom  over 1.5s"&gt;
+         &lt;iframe src="//giphy.com/embed/ogyoTLLtAcxZS" width="711" height="400" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+            &lt;div class="row"&gt;
+        &lt;div class="col-lg-12 text-center"&gt;
+        &lt;h1 class="question"&gt;Yes, I accept that my thesis will be Open Access. But let's say that someone cite my Thesis, can I be sure that his Thesis will be Open Access too ?  &lt;/h1&gt;&lt;/div&gt;
+        &lt;div class="col-lg-12 text-center"  data-sr="enter bottom wait 1s over 1.5s"&gt;
+         &lt;iframe src="//giphy.com/embed/anB3cor0tgFX2" width="480" height="288" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+                &lt;div class="row"&gt;
+        &lt;div class="col-lg-12 text-center"&gt;
+        &lt;h1 class="question"&gt;Est-ce que Open Access == Open Source?  &lt;/h1&gt;&lt;/div&gt;
+        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s"&gt;
+         &lt;img src="http://i121.photobucket.com/albums/o205/guinslym/totrash/opensource-1_zpsc598a0c2.jpg" alt="image: my name is open source: représentant une image de open-source" class="img-thumbnail"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+
+        &lt;div class="row"&gt;
+        &lt;div class="col-lg-12 text-center"&gt;
+        &lt;h1 class="question"&gt;What's up with Open? Seems to me everything is becoming Open, Are we building an Open Society?  &lt;/h1&gt;&lt;/div&gt;
+        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s"&gt;
+         &lt;img src="http://i121.photobucket.com/albums/o205/guinslym/totrash/opensourcewordcloud_zpse3e2761c.jpg" alt="image: tag cloud d'Open project" class="img-thumbnail"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+         
+
+
+
+
+      &lt;footer&gt;
+        &lt;p&gt;Les gif ont été pris de &lt;a href="http://giphy.com" target="_blank"&gt;Giphy&lt;/a&gt;  l'image du cartoon a &amp;eacute;t&amp;eacute; prise de &lt;a href="http://iwastesomuchtime.com/on/?i=37716" target="_blank"&gt;iwastesomuchtime&lt;/a&gt;. Open Source; la source de l'image d'Open Source est de &lt;a href="http://www.smashingmagazine.com/2013/01/03/starting-an-open-source-project/" target="_blank"&gt;smashingmagazine&lt;/a&gt; et celui du nuage de mot est de &lt;a href="http://www.paulduane.net/2014/08/open-source-society/" target="_blank"&gt;paulduane&lt;/a&gt; .&lt;/p&gt;
+      &lt;/footer&gt;
+    &lt;/div&gt; &lt;!-- /container --&gt;
+
+
+    &lt;!-- Bootstrap core JavaScript
+    ================================================== --&gt;
+    &lt;!-- Placed at the end of the document so the pages load faster --&gt;
+
+    &lt;!-- IE10 viewport hack for Surface/desktop Windows 8 bug
+    &lt;script src="../../assets/js/ie10-viewport-bug-workaround.js"&gt;&lt;/script&gt;
+     --&gt;
+
+      &lt;script&gt;
+
+       (function($) {
+
+        'use strict';
+
+        window.sr= new scrollReveal({
+          reset: true,
+          move: '50px',
+          mobile: true
+        });
+
+
+      })();
+      /*
+
+        $('div.jumbotron').particleground({
+		    dotColor: '#ff0000',
+		    lineColor: '#ff0000'
+		});
+*/
+    &lt;/script&gt;
+
+    &lt;footer&gt;
+    &lt;div class="container"&gt;
+    	  &lt;div class="row text-center"&gt;
+    
+  &lt;h1&gt;Au revoir!!!&lt;/h1&gt;
+  &lt;h4&gt;&lt;a href="/" class="blog"&gt;-- retour au blog --&lt;/a&gt;&lt;/h4&gt;
+  &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/footer&gt;</content>
+  </entry>
+  <entry>
+    <title>Graph diagram of all professors from MIS program at UOttawa</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2014/09/25/Graph-diagram-of-professors-at-uottawa/"/>
+    <id>http://blog.url.com/blog/2014/09/25/Graph-diagram-of-professors-at-uottawa/</id>
+    <published>2014-09-25T18:12:00-04:00</published>
+    <updated>2015-12-12T17:02:58-05:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html"> &lt;style&gt;
+    .popover {
+      color: #333;
+    }
+    .node {
+      stroke: #ccc;
+      stroke-width: 1.5px;
+    }
+    .link {
+      stroke: #fff;
+      stroke-opacity: .8;
+    }
+
+	#main {
+		margin:0 auto;
+		width:960px;
+		color:#FFF;
+		border: 1px dashed #333;
+		fill: #000;
+		}		
+	
+  line {
+		stroke: #666;
+		}
+
+body{
+    background: url("http://subtlepatterns.com/patterns/congruent_outline.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}	
+.preambule{
+  color: white;
+}
+.color-yellow{
+  background-color: #FFF000;
+  padding-right:20px;
+}
+.color-green{
+  background-color:#7CA721; 
+  padding-right:20px;
+}
+.color-red{
+  background-color: #8F4139;
+  padding-right:20px;
+}
+.color-orange{
+  background-color: #DA991C;
+  padding-right:20px;
+}
+    &lt;/style&gt;
+
+  &lt;div class="container"&gt;
+&lt;div class="row"&gt;
+ &lt;!-- Button trigger modal --&gt;
+&lt;button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"&gt;
+  Information
+&lt;/button&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;button type="button" class="close" data-dismiss="modal"&gt;&lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;&lt;span class="sr-only"&gt;Close&lt;/span&gt;&lt;/button&gt;
+        &lt;h4 class="modal-title" id="myModalLabel"&gt;Network Analysis of University of Ottawa MIS's professors&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        &lt;h2&gt;Preambule&lt;/h2&gt;
+        &lt;p&gt;This is a &lt;a href="https://github.com/mbostock/d3/wiki/Force-Layout" target='_blank'&gt; network or a graph diagram&lt;/a&gt; that shows which university each professors went to, either they are regular full-time, adjunct or part-time and cross-appointed professors&lt;/p&gt;
+        &lt;h3&gt;How does it Work ?&lt;/h3&gt;
+        &lt;p&gt;As you can see, there is a set of nodes of different size and colors.&lt;/p&gt;  
+        &lt;ul&gt;
+                &lt;li&gt;&lt;span class="color-yellow"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt; This color represents the university that most professors have in common. (UWO)&lt;/li&gt;
+                &lt;li&gt;&lt;span class="color-orange"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt; This color represents  a canadian university that offers a Master in Library and Information Studies program&lt;/li&gt;
+                &lt;li&gt;&lt;span class="color-green"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt; This color represents a university (canadian or not). In fact all the &lt;strong&gt;bigger nodes represents universities&lt;/strong&gt;. &lt;/li&gt;
+                &lt;li&gt;&lt;span class="color-red"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt; This colors represents all professors for 2014-2015 year&lt;/li&gt;
+              &lt;/ul&gt;      
+        &lt;p&gt;As you can see (the yellow node) 5 professors went to the University of Western Ontario. Following up for 4 professors that attends McGill University. &lt;/p&gt;
+        &lt;p&gt;What I do like about diagram it's that it will trigger questions. Why does &lt;a href="http://www.fims.uwo.ca/" target="_blank"&gt;UWO&lt;/a&gt; have the most attendances? Is UWO is the best school in IS in Canada? Where is &lt;a href="http://slais.ubc.ca/" target="_blank"&gt;UBC&lt;/a&gt;? Did UWO was the first university that offers MLIS program in Canada? If I add up all the professors that teaches in a Masters of Information Studies in Canada, will UWO will still be the one that most professors went to?&lt;/p&gt;
+        &lt;p&gt;Keep in mind that &lt;a href="http://en.wikipedia.org/wiki/Correlation_does_not_imply_causation" target="_blank"&gt; Correlation does not imply causation&lt;/a&gt;. This visualization does not imply that UWO or &lt;a href="http://www.mcgill.ca/sis/" target="_blank"&gt;McGill&lt;/a&gt; are the best university for a MLIS program neither that I'll have a better chance to get a job as a professor.&lt;/p&gt;
+        &lt;h3&gt;Gihub&lt;/h3&gt;
+        &lt;p&gt;The program is available on my &lt;a href="https://github.com/guinslym/uottawa_lis_teacher_network" target='_blank'&gt; github&lt;/a&gt; if you would like to play with it&lt;/p&gt;
+        &lt;h3&gt;Hack Safe!!! :)&lt;/h3&gt;
+
+      &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button type="button" class="btn btn-primary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt; 
+&lt;/div&gt;    
+
+
+
+
+ &lt;div class="row preambule"&gt;
+ &lt;/div&gt; 
+
+  &lt;/div&gt;
+    &lt;div class="row"&gt;
+      &lt;div id="main" class="col-md-12"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      var width = 960, height = 700;
+
+      var color = d3.scale.ordinal().range(['#3d4f53', '#8f4139', '#ab987a']);
+
+      var force = d3.layout.force()
+          .charge(-150)
+          .linkDistance(40)
+          .gravity(.05)
+          .size([width, height]);
+
+      var svg = d3.select("#main").append("svg")
+          .attr("id", "main-svg")
+          .attr("width", width)
+          .attr("height", height);
+
+      d3.json("https://gist.githubusercontent.com/guinslym/5fd33b30b8cb60feb0fe/raw/ca85f099cc8b69e616cb66fdcb6511758a50a820/professeurs.json", function(error, graph) {
+      
+        force.nodes(graph.nodes)
+          .links(graph.links)
+          .start();
+
+        var drag = force.drag()
+          .on("dragstart", dragstart);
+
+        var link = svg.selectAll(".link")
+            .data(graph.links)
+          .enter().append("line")
+            .attr("class", "link")
+            .attr("stroke-opacity", function(d) { if(d.label == 'is a') { return '0.8';} else{ return '0.2'; }; })
+            .attr("stroke-width","3")
+            .on("mouseover", function(){d3.select(this).style("stroke", "#999999").attr("stroke-opacity", "1.0");})
+            .on("mouseout", function(){d3.select(this).style("stroke", "#fff").attr("stroke-opacity", "1.0");});
+
+            link.append('title').text(function(d){
+              //console.log(d.name);
+            });
+
+        var node = svg.selectAll("g.node")
+              .data(graph.nodes)
+            .enter().append("svg:g")
+              .attr("class", "node")
+              .on("trigger_me", trigger_me)
+              .call(force.drag);
+
+        node.append("circle")
+          .attr("class",function (d) { return d.type + " nodecircle" })
+          .attr("r", function(d){if (d.mls){
+            return d.size;
+          }else if (d.type == 'school'){
+            return d.size;
+          }else{
+            return d.size;
+          }})
+          .style("fill", function (d) { 
+            if(d.name == 'University of Western Ontario'){
+              return '#fff000';
+            }else{
+              return d.color;
+            }
+             })
+          .on("mouseover", showPopover)
+          .on("mouseout", removePopovers);
+
+        
+
+
+        force.on("tick", function() {
+          link.attr("x1", function (d) { return d.source.x; })
+              .attr("y1", function (d) { return d.source.y; })
+              .attr("x2", function (d) { return d.target.x; })
+              .attr("y2", function (d) { return d.target.y; });
+
+          node.attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
+        })
+        .attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; });
+
+        function trigger_me(d) {
+          force.start();
+        }
+
+        function dragstart(d) {
+          d3.select(this).classed("fixed", d.fixed = true);
+        }
+      });
+
+      function removePopovers () {
+        //bootstrap javascript
+        $('.popover').each(function() {
+          $(this).remove();
+        }); 
+      }
+
+      function showPopover (d) {
+        //bootstrap javascript
+        $(this).popover({
+          placement: 'auto top',
+          container: 'body',
+          trigger: 'manual',
+          html : true,
+          content: function() {
+            if (d.type == 'teacher'){
+              return 'Professor' + ": " + d.name 
+            }else{
+              return d.name;
+            }
+         }  
+        });
+        $(this).popover('show')
+      }
+
+    &lt;/script&gt;
+    &lt;script type="text/javascript"&gt;
+
+
+      function resize_the_svg_window () {
+        var chart = $("#main-svg");
+        chart.attr("width", chart.parent().width());
+        chart.attr("height", chart.parent().height());
+        force.size([chart.parent().width(), chart.parent().height()]);
+        force.start(); 
+      }
+
+      $(document).ready(function() {
+        resize_the_svg_window();
+
+      });
+
+      $(window).on("resize_the_svg_window", function() {
+        resize_the_svg_window();
+      });
+    &lt;/script&gt;
+ 
+
+</content>
+  </entry>
+  <entry>
+    <title>La migration interprovinciale au canada en 2013</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2014/09/03/migration-interprovinciale-au-canada-en-2013/"/>
+    <id>http://blog.url.com/blog/2014/09/03/migration-interprovinciale-au-canada-en-2013/</id>
+    <published>2014-09-02T20:55:00-04:00</published>
+    <updated>2015-12-12T17:02:58-05:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;div class="header"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="large-12 columns"&gt;
+      &lt;h1&gt;La Migration Interprovinciale au Canada en 2013&lt;/h1&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row text-center"&gt;&lt;img src="http://i121.photobucket.com/albums/o205/guinslym/personal-site-and-blog/650px-Political_map_of_Canada_zps1373fb64.png" alt="Image représentants les provinces du Canada"&gt;&lt;/div&gt;
+
+
+&lt;div class="row"&gt;
+  &lt;div class=""&gt;
+    &lt;h2&gt;Migration&lt;/h2&gt;
+    &lt;p&gt;J'ai pris une année sabbatique en 2013 pour pouvoir m'enrichir culturellement en allant visiter l'Ouest canadien. Du Québec jusqu'en Colombie-britannique. J'ai fait des découvertes et des rencontres inoubliables. À mon grand étonnement j'ai fait plusieurs rencontrent d'ontariens dans chaque province alors je me suis demander quel est la répartition des migrants au Canada. Alors, j'ai créer une &lt;a target="_blank" href="http://fr.wikipedia.org/wiki/Repr%C3%A9sentation_graphique_de_donn%C3%A9es_statistiques"&gt;représentation graphique de données statistiques&lt;/a&gt; ou tout simplement de la &lt;a target="_blank" href="http://en.wikipedia.org/wiki/Data_visualization"&gt; Data visualization&lt;/a&gt; en anglais. Ce courant comptemporain, la data visualization, est une manière non conventionnelle de représenter les données pour éveiller nôtre côté artistique.&lt;/p&gt;
+    &lt;p&gt;Je vais tenté par cette représentation graphique de données statistiques de répondre à ces questions que je me suis posé:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+Quelle province a accueillie le plus de migrants en 2013 ?&lt;/li&gt;
+&lt;li&gt;Quelle province a vu le plus de ses résidents s'établir dans une autre province en 2013 ?&lt;/li&gt;
+&lt;li&gt;Est-ce que les ontariens sont sont vraiment les migrants que j'aurai le plus de chance de rencontrer au Canada?&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h3&gt;Comment fonctionne le diagramme à corde&lt;/h3&gt;
+    &lt;p&gt;Si vous passer votre curseur sur une arc, Il y aura une indication sur le nombre de résident que cette province a accueillie. Par exemple pour "ON", &lt;em&gt;«En 2013 l'Ontario a accueillie 69 700 migrants»&lt;/em&gt;. Les résultats sont toujours arrondis. Pour les données brutes de calcul vous pouvez vous réferer à la section Donnée Brutes ci-bas et sélectionner une province ou vous rendre directement sur la page web de &lt;a target="_blank" href="http://www5.statcan.gc.ca/cansim/a26?id=0510045&amp;p2=9&amp;tabMode=dataTable&amp;p1=-1&amp;retrLang=fra&amp;srchLan=-1&amp;lang=fra"&gt;statistique canada&lt;/a&gt;.&lt;/p&gt;
+
+ &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;section class="main row" style="text-align:center"&gt;
+  &lt;div class="main-diagram"&gt; &lt;h2&gt;Quelle province a accueillie le plus de migrants  en 2013 ?&lt;/h2&gt;&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class="destination" style="text-align:center;"&gt;&lt;/section&gt;
+
+
+&lt;div class="row"&gt;
+  &lt;div class="panel"&gt;
+    &lt;h2&gt;Terre Promise!!!&lt;/h2&gt;
+    &lt;p&gt;On constate que l'Alberta et l'Ontario sont les provinces de destination les plus convoitées. À eux seul ils s'accaparent près de la moitìé des migrants. &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;section class="row deuxieme" style="text-align:center"&gt;
+  &lt;div class="second-diagram"&gt;&lt;h2&gt;Quelle province a vu le plus de ses résidents s'établir dans une autre province en 2013 ?&lt;/h2&gt;&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class="origine" style="text-align:center;"&gt;&lt;/section&gt;
+
+
+
+&lt;div class="row"&gt;
+  &lt;div class="panel"&gt;
+    
+    &lt;h2&gt;Je déménage!&lt;/h2&gt;
+    &lt;p&gt;On constate ici que les résidents des provinces de l'Ontario, de la Colombie-britannique et de l'Alberta ont été le plus mobile pour changer de provinces. Les résidents de la province de l'Ontario sont en nombre supérieurs comparativements aux autres provinces&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;style&gt;
+      select{
+      height: 40px;
+      }
+      option{
+        padding: 5px;
+      }
+    &lt;/style&gt;
+
+
+&lt;div class="row"&gt;
+  &lt;div class="large-5"&gt;
+    &lt;h1&gt;Donnée brutes&lt;/h1&gt;
+ &lt;p&gt; Sélectionner une province pour générer le tableau de donnée &lt;/p&gt;
+    &lt;select  multiple class="form-control" style="min-height:30px;" id="les_provinces_selection"&gt;
+      &lt;option&gt;Terre-Neuve-et-Labrador&lt;/option&gt;
+      &lt;option&gt;Île-du-Prince-Édouard&lt;/option&gt;
+      &lt;option&gt;Nouvelle-Écosse&lt;/option&gt;
+      &lt;option&gt;Nouveau-Brunswick&lt;/option&gt;
+      &lt;option value= "6"&gt;Québec&lt;/option&gt;
+      &lt;option value= "7"&gt;Ontario&lt;/option&gt;
+      &lt;option&gt;Manitoba&lt;/option&gt;
+      &lt;option&gt;Saskatchewan&lt;/option&gt;
+      &lt;option&gt;Alberta&lt;/option&gt;
+      &lt;option&gt;Colombie-Britannique&lt;/option&gt;
+      &lt;option selected="selected"&gt;Yukon&lt;/option&gt;
+      &lt;option selected="selected"&gt;Territoires du Nord-Ouest&lt;/option&gt;
+      &lt;option selected="selected"&gt;Nunavut&lt;/option&gt;
+
+
+    &lt;/select&gt;
+
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row"&gt;
+  &lt;div class="large-12"&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;table id="target_table_id" role="grid" summary="lorem"&gt;
+&lt;caption&gt;Migrants interprovinciaux, selon la province ou territoire d'origine et de la destination&lt;br&gt; pour l'année 2013
+&lt;/caption&gt;
+      &lt;thead&gt;
+        &lt;th&gt;Province d'origine&lt;/th&gt;
+        &lt;th&gt;Province de destination&lt;/th&gt;
+        &lt;th&gt;Trimestre : 1&lt;/th&gt;
+        &lt;th&gt;Trimestre : 2&lt;/th&gt;
+        &lt;th&gt;Trimestre : 3&lt;/th&gt;
+        &lt;th&gt;Trimestre : 4&lt;/th&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;script&gt;
+      $(document).ready(function(){
+          $( "select" )
+          .change(function () {
+
+            var str = "";
+            $( "select option:selected" ).each(function() {
+              str += $( this ).text();
+              var ext_data = _.where(provinces_json, {provOrigine: str});
+              var tbl_body = "";
+                  $.each(ext_data, function() {
+                            var tbl_row = "";
+                              var la_prov = 0
+                                      $.each(this, function(k , v) {
+                                                    tbl_row += "&lt;td&gt;"+v+"&lt;/td&gt;";
+                                                      
+                                                            });
+                                              tbl_body += "&lt;tr&gt;"+tbl_row+"&lt;/tr&gt;";                 
+                                                  }); 
+                      $("#target_table_id tbody").html(tbl_body);
+
+                      });
+            })
+      .change();
+ 
+
+
+//$("#les_provinces_selection").val(2);
+
+      });
+    &lt;/script&gt; 
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="queFaire"&gt;
+  &lt;div class="row"&gt;
+    &lt;h2&gt;Comment s'est fait?&lt;/h2&gt;
+    &lt;p&gt;J'ai voulu apprendre &lt;a target="_blank" href="http://d3js.org/"&gt;d3.js&lt;/a&gt; alors forte de ma compréhension de cette &lt;a target="_blank" href="https://github.com/mbostock/d3/wiki/Gallery"&gt; librairie&lt;/a&gt; pour les diagrammes à bandes, j'ai voulu en apprendre d'avantage en expérimentant un des diagrammes le les plus complexe à réaliser: &lt;a target="_blank" href="http://bl.ocks.org/mbostock/4062006"&gt;Le diagramme a Cord&lt;/a&gt;. &lt;/p&gt;
+
+    &lt;p&gt;J'ai tout d'abord fait une application ruby permettant d'extraire les données nécessaires pour pouvoir faire ces diagrammes. Les données brutes ont été acquis sur le site de &lt;a target="_blank" href="http://www5.statcan.gc.ca/cansim/a26?id=0510045&amp;p2=9&amp;tabMode=dataTable&amp;p1=-1&amp;retrLang=fra&amp;srchLan=-1&amp;lang=fra"&gt;statistique canada&lt;/a&gt;. &lt;/p&gt;
+    &lt;h4&gt;Ce qu'il faut savoir&lt;/h4&gt;
+    &lt;ul&gt;
+      &lt;li class="premier"&gt;Les matrices &lt;ul&gt;&lt;li&gt;pour les diagrammes a corde il faut avoir une compréhension minimale des matrices. Parce qu'il faudra représenter les données sous forme de matrice pour pouvoir créer les cordes.&lt;/li&gt;&lt;/ul&gt; &lt;/li&gt;
+      &lt;li class="premier"&gt;d3.js &lt;ul&gt;&lt;li&gt;Oui ça a l'air bête mais il faut quand même avoir une habilité avec cette librairie sinon bonjour les maux de têtes :(&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="queFaire"&gt;
+  &lt;div class="row"&gt;
+    &lt;h2&gt;Ce que ne dit pas les données&lt;/h2&gt;
+  &lt;p&gt;Ce que m'a appris cette excercice sur les données c'est que je me suis posé plusieurs questions que je n'ai pas pu répondre parce que l'intérêt première de cette article c'était de parfaire ma connaissance et mon expérience de la data visualization avec d3.js.&lt;/p&gt;
+  &lt;p&gt;Pour aller plus loin voci tout ce qui m'a trotté dans la tête en voyant ces données; Ce n'est plus un secret de polichinelle que l'Alberta a une forte croissance économique depuis plusieurs années déjà. Mais est-ce qu'il y a une relation entre la croissance économique et le nombre de migrants que cette province reçoit? &lt;/p&gt;
+&lt;p&gt;Est-ce que le fait d'avoir des migrants est plus avantageux que des immigrants? Pour l'instant les données ne donne aucune indice. Les données ne donne pas d'information sur ces migrants, leur revenu, la raison de leur départ, leur niveau d'éducation. Le Canada a déjà établi des barêmes au niveau de   l'Immigration mais au niveau de la migration provincial un barême n'aurait pas de sens puisse qu'il serait de facto discriminatoire. À défaut d'un barême est-ce que les provinces auraient à gagner de connaître ses migrants? Quel(s) travail(aux) occupe(nt) ses migrants? Vers quel secteur se tourne-t'il dès leur arrivé? Est-ce que cette occupation était celle que l'individu avait espéré avoir en migrant? Est-ce que ce sont des métiers pour lesquels la province de destination n'a pas assez de travailleur? Est-ce que ce sont des résidents qui n'avait pas de travail qui ont décider de faire leur valise pour une autre province? Est-ce que ce sont des migrants hautement qualifée dans un domaine?  Quelle taux de migration à chaque province? Est-ce qu'il y a eu de la part de la province d'accueil une campagne de recrutement de travailleur dans une autre province? Si oui, quel budget a été alloué pour cela.&lt;/p&gt;
+ 
+&lt;p&gt;J'ai fait aussi plusieurs rencontres de migrants qui travaillaient. dans leur province de destination mais qui n'étaient pas officiellement résident de la province. Il se pourrait qu'ils soient qualifiés pour être résident mais qu'ils n'ont pas fait de demande non plus. Donc leur donnée statistique ne sont pas pris en compte.&lt;/p&gt;
+
+&lt;h2&gt;Liens utiles et Références&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a target="_blank" href="http://d3js.org/"&gt;d3.js&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a target="_blank" href="http://www5.statcan.gc.ca/cansim/a26?id=0510045&amp;p2=9&amp;tabMode=dataTable&amp;p1=-1&amp;retrLang=fra&amp;srchLan=-1&amp;lang=fra"&gt;Migrants interprovinciaux, selon la province ou territoire d'origine et de la destination&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/List_of_regions_of_Canada#mediaviewer/File:Political_map_of_Canada.png" target="_blank"&gt;Image (carte du canada) Wikimedia Commons par Kaveh&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;footer&gt;
+  &lt;div class="row"&gt;
+    
+  &lt;h1&gt;Au revoir!!!&lt;/h1&gt;
+  &lt;h4&gt;&lt;a href="/" class="blog"&gt;-- retour au blog --&lt;/a&gt;&lt;/h4&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+
+&lt;script&gt;
+/* here are two different ways to do this */
+//using jquery:
+$(document).ready(function(){
+  $('a:not(.blog)').attr('target', '_blank');
+});
+
+
+&lt;/script&gt;
+</content>
+  </entry>
+</feed>

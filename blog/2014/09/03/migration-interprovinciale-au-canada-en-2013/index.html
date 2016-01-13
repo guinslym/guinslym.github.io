@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>La migration interprovinciale au canada en 2013 — Blog de Guinsly Mondésir</title>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="d3,js, migration interprovinciale au canada en 2013, migration canada, chord diagram,">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.3.3/css/foundation.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
+  <link href="/stylesheets/migration_interprovinciale/homer-3227b47b.css" rel="stylesheet" />
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script><script src="/javascripts/migration_interprovinciale/pro_json-ed991c66.js"></script><script src="/javascripts/migration_interprovinciale/provinces-6f2eb737.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+
+
+
+  <link href='http://fonts.googleapis.com/css?family=Rye' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+div.header {
+    min-height: 400px;
+    background-color: #33CC99;
+    text-align: center;
+    background-image: url("data:image/svg+xml,%3Csvg%20version%3D%271.1%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20xmlns%3Axlink%3D%27http%3A//www.w3.org/1999/xlink%27%20x%3D%270px%27%20y%3D%270px%27%0A%20%20%20%20%20width%3D%2736px%27%20height%3D%2736px%27%20viewBox%3D%27-7%20-7%2036%2036%27%20enable-background%3D%27new%20-7%20-7%2036%2036%27%20xml%3Aspace%3D%27preserve%27%3E%0A%3Cpath%20fill%3D%27white%27%20d%3D%27M5%2C0H0v5h-2V0h-5v-2h5v-5h2v5h5V0z%20M23%2C18h-5v5h-2v-5h-5v-2h5v-5h2v5h5V18z%27/%3E%0A%3C/svg%3E");
+}
+div.header h1{
+  font-family: 'Rye',arial;
+  font-size: 76px;
+  font-weight: normal;
+  margin-top: 0;
+  text-align: center;
+}
+div.diagram{
+  text-align: center;
+}
+</style>
+  <style type="text/css">
+   *{
+    inherit: none;
+   }
+  .group text {
+  font: 11px sans-serif;
+  pointer-events: none;
+  }
+   
+  .group path {
+  stroke: #000;
+  stroke-width: 0.2px;
+  }
+   
+  path.chord {
+  stroke-width: .75;
+  fill-opacity: .75;
+  }
+  path.chord {
+    fill-opacity: .8;
+    stroke: #000;
+    stroke-width: .75px;
+  }
+  div{
+    margin: auto 0;
+  } 
+  #tooltip {
+    color: white;
+    opacity: .9;
+    background: #333;
+    padding: 5px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 10;
+    visibility: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  #circle circle {
+    fill: none;
+    pointer-events: all;
+  }
+  path.group {
+    fill-opacity: .8;
+  }
+
+  #circle:hover path.fade {
+    display: none;
+    /* if I want to add opacity */
+    //opacity: 0.4;
+    //filter: alpha(opacity=40); /* For IE8 and earlier */
+  }
+  h2{
+    text-align: center;
+    margin: 40px 0 20px 0;
+  }
+  footer{
+    min-height: 100px;
+    text-align: center;
+
+color:white;
+  }
+  .panel{
+    margin-top: 50px;
+  }
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('http://i290.photobucket.com/albums/ll262/iMew/loading.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+  </style>
+
+<script type="text/javascript">
+
+$(window).load(function() {
+	$(".loader").fadeOut("slow");
+});
+</script>
+</head>
+<body>
+<div class="loader"></div>
+
+  <div class="header">
+  <div class="row">
+    <div class="large-12 columns">
+      <h1>La Migration Interprovinciale au Canada en 2013</h1>
+    </div>
+  </div>
+</div>
+
+<div class="row text-center"><img src="http://i121.photobucket.com/albums/o205/guinslym/personal-site-and-blog/650px-Political_map_of_Canada_zps1373fb64.png" alt="Image représentants les provinces du Canada"></div>
+
+
+<div class="row">
+  <div class="">
+    <h2>Migration</h2>
+    <p>J'ai pris une année sabbatique en 2013 pour pouvoir m'enrichir culturellement en allant visiter l'Ouest canadien. Du Québec jusqu'en Colombie-britannique. J'ai fait des découvertes et des rencontres inoubliables. À mon grand étonnement j'ai fait plusieurs rencontrent d'ontariens dans chaque province alors je me suis demander quel est la répartition des migrants au Canada. Alors, j'ai créer une <a target="_blank" href="http://fr.wikipedia.org/wiki/Repr%C3%A9sentation_graphique_de_donn%C3%A9es_statistiques">représentation graphique de données statistiques</a> ou tout simplement de la <a target="_blank" href="http://en.wikipedia.org/wiki/Data_visualization"> Data visualization</a> en anglais. Ce courant comptemporain, la data visualization, est une manière non conventionnelle de représenter les données pour éveiller nôtre côté artistique.</p>
+    <p>Je vais tenté par cette représentation graphique de données statistiques de répondre à ces questions que je me suis posé:</p>
+    <ul>
+      <li>
+Quelle province a accueillie le plus de migrants en 2013 ?</li>
+<li>Quelle province a vu le plus de ses résidents s'établir dans une autre province en 2013 ?</li>
+<li>Est-ce que les ontariens sont sont vraiment les migrants que j'aurai le plus de chance de rencontrer au Canada?</li>
+    </ul>
+
+    <h3>Comment fonctionne le diagramme à corde</h3>
+    <p>Si vous passer votre curseur sur une arc, Il y aura une indication sur le nombre de résident que cette province a accueillie. Par exemple pour "ON", <em>«En 2013 l'Ontario a accueillie 69 700 migrants»</em>. Les résultats sont toujours arrondis. Pour les données brutes de calcul vous pouvez vous réferer à la section Donnée Brutes ci-bas et sélectionner une province ou vous rendre directement sur la page web de <a target="_blank" href="http://www5.statcan.gc.ca/cansim/a26?id=0510045&p2=9&tabMode=dataTable&p1=-1&retrLang=fra&srchLan=-1&lang=fra">statistique canada</a>.</p>
+
+ </div>
+</div>
+
+
+<section class="main row" style="text-align:center">
+  <div class="main-diagram"> <h2>Quelle province a accueillie le plus de migrants  en 2013 ?</h2></div>
+</section>
+
+<section class="destination" style="text-align:center;"></section>
+
+
+<div class="row">
+  <div class="panel">
+    <h2>Terre Promise!!!</h2>
+    <p>On constate que l'Alberta et l'Ontario sont les provinces de destination les plus convoitées. À eux seul ils s'accaparent près de la moitìé des migrants. </p>
+  </div>
+</div>
+
+<section class="row deuxieme" style="text-align:center">
+  <div class="second-diagram"><h2>Quelle province a vu le plus de ses résidents s'établir dans une autre province en 2013 ?</h2></div>
+</section>
+
+<section class="origine" style="text-align:center;"></section>
+
+
+
+<div class="row">
+  <div class="panel">
+    
+    <h2>Je déménage!</h2>
+    <p>On constate ici que les résidents des provinces de l'Ontario, de la Colombie-britannique et de l'Alberta ont été le plus mobile pour changer de provinces. Les résidents de la province de l'Ontario sont en nombre supérieurs comparativements aux autres provinces</p>
+  </div>
+</div>
+
+    <style>
+      select{
+      height: 40px;
+      }
+      option{
+        padding: 5px;
+      }
+    </style>
+
+
+<div class="row">
+  <div class="large-5">
+    <h1>Donnée brutes</h1>
+ <p> Sélectionner une province pour générer le tableau de donnée </p>
+    <select  multiple class="form-control" style="min-height:30px;" id="les_provinces_selection">
+      <option>Terre-Neuve-et-Labrador</option>
+      <option>Île-du-Prince-Édouard</option>
+      <option>Nouvelle-Écosse</option>
+      <option>Nouveau-Brunswick</option>
+      <option value= "6">Québec</option>
+      <option value= "7">Ontario</option>
+      <option>Manitoba</option>
+      <option>Saskatchewan</option>
+      <option>Alberta</option>
+      <option>Colombie-Britannique</option>
+      <option selected="selected">Yukon</option>
+      <option selected="selected">Territoires du Nord-Ouest</option>
+      <option selected="selected">Nunavut</option>
+
+
+    </select>
+
+  </div>
+  </div>
+  <div class="row">
+  <div class="large-12">
+    <div></div>
+    <table id="target_table_id" role="grid" summary="lorem">
+<caption>Migrants interprovinciaux, selon la province ou territoire d'origine et de la destination<br> pour l'année 2013
+</caption>
+      <thead>
+        <th>Province d'origine</th>
+        <th>Province de destination</th>
+        <th>Trimestre : 1</th>
+        <th>Trimestre : 2</th>
+        <th>Trimestre : 3</th>
+        <th>Trimestre : 4</th>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <script>
+      $(document).ready(function(){
+          $( "select" )
+          .change(function () {
+
+            var str = "";
+            $( "select option:selected" ).each(function() {
+              str += $( this ).text();
+              var ext_data = _.where(provinces_json, {provOrigine: str});
+              var tbl_body = "";
+                  $.each(ext_data, function() {
+                            var tbl_row = "";
+                              var la_prov = 0
+                                      $.each(this, function(k , v) {
+                                                    tbl_row += "<td>"+v+"</td>";
+                                                      
+                                                            });
+                                              tbl_body += "<tr>"+tbl_row+"</tr>";                 
+                                                  }); 
+                      $("#target_table_id tbody").html(tbl_body);
+
+                      });
+            })
+      .change();
+ 
+
+
+//$("#les_provinces_selection").val(2);
+
+      });
+    </script> 
+
+  </div>
+</div>
+
+<div class="queFaire">
+  <div class="row">
+    <h2>Comment s'est fait?</h2>
+    <p>J'ai voulu apprendre <a target="_blank" href="http://d3js.org/">d3.js</a> alors forte de ma compréhension de cette <a target="_blank" href="https://github.com/mbostock/d3/wiki/Gallery"> librairie</a> pour les diagrammes à bandes, j'ai voulu en apprendre d'avantage en expérimentant un des diagrammes le les plus complexe à réaliser: <a target="_blank" href="http://bl.ocks.org/mbostock/4062006">Le diagramme a Cord</a>. </p>
+
+    <p>J'ai tout d'abord fait une application ruby permettant d'extraire les données nécessaires pour pouvoir faire ces diagrammes. Les données brutes ont été acquis sur le site de <a target="_blank" href="http://www5.statcan.gc.ca/cansim/a26?id=0510045&p2=9&tabMode=dataTable&p1=-1&retrLang=fra&srchLan=-1&lang=fra">statistique canada</a>. </p>
+    <h4>Ce qu'il faut savoir</h4>
+    <ul>
+      <li class="premier">Les matrices <ul><li>pour les diagrammes a corde il faut avoir une compréhension minimale des matrices. Parce qu'il faudra représenter les données sous forme de matrice pour pouvoir créer les cordes.</li></ul> </li>
+      <li class="premier">d3.js <ul><li>Oui ça a l'air bête mais il faut quand même avoir une habilité avec cette librairie sinon bonjour les maux de têtes :(</li></ul></li>
+    </ul>
+  </div>
+</div>
+
+<div class="queFaire">
+  <div class="row">
+    <h2>Ce que ne dit pas les données</h2>
+  <p>Ce que m'a appris cette excercice sur les données c'est que je me suis posé plusieurs questions que je n'ai pas pu répondre parce que l'intérêt première de cette article c'était de parfaire ma connaissance et mon expérience de la data visualization avec d3.js.</p>
+  <p>Pour aller plus loin voci tout ce qui m'a trotté dans la tête en voyant ces données; Ce n'est plus un secret de polichinelle que l'Alberta a une forte croissance économique depuis plusieurs années déjà. Mais est-ce qu'il y a une relation entre la croissance économique et le nombre de migrants que cette province reçoit? </p>
+<p>Est-ce que le fait d'avoir des migrants est plus avantageux que des immigrants? Pour l'instant les données ne donne aucune indice. Les données ne donne pas d'information sur ces migrants, leur revenu, la raison de leur départ, leur niveau d'éducation. Le Canada a déjà établi des barêmes au niveau de   l'Immigration mais au niveau de la migration provincial un barême n'aurait pas de sens puisse qu'il serait de facto discriminatoire. À défaut d'un barême est-ce que les provinces auraient à gagner de connaître ses migrants? Quel(s) travail(aux) occupe(nt) ses migrants? Vers quel secteur se tourne-t'il dès leur arrivé? Est-ce que cette occupation était celle que l'individu avait espéré avoir en migrant? Est-ce que ce sont des métiers pour lesquels la province de destination n'a pas assez de travailleur? Est-ce que ce sont des résidents qui n'avait pas de travail qui ont décider de faire leur valise pour une autre province? Est-ce que ce sont des migrants hautement qualifée dans un domaine?  Quelle taux de migration à chaque province? Est-ce qu'il y a eu de la part de la province d'accueil une campagne de recrutement de travailleur dans une autre province? Si oui, quel budget a été alloué pour cela.</p>
+ 
+<p>J'ai fait aussi plusieurs rencontres de migrants qui travaillaient. dans leur province de destination mais qui n'étaient pas officiellement résident de la province. Il se pourrait qu'ils soient qualifiés pour être résident mais qu'ils n'ont pas fait de demande non plus. Donc leur donnée statistique ne sont pas pris en compte.</p>
+
+<h2>Liens utiles et Références</h2>
+<ul>
+  <li><a target="_blank" href="http://d3js.org/">d3.js</a></li>
+  <li><a target="_blank" href="http://www5.statcan.gc.ca/cansim/a26?id=0510045&p2=9&tabMode=dataTable&p1=-1&retrLang=fra&srchLan=-1&lang=fra">Migrants interprovinciaux, selon la province ou territoire d'origine et de la destination</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/List_of_regions_of_Canada#mediaviewer/File:Political_map_of_Canada.png" target="_blank">Image (carte du canada) Wikimedia Commons par Kaveh</a></li>
+  </ul>
+  </div>
+</div>
+
+
+<footer>
+  <div class="row">
+    
+  <h1>Au revoir!!!</h1>
+  <h4><a href="/" class="blog">-- retour au blog --</a></h4>
+  </div>
+</footer>
+
+<script>
+/* here are two different ways to do this */
+//using jquery:
+$(document).ready(function(){
+  $('a:not(.blog)').attr('target', '_blank');
+});
+
+
+</script>
+
+
+<script src="/javascripts/migration_interprovinciale/script-29baf073.js"></script>
+<div id="homer">
+  <div class="head">
+            
+          <!-- Hair and top of head -->
+          <div class="hair1"></div>
+          <div class="hair2"></div>
+          <div class="body head-top"></div>
+          <div class="no-border body head-main"></div>
+
+          <!-- The 'M' above the ear -->
+          <div class="no-border m1"></div>
+          <div class="no-border m2"></div>
+          <div class="no-border m3"></div>
+          <div class="no-border m4"></div>
+
+          <!-- The neck parts -->
+          <div class="no-border neck1"></div>
+          <div class="body neck2"></div>
+
+          <!-- The ear -->
+          <div class="body ear">
+        <div class="no-border inner1"></div>
+        <div class="no-border inner2"></div>
+        <div class="no-border body clip"></div>
+          </div>
+
+          <!-- The mouth -->
+          <div class="mouth">
+        <div class="mouth5"></div>
+        <div class="mouth2"></div>
+        <div class="mouth1"></div>
+        <div class="mouth7"></div>
+        <div class="no-border mouth3"></div>
+        <div class="no-border mouth4"></div>
+        <div class="no-border mouth6"></div>
+        <div class="no-border mouth8"></div>
+          </div>
+
+          <!-- The right eye -->
+          <div class="right-eye">
+        <div class="no-border right-eye-pupil"></div>
+        <div class="no-border body eyelid-top"></div>
+        <div class="no-border body eyelid-bottom"></div>
+          </div>
+
+          <!-- The nose -->
+          <div class="body nose"></div>
+          <div class="body nose-tip"></div>
+
+          <!-- The left eye -->
+          <div class="left-eye">
+        <div class="no-border left-eye-pupil"></div>
+        <div class="no-border body eyelid-top"></div>
+        <div class="no-border body eyelid-bottom"></div>
+          </div>
+      </div>
+</div>
+</body>
+
+
+
+</html>

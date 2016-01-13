@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guinsly Mondésir</title>
+<meta name="description" content="Powerful website full of best practices and keywords" />
+<meta name="site" content="Guinsly Mondésir" />
+  <title>How to find a DOI and create a permanent link using curl — Blog de Guinsly Mondésir</title>
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+  <meta name="keywords" content="blog guinsly">
+ <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> 
+ <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+ <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed|Merriweather|Francois+One|Shadows+Into+Light|Bree+Serif' rel='stylesheet' type='text/css'>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
+  <link href="/stylesheets/2015/styles-864fbf6e.css" rel="stylesheet" />
+  <link href="/stylesheets/2015/homer-3227b47b.css" rel="stylesheet" />
+
+<style type="text/css">
+section.header_name h1{
+  font-family: 'Francois One', sans-serif;
+}
+section.header_name h1 span{
+  font-family: 'Shadows Into Light', cursive;
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js"></script><script src="/javascripts/scrollReveal.min-890fa766.js"></script><script src="/javascripts/jquery.particleground.min-e863295a.js"></script><script src="/javascripts/particle-71048f94.js"></script>
+
+
+</head>
+
+<body>
+
+<section class="header_name">
+	<div class="container">
+		<h1><a href="/" style="text-decoration:none;color:black;">Guinslym::<span>&nbsp;My Blog</span></a></h1>
+	</div>
+</section>
+
+
+
+<div id="particles-js"></div>
+
+
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">
+	pre{
+		margin: 18px 0; 
+	}
+    p{
+        margin: 18px 0;
+    }
+    .article_title{
+        color:#B61924;text-transform: capitalize;
+        padding: 20px 0 40px 0;
+    }
+    p.prerequis{
+        font-weight: bolder;
+    }
+    ul.references li{
+      list-style: circle !important;
+    }
+    thead tr td{
+      font-weight: bolder;
+    }
+</style>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=desert"></script>
+
+<div class="container article_index">
+
+<div class="row">
+  <div class="col-lg-9 col-lg-offset-1">
+    <div class="row text-center">
+    <h1 class="article_title" style="  ">how to find a DOI and create a permanent link using curl</h1>
+    </div>
+
+    <div class="post-desc">
+      <p>DOI (Digital Object Identifier) is a system to identify and to find an Object (document) on a network. This document may be an audio file, an image, a paper, a video ... The <a href="http://www.doi.org/doi_handbook/7_IDF.html">International DOI Foundation</a> assigns an unique identifyer (DOI) to an object so that it can be retrieved even if its location (uri) changes.</p>
+
+      <table class="table  table-bordered" style="width:50%">
+        <caption>DOI </caption>
+        <thead>
+          <tr>
+            <td>DOI translator</td>
+            <td>Naming Authority (prefix)</td>
+            <td>suffix</td>
+          </tr>
+        </thead>
+        <tbody>
+          <td>http://dx.doi.org/</td>
+          <td>10.1002</td>
+          <td>asi.23179</td>
+        </tbody>
+      </table>
+
+
+    <p class="prerequis"><strong>Prerequisite</strong></p>
+    <p style="text-indent:40px;">A command line interface (shell/terminal) (For Windows: download <a href="http://curl.haxx.se/download.html">curl</a> and <a href="http://www.cygwin.com/">cygwin</a>)</p>
+     <p style="text-indent:40px;">A doi: I will use this one: <a href="http://doi.wiley.com/10.1002/asi.23179">10.1002/asi.23179</a></p>
+
+    <p>Curl is a program available on pretty much all the operating system and linux distros (Windows, Unix, Mac OS X ...). What does it really do? </p>
+    <p class="note">In your terminal type the following: (Note: <strong>please don't type '-> %'</strong>)</p>
+<div class="row ">
+
+<pre class="prettyprint">
+ -> %  whatis curl
+    curl (1)             - transfer a URL
+</pre>
+
+</div>
+
+    <p>It doesn't say much :) but it actually does a lot of things, it will transfer or retrieve data to or from an url. </p>
+
+<div class="row ">
+
+<pre class="prettyprint lang-ruby">
+ -> %  man curl | less
+</pre>
+
+<pre class="prettyprint linenums ">
+ curl  is  a tool to transfer data from or to a server, using one of the
+ supported protocols (DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS,  IMAP,
+ IMAPS,  LDAP,  LDAPS,  POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMTP, SMTPS,
+ TELNET and TFTP).  
+</pre>
+
+</div>
+
+    <p>(press 'q' to exit ). So we will use this tool to retrieve the url and as it is written further down in the man, we can pass switches or paremeters to the curl command. We will pass one parameter  '--head'. This parameter (--head) allows you to view the HTTP response headers that the web server returns when requesting a URL..</p>
+
+    <div class="row ">
+
+        <pre class="prettyprint  lang-ruby">
+-> %  curl --head http://dx.doi.org/10.1002/asi.23179
+        </pre>
+        <pre class="prettyprint linenums">
+HTTP/1.1 303 See Other
+Server: Apache-Coyote/1.1
+Vary: Accept
+Location: http://doi.wiley.com/10.1002/asi.23179
+Expires: Fri, 30 Jan 2015 20:49:19 GMT
+Content-Type: text/html;charset=utf-8
+Content-Length: 162
+Date: Fri, 30 Jan 2015 04:46:21 GMT
+        </pre>
+
+    </div>
+
+    <p>Curl went to this address and the server send a '303' response code.
+  </p>
+  <blockquote>303: 'The response to the request can be found under a different URI and SHOULD be retrieved using a GET method on that resource. source: <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">w3.org</a></blockquote>
+  <p>
+  	Now that you have the URI let's remove from the output all the line that are unnecessary because we only need to print the URI. We will use grep, it will search only for the pattern that I need. I want grep to look for a line that start with 'Location'. We will also use an other parameter: '-s' 
+  </p>
+
+ <div class="row ">
+          <pre class="prettyprint">
+-s, --silent
+        Silent  or  quiet  mode. Don't show progress meter or error mes‐
+        sages.  Makes Curl mute. It will still output the data  you  ask
+        for, potentially even to the terminal/stdout unless you redirect
+        it.
+
+        </pre>
+</div>
+<p>Now you can type the following:</p>
+    <div class="row ">
+
+        <pre class="prettyprint lang-ruby">
+-> % curl --head -s http://dx.doi.org/10.1002/asi.23179  | grep "Location"
+
+Location: http://doi.wiley.com/10.1002/asi.23179
+        </pre>
+
+    </div>
+
+    <p>Not bad but we can do better. We can remove the word 'location' from the output using a regular expression. </p>
+
+    <div class="row ">
+
+        <pre class="prettyprint linenums lang-ruby">
+-> % curl --head -s http://dx.doi.org/10.1002/asi.23179  | grep -Po  '(\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))))'
+ 
+ http://doi.wiley.com/10.1002/asi.23179
+        </pre>
+
+    </div>
+
+    <p>Let's take this a little bit further let's say that we want to retrieve the title of this paper, along with the authors and so on as if it was dtyled in a APA style. For that I will dump the HTTP response header (-D) that may contains cookies. I also want curl to take theses informations (cookies) and go to the redirection link (-L). I also want the information in plain text and within this text I want to retrieve all the lines that start with 'doi'.</p>
+
+
+     <div class="row ">
+
+        <pre class="prettyprint lang-ruby">
+-D, --dump-header <file>
+    This  option  is  handy to use when you want to store
+    the headers that an HTTP site sends to  you.  Cookies
+    from  the headers could then be read in a second curl
+    ... 
+
+-H, --header <header>
+    (HTTP) Extra header to use when getting a  web  page.
+    You  may  specify  any  number of extra headers....
+
+-L, --location
+    (HTTP/HTTPS) If the server reports that the requested
+    page has moved to  a  different  location  (indicated
+    with  a  Location:  header  and a 3XX response code),
+    this option will make curl redo the  request  on  the
+    new place. 
+        </pre>
+
+    </div>
+
+     <div class="row ">
+
+        <pre class="prettyprint linenums lang-ruby">
+-> % curl -s -D --next -L -H "Accept: text/plain" "http://dx.doi.org/10.1002/asi.23179" | grep  "doi:"
+
+Zhu, X., Turney, P., Lemire, D., & Vellino, A. (2014). Measuring academic influence: Not all citations are equal. J Assn Inf Sci Tec, 66(2), 408–427. doi:10.1002/asi.23179
+        </pre>
+
+    </div>
+
+
+     <p>Let's say that we want to see the webpage locally like it's suppose to look in Willey' website. We will dump the webpage in a file call doi.html and than opens it in Firefox. <strong>Notes: </strong> as I'm not quite sure what is the command to open a browser in Mac OS X and Windows, you can run the first command bellow and than go to your directory and open in your browser the file named doi.html </p>
+
+         <div class="row ">
+
+        <pre class="prettyprint linenums lang-ruby">
+-> % #IMPORTANT for MAC OS and Windows user: 
+curl -D -s -L  "Accept: text/html;charset=UTF-8" "http://dx.doi.org/10.1002/asi.23179" > doi.html
+
+
+-> % #Linux distro
+curl -D -s -L  "Accept: text/html;charset=UTF-8" "http://dx.doi.org/10.1002/asi.23179" > /tmp/doi.html && firefox /tmp/doi.html
+        </pre>
+        <!-- I need the -s because otherwise it will output the header response in the html page -->
+
+    </div>
+
+
+    <p>Lets retrieve the turtle instead of a plain text or an html file.</p>
+    
+       <div class="row ">
+
+        <pre class="prettyprint lang-ruby">
+-> % curl -D - -L -H  "Accept: text/turtle" "http://dx.doi.org/10.1002/asi.23179"
+
+        </pre>
+
+    </div>
+<script src="https://gist.github.com/guinslym/cd917a60c6e649410128.js"></script>
+
+<p><strong>Wait a minute!</strong> Something is really interesting here: Whitin the header section the location have changed for <strong>Location: http://data.crossref.org/10.1002%2Fasi.23179</strong> this wasn't the location that we had in the previous HTTP response header <em>Location: http://doi.wiley.com/10.1002/asi.23179</em>. So the redirection have been process by <a href="http://data.crossref.org/"><strong>http://data.crossref.org/</strong></a>. By following this link I realized that <strong>crosscite.org</strong> provides an API to GET a DOI resource and their documentation is pretty neat. </p>
+
+<p>So all the steps I did above to retrieved the resource associated with the DOI was done from scratch. I realized that I could have get the result faster if I knew about <strong>crosscite</strong>. For the last example I will use their doc instead and as I don't know much about RDF, I do prefer retrieving the resource in json instead of turtle :)</p>
+
+<div class="row ">
+<pre class="prettyprint  lang-javascript">
+-> % curl -LH "Accept: application/rdf+xml;q=0.5, application/vnd.citationstyles.csl+json;q=1.0" http://dx.doi.org/10.1002/asi.23179
+
+#IMPORTANT if you have Python and you want to format the output like in this example
+#for Node.js if you have npm json installed instead of 'python -mjson.tool' use | json 
+-> % curl -LH "Accept: application/rdf+xml;q=0.5, application/vnd.citationstyles.csl+json;q=1.0" http://dx.doi.org/10.1002/asi.23179 | python -mjson.tool
+
+{  
+   "subtitle":[  
+      "Measuring Academic Influence"
+   ],
+   "issued":{  
+      "date-parts":[  
+         [  
+            2014,
+            5,
+            21
+         ]
+      ]
+   },
+   "score":1.0,
+   "prefix":"http:\/\/id.crossref.org\/prefix\/10.1002",
+   "author":[  
+      {  
+         "family":"Zhu",
+         "given":"Xiaodan"
+      },
+      {  
+         "family":"Turney",
+         "given":"Peter"
+      },
+      {  
+         "family":"Lemire",
+         "given":"Daniel"
+      },
+      {  
+         "family":"Vellino",
+         "given":"Andr\u00e9"
+      }
+   ],
+   "container-title":"Journal of the Association for Information Science and Technology",
+   "reference-count":79,
+   "page":"408-427",
+   "deposited":{  
+      "date-parts":[  
+         [  
+            2015,
+            1,
+            20
+         ]
+      ],
+      "timestamp":1421712000000
+   },
+   "issue":"2",
+   "funder":[  
+      {  
+         "award":[  
+            "26143"
+         ],
+         "name":"Natural Sciences and Engineering Research Council of Canada",
+         "DOI":"10.13039\/501100000038"
+      }
+   ],
+   "title":"Measuring academic influence: Not all citations are equal",
+   "type":"journal-article",
+   "DOI":"10.1002\/asi.23179",
+   "ISSN":[  
+      "2330-1635"
+   ],
+   "URL":"http:\/\/dx.doi.org\/10.1002\/asi.23179",
+   "source":"CrossRef",
+   "publisher":"Wiley-Blackwell",
+   "indexed":{  
+      "date-parts":[  
+         [  
+            2015,
+            1,
+            23
+         ]
+      ],
+      "timestamp":1421971998759
+   },
+   "volume":"66",
+   "member":"http:\/\/id.crossref.org\/member\/311"
+}
+
+</pre>
+</div>
+
+
+    <p>Voilà!!! This was my long journey to find out how to retrieve a DOI resource. </p>
+
+    <p class="prerequis"><strong>Challenge:</strong></p>
+
+    <p>From the previous example. Try to retrieve the <strong>xml</strong> version instead. But you must only output the lines that include the name 'Vellino' or 'vellino' along with their line number.
+    </p>
+
+
+    <h4>Hack safe! :)</h4>
+    <hr/>
+
+    
+    <p class="prerequis" style="margin-top:60px;"><strong>References:</strong></p>
+    <ul class="references">
+      <li><a href="http://www.doi.org/doi_handbook/7_IDF.html">International DOI Foundation</a></li>
+      <li><a href="https://fr.wikipedia.org/wiki/Digital_Object_Identifier">wikipedia (en)</a></li>
+      <li><a href="https://pt.wikipedia.org/wiki/Digital_object_identifier">wikipedia (pt)</a></li>
+      <li><a href="http://curl.haxx.se/docs/manpage.html">Unix man curl</a></li>
+      <li><a href="http://unixhelp.ed.ac.uk/CGI/man-cgi?grep">Unix man grep</a></li>
+      <li><a href="http://crosscite.org/cn/">DOI content negociation</a></li>
+      <li><a href="https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md">Crossref API</a></li>
+      <li><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">HTTP/1.1: Header Field Definitions</a></li>
+    </ul>
+
+     <hr/>
+    </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<style type="text/css">
+	   .media
+    {
+        /*box-shadow:0px 0px 4px -2px #000;*/
+        margin: 20px 0;
+        padding:30px;
+    }
+    .dp
+    {
+        border:10px solid #eee;
+        transition: all 0.2s ease-in-out;
+    }
+    .dp:hover
+    {
+        border:2px solid #eee;
+        transform:rotate(360deg);
+        -ms-transform:rotate(360deg);  
+        -webkit-transform:rotate(360deg);  
+        /*-webkit-font-smoothing:antialiased;*/
+    }
+</style>
+<div class="row">
+
+
+    <div class="col-lg-6 col-lg-offset-1">
+        <div class="media">
+            <a class="pull-left" href="#">
+                <img class="media-object dp img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/guinslym/128.jpg" style="width: 100px;height:100px;">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">Guinsly Mondésir <small> Ottawa </i></small></h4>
+                <h5>Web developer - Pythonist - Rubyist</h5>
+                <a href="https://twitter.com/guinslym"><i class="fa fa-twitter fa-2x"></i></a>
+                <a href="https://github.com/guinslym"><i class="fa fa-github fa-2x"></i></a>
+                <hr style="margin:8px auto">
+
+                <span class="label label-default">doi</span>
+                <span class="label label-default">cli</span>
+                <span class="label label-info">curl</span>
+                <span class="label label-default">HTTP</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+   <footer>
+  <div class="row text-center">
+    
+  <h1>Au revoir!!!</h1>
+  <h4><a href="/" class="blog">-- retour au blog --</a></h4>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  $('a').each(function() {
+   var a = new RegExp('/' + window.location.host + '/');
+   if (!a.test(this.href)) {
+      $(this).attr("target","_blank");
+   }
+});
+</script>
+
+<div id="homer">
+  <div class="head">
+            
+          <!-- Hair and top of head -->
+          <div class="hair1"></div>
+          <div class="hair2"></div>
+          <div class="body head-top"></div>
+          <div class="no-border body head-main"></div>
+
+          <!-- The 'M' above the ear -->
+          <div class="no-border m1"></div>
+          <div class="no-border m2"></div>
+          <div class="no-border m3"></div>
+          <div class="no-border m4"></div>
+
+          <!-- The neck parts -->
+          <div class="no-border neck1"></div>
+          <div class="body neck2"></div>
+
+          <!-- The ear -->
+          <div class="body ear">
+        <div class="no-border inner1"></div>
+        <div class="no-border inner2"></div>
+        <div class="no-border body clip"></div>
+          </div>
+
+          <!-- The mouth -->
+          <div class="mouth">
+        <div class="mouth5"></div>
+        <div class="mouth2"></div>
+        <div class="mouth1"></div>
+        <div class="mouth7"></div>
+        <div class="no-border mouth3"></div>
+        <div class="no-border mouth4"></div>
+        <div class="no-border mouth6"></div>
+        <div class="no-border mouth8"></div>
+          </div>
+
+          <!-- The right eye -->
+          <div class="right-eye">
+        <div class="no-border right-eye-pupil"></div>
+        <div class="no-border body eyelid-top"></div>
+        <div class="no-border body eyelid-bottom"></div>
+          </div>
+
+          <!-- The nose -->
+          <div class="body nose"></div>
+          <div class="body nose-tip"></div>
+
+          <!-- The left eye -->
+          <div class="left-eye">
+        <div class="no-border left-eye-pupil"></div>
+        <div class="no-border body eyelid-top"></div>
+        <div class="no-border body eyelid-bottom"></div>
+          </div>
+      </div>
+</div>
+</body>
+<script type="text/javascript">
+function pJS_desktop(){
+  particlesJS('particles-js', {
+    particles: {
+      color: '#fff',
+      shape: 'circle',
+      opacity: 1,
+      size: 2.5,
+      size_random: true,
+      nb: 100,
+      line_linked: {
+        enable_auto: true,
+        distance: 250,
+        color: '#fff',
+        opacity: 0.5,
+        width: 1,
+        condensed_mode: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 600
+        }
+      },
+      anim: {
+        enable: true,
+        speed: 3
+      }
+    },
+    interactivity: {
+      enable: true,
+      mouse: {
+        distance: 200
+      },
+      detect_on: 'canvas',
+      mode: 'grab',
+      line_linked: {
+        opacity: .5
+      },
+      events: {
+        onclick: {
+          enable: true,
+          mode: 'push',
+          nb: 4
+        }
+      }
+    },
+    retina_detect: true
+  });
+}
+
+
+if(window.innerWidth > 1100){
+  pJS_desktop();
+}else{
+  pJS_mobile();
+}
+
+/* on resize */
+
+window.addEventListener('resize', function() {
+  checkOnResize();
+}, true);
+
+function checkOnResize(){
+  if(window.innerWidth > 1100){
+    if(pJS.particles.nb != 150){
+      console.log('desktop mode')
+      pJS.fn.vendors.destroy();
+      pJS_desktop();
+    }
+  }else{
+    if(pJS.particles.nb == 150){
+      console.log('mobile mode');
+      pJS.fn.vendors.destroy();
+      pJS_mobile();
+    }
+  }
+}
+</script>
+
+
+
+</html>
