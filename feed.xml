@@ -5,16 +5,303 @@
   <id>http://blog.url.com/blog</id>
   <link href="http://blog.url.com/blog"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2015-01-30T18:49:00-05:00</updated>
+  <updated>2016-06-28T02:09:00-04:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Blisk a web browser for Mobile-First Web Design</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2016/06/28/blisk-a-mobile-first-web-browser/"/>
+    <id>http://blog.url.com/blog/2016/06/28/blisk-a-mobile-first-web-browser/</id>
+    <published>2016-06-28T02:09:00-04:00</published>
+    <updated>2016-06-30T03:26:30-04:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">  &lt;link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"&gt;
+&lt;style type="text/css"&gt;
+	pre{
+		margin: 18px 0;
+	}
+    p, ul{
+        margin: 18px 0;
+        font-size: 2.0rem;;
+    }
+
+    .article_title{
+        color:#B61924;text-transform: capitalize;
+        padding: 20px 0 40px 0;
+    }
+    p.prerequis{
+        font-weight: bolder;
+    }
+    ul.references li{
+      list-style: circle !important;
+    }
+    thead tr td{
+      font-weight: bolder;
+    }
+&lt;/style&gt;
+&lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&amp;skin=desert"&gt;&lt;/script&gt;
+
+&lt;div class="container article_index"&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="col-lg-9 col-lg-offset-1"&gt;
+    &lt;div class="row text-center"&gt;
+    &lt;h1 class="article_title" style="  "&gt;Blisk a web browser to help building your frontend the right way&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;&lt;a href="https://blisk.io/"&gt;Blisk&lt;/a&gt; is the new kid on the block to help web developers getting things done right. Blisk is a web browser that has three frames on its interface.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The left frame display a range of Mobile device that you can choose. &lt;/li&gt;
+  &lt;li&gt;The middle frame display how a given website will look like on the chosen device (the left frame) &lt;/li&gt;
+  &lt;li&gt; the right frame displays the website as you could  see it in your day-to-day browser like Firefox or Chrome.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For sure Firefox and Google Chrome offers many addons or extensions that you can toggle to view how the website will look like in an Iphone but you have to toggle or to enable those addons/extensions. By default Blisk come with similar extension already enable.
+&lt;/p&gt;
+&lt;video poster="https://bliskstatic.azureedge.net/video/poster/switching-blisk-devices-poster.jpg" loop="" class="img-thumbnail nopadding"&gt;
+                                        &lt;source src="https://bliskstatic.azureedge.net/video/switching-blisk-devices.mp4" type="video/mp4"&gt;
+                                        &lt;source src="https://bliskstatic.azureedge.net/video/switching-blisk-devices.ogg" type="video/ogg"&gt;
+                                        Your browser does not support this video.
+                                    &lt;/video&gt;
+&lt;p&gt;
+  Blisk is based on Chromium the open-source webroswer which Google Chrome is based on. So that means that every extension that you like in Chrome you can install it on Blisk. Here is an overview of Blisk functionnalities.
+&lt;/p&gt;
+
+&lt;div class="text-center"&gt;
+&lt;p&gt;&lt;iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/9W_Z5AruTLI" width="640"&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;p&gt;
+  Blisk is more than a fancy browser, as its core it should be the first choice for frontend developpers to test the layout of their web application.
+&lt;/p&gt;
+    &lt;h4&gt;Hack safe! :)&lt;/h4&gt;
+    &lt;hr/&gt;
+
+
+    &lt;p class="prerequis" style="margin-top:60px;"&gt;&lt;strong&gt;References:&lt;/strong&gt;&lt;/p&gt;
+    &lt;ul class="references"&gt;
+      &lt;li&gt;&lt;a href="https://blisk.io/"&gt;Blisk.io&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://codemyviews.com/blog/mobilefirst"&gt;Mobile First Design: Why It’s Great and Why It Sucks&lt;/a&gt;&lt;/li&gt;
+
+    &lt;/ul&gt;
+
+     &lt;hr/&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;style type="text/css"&gt;
+	   .media
+    {
+        /*box-shadow:0px 0px 4px -2px #000;*/
+        margin: 20px 0;
+        padding:30px;
+    }
+    .dp
+    {
+        border:10px solid #eee;
+        transition: all 0.2s ease-in-out;
+    }
+    .dp:hover
+    {
+        border:2px solid #eee;
+        transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -webkit-transform:rotate(360deg);
+        /*-webkit-font-smoothing:antialiased;*/
+    }
+&lt;/style&gt;
+&lt;div class="row"&gt;
+
+
+    &lt;div class="col-lg-6 col-lg-offset-1"&gt;
+        &lt;div class="media"&gt;
+            &lt;a class="pull-left" href="#"&gt;
+                &lt;img class="media-object dp img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/guinslym/128.jpg" style="width: 100px;height:100px;"&gt;
+            &lt;/a&gt;
+            &lt;div class="media-body"&gt;
+                &lt;h4 class="media-heading"&gt;Guinsly Mondésir &lt;small&gt; Ottawa &lt;/i&gt;&lt;/small&gt;&lt;/h4&gt;
+                &lt;h5&gt;Web developer - Pythonista - Rubyist&lt;/h5&gt;
+                &lt;a href="https://twitter.com/guinslym"&gt;&lt;i class="fa fa-twitter fa-2x"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href="https://github.com/guinslym"&gt;&lt;i class="fa fa-github fa-2x"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;hr style="margin:8px auto"&gt;
+
+                &lt;span class="label label-default"&gt;web&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+   &lt;footer&gt;
+  &lt;div class="row text-center"&gt;
+
+  &lt;h1&gt;Au revoir!!!&lt;/h1&gt;
+  &lt;h4&gt;&lt;a href="/" class="blog"&gt;-- retour au blog --&lt;/a&gt;&lt;/h4&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+
+&lt;script type="text/javascript"&gt;
+  $('a').each(function() {
+   var a = new RegExp('/' + window.location.host + '/');
+   if (!a.test(this.href)) {
+      $(this).attr("target","_blank");
+   }
+});
+&lt;/script&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Muhammad Ali</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2016/06/15/mohamed-ali/"/>
+    <id>http://blog.url.com/blog/2016/06/15/mohamed-ali/</id>
+    <published>2016-06-15T02:39:00-04:00</published>
+    <updated>2016-06-30T03:52:45-04:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">  &lt;link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"&gt;
+&lt;style type="text/css"&gt;
+	pre{
+		margin: 18px 0;
+	}
+    p, ul{
+        margin: 18px 0;
+        font-size: 18px;
+    }
+
+    .article_title{
+        color:#B61924;text-transform: capitalize;
+        padding: 20px 0 40px 0;
+    }
+    p.prerequis{
+        font-weight: bolder;
+    }
+    ul.references li{
+      list-style: circle !important;
+    }
+    thead tr td{
+      font-weight: bolder;
+    }
+&lt;/style&gt;
+&lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&amp;skin=desert"&gt;&lt;/script&gt;
+
+&lt;div class="container article_index"&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="col-lg-9 col-lg-offset-1"&gt;
+    &lt;div class="row text-center"&gt;
+    &lt;h1 class="article_title" style="  "&gt;Mohamed Ali&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Natif natal d'Haiti, j'ai su que Muhammad Ali était vivant qu'après avoir déménagé au Canada.
+Dans mon enfance des années 80-90 j'entendais plus souvent parlé de Tyson que de Mohammed Ali. A cette époque Mohamed Ali était une légende. Malgré que le monde de la boxe ne me fascinait pas le nom &lt;em&gt;Mohamed Ali&lt;/em&gt; faisait echo avec le mot champion. &lt;/p&gt;
+
+&lt;p&gt; Après avoir vu le film &lt;a href="http://www.imdb.com/title/tt0248667/"&gt;Ali&lt;/a&gt; joué par Will Smith, j'ai pu fouiller dans la liste de vidéo de &lt;a href="www.youtube.com"&gt;Youtube&lt;/a&gt;, la médiathèque web par excellence quand il s'agit de trouver une vidéo, pour en savoir plus sur lui,  sur son arrogance et son assurance. Faut dire que je ne crois pas que Mohamed Ali était arrogant  si ce dernier est dépeint comme un mot qui a un sens négatif, je crois que son arrogance n'est que le reflet de sa confiance en soi ou de son objectif de parler franc devant des faits injuste. &lt;/p&gt;
+
+
+&lt;div class="text-center"&gt;
+&lt;p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/sHdgqWRgkfk" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+
+
+    &lt;p class="prerequis" style="margin-top:60px;"&gt;&lt;strong&gt;References:&lt;/strong&gt;&lt;/p&gt;
+    &lt;ul class="references"&gt;
+      &lt;li&gt;&lt;a href="http://www.imdb.com/title/tt0248667/"&gt;Ali (2001)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://ici.radio-canada.ca/sports/plussports/2016/06/04/001-muhammad-ali-biographie-moments-cles.shtml"&gt;La vie de Muhammad Ali en 12 moments-clés&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+     &lt;hr/&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;style type="text/css"&gt;
+	   .media
+    {
+        /*box-shadow:0px 0px 4px -2px #000;*/
+        margin: 20px 0;
+        padding:30px;
+    }
+    .dp
+    {
+        border:10px solid #eee;
+        transition: all 0.2s ease-in-out;
+    }
+    .dp:hover
+    {
+        border:2px solid #eee;
+        transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -webkit-transform:rotate(360deg);
+        /*-webkit-font-smoothing:antialiased;*/
+    }
+&lt;/style&gt;
+&lt;div class="row"&gt;
+
+
+    &lt;div class="col-lg-6 col-lg-offset-1"&gt;
+        &lt;div class="media"&gt;
+            &lt;a class="pull-left" href="#"&gt;
+                &lt;img class="media-object dp img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/guinslym/128.jpg" style="width: 100px;height:100px;"&gt;
+            &lt;/a&gt;
+            &lt;div class="media-body"&gt;
+                &lt;h4 class="media-heading"&gt;Guinsly Mondésir &lt;small&gt; Ottawa &lt;/i&gt;&lt;/small&gt;&lt;/h4&gt;
+                &lt;h5&gt;Web developer - Pythonista - Rubyist&lt;/h5&gt;
+                &lt;a href="https://twitter.com/guinslym"&gt;&lt;i class="fa fa-twitter fa-2x"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href="https://github.com/guinslym"&gt;&lt;i class="fa fa-github fa-2x"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;hr style="margin:8px auto"&gt;
+
+                &lt;span class="label label-default"&gt;web&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+   &lt;footer&gt;
+  &lt;div class="row text-center"&gt;
+
+  &lt;h1&gt;Au revoir!!!&lt;/h1&gt;
+  &lt;h4&gt;&lt;a href="/" class="blog"&gt;-- retour au blog --&lt;/a&gt;&lt;/h4&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+
+&lt;script type="text/javascript"&gt;
+  $('a').each(function() {
+   var a = new RegExp('/' + window.location.host + '/');
+   if (!a.test(this.href)) {
+      $(this).attr("target","_blank");
+   }
+});
+&lt;/script&gt;
+</content>
+  </entry>
   <entry>
     <title>Introduction aux Métadonnées d'une image</title>
     <link rel="alternate" href="http://blog.url.com/blog/2015/01/30/introduction-aux-metadonnees-d-une-image/"/>
     <id>http://blog.url.com/blog/2015/01/30/introduction-aux-metadonnees-d-une-image/</id>
     <published>2015-01-30T18:49:00-05:00</published>
-    <updated>2015-12-12T17:02:58-05:00</updated>
+    <updated>2016-06-30T02:47:56-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -268,7 +555,7 @@
     <link rel="alternate" href="http://blog.url.com/blog/2015/01/26/How-to-find-a-DOI-and-create-a-permanent-link-using-curl/"/>
     <id>http://blog.url.com/blog/2015/01/26/How-to-find-a-DOI-and-create-a-permanent-link-using-curl/</id>
     <published>2015-01-25T21:12:00-05:00</published>
-    <updated>2015-12-12T17:02:58-05:00</updated>
+    <updated>2016-06-30T02:47:56-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -678,7 +965,7 @@ curl -D -s -L  "Accept: text/html;charset=UTF-8" "http://dx.doi.org/10.1002/asi.
     <link rel="alternate" href="http://blog.url.com/blog/2014/10/26/open-access-en-question/"/>
     <id>http://blog.url.com/blog/2014/10/26/open-access-en-question/</id>
     <published>2014-10-25T22:01:00-04:00</published>
-    <updated>2015-12-12T17:02:58-05:00</updated>
+    <updated>2016-06-30T02:47:56-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -823,211 +1110,253 @@ curl -D -s -L  "Accept: text/html;charset=UTF-8" "http://dx.doi.org/10.1002/asi.
 &lt;/footer&gt;</content>
   </entry>
   <entry>
-    <title>La migration interprovinciale au canada en 2013</title>
-    <link rel="alternate" href="http://blog.url.com/blog/2014/09/03/migration-interprovinciale-au-canada-en-2013/"/>
-    <id>http://blog.url.com/blog/2014/09/03/migration-interprovinciale-au-canada-en-2013/</id>
-    <published>2014-09-02T20:55:00-04:00</published>
-    <updated>2015-12-12T17:02:58-05:00</updated>
+    <title>Graph diagram of all professors from MIS program at UOttawa</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2014/09/25/Graph-diagram-of-professors-at-uottawa/"/>
+    <id>http://blog.url.com/blog/2014/09/25/Graph-diagram-of-professors-at-uottawa/</id>
+    <published>2014-09-25T18:12:00-04:00</published>
+    <updated>2016-06-30T02:47:56-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;div class="header"&gt;
-  &lt;div class="row"&gt;
-    &lt;div class="large-12 columns"&gt;
-      &lt;h1&gt;La Migration Interprovinciale au Canada en 2013&lt;/h1&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+    <content type="html"> &lt;style&gt;
+    .popover {
+      color: #333;
+    }
+    .node {
+      stroke: #ccc;
+      stroke-width: 1.5px;
+    }
+    .link {
+      stroke: #fff;
+      stroke-opacity: .8;
+    }
 
-&lt;div class="row text-center"&gt;&lt;img src="http://i121.photobucket.com/albums/o205/guinslym/personal-site-and-blog/650px-Political_map_of_Canada_zps1373fb64.png" alt="Image représentants les provinces du Canada"&gt;&lt;/div&gt;
+	#main {
+		margin:0 auto;
+		width:960px;
+		color:#FFF;
+		border: 1px dashed #333;
+		fill: #000;
+		}		
+	
+  line {
+		stroke: #666;
+		}
 
-
-&lt;div class="row"&gt;
-  &lt;div class=""&gt;
-    &lt;h2&gt;Migration&lt;/h2&gt;
-    &lt;p&gt;J'ai pris une année sabbatique en 2013 pour pouvoir m'enrichir culturellement en allant visiter l'Ouest canadien. Du Québec jusqu'en Colombie-britannique. J'ai fait des découvertes et des rencontres inoubliables. À mon grand étonnement j'ai fait plusieurs rencontrent d'ontariens dans chaque province alors je me suis demander quel est la répartition des migrants au Canada. Alors, j'ai créer une &lt;a target="_blank" href="http://fr.wikipedia.org/wiki/Repr%C3%A9sentation_graphique_de_donn%C3%A9es_statistiques"&gt;représentation graphique de données statistiques&lt;/a&gt; ou tout simplement de la &lt;a target="_blank" href="http://en.wikipedia.org/wiki/Data_visualization"&gt; Data visualization&lt;/a&gt; en anglais. Ce courant comptemporain, la data visualization, est une manière non conventionnelle de représenter les données pour éveiller nôtre côté artistique.&lt;/p&gt;
-    &lt;p&gt;Je vais tenté par cette représentation graphique de données statistiques de répondre à ces questions que je me suis posé:&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-Quelle province a accueillie le plus de migrants en 2013 ?&lt;/li&gt;
-&lt;li&gt;Quelle province a vu le plus de ses résidents s'établir dans une autre province en 2013 ?&lt;/li&gt;
-&lt;li&gt;Est-ce que les ontariens sont sont vraiment les migrants que j'aurai le plus de chance de rencontrer au Canada?&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;h3&gt;Comment fonctionne le diagramme à corde&lt;/h3&gt;
-    &lt;p&gt;Si vous passer votre curseur sur une arc, Il y aura une indication sur le nombre de résident que cette province a accueillie. Par exemple pour "ON", &lt;em&gt;«En 2013 l'Ontario a accueillie 69 700 migrants»&lt;/em&gt;. Les résultats sont toujours arrondis. Pour les données brutes de calcul vous pouvez vous réferer à la section Donnée Brutes ci-bas et sélectionner une province ou vous rendre directement sur la page web de &lt;a target="_blank" href="http://www5.statcan.gc.ca/cansim/a26?id=0510045&amp;p2=9&amp;tabMode=dataTable&amp;p1=-1&amp;retrLang=fra&amp;srchLan=-1&amp;lang=fra"&gt;statistique canada&lt;/a&gt;.&lt;/p&gt;
-
- &lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;section class="main row" style="text-align:center"&gt;
-  &lt;div class="main-diagram"&gt; &lt;h2&gt;Quelle province a accueillie le plus de migrants  en 2013 ?&lt;/h2&gt;&lt;/div&gt;
-&lt;/section&gt;
-
-&lt;section class="destination" style="text-align:center;"&gt;&lt;/section&gt;
-
-
-&lt;div class="row"&gt;
-  &lt;div class="panel"&gt;
-    &lt;h2&gt;Terre Promise!!!&lt;/h2&gt;
-    &lt;p&gt;On constate que l'Alberta et l'Ontario sont les provinces de destination les plus convoitées. À eux seul ils s'accaparent près de la moitìé des migrants. &lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;section class="row deuxieme" style="text-align:center"&gt;
-  &lt;div class="second-diagram"&gt;&lt;h2&gt;Quelle province a vu le plus de ses résidents s'établir dans une autre province en 2013 ?&lt;/h2&gt;&lt;/div&gt;
-&lt;/section&gt;
-
-&lt;section class="origine" style="text-align:center;"&gt;&lt;/section&gt;
-
-
-
-&lt;div class="row"&gt;
-  &lt;div class="panel"&gt;
-    
-    &lt;h2&gt;Je déménage!&lt;/h2&gt;
-    &lt;p&gt;On constate ici que les résidents des provinces de l'Ontario, de la Colombie-britannique et de l'Alberta ont été le plus mobile pour changer de provinces. Les résidents de la province de l'Ontario sont en nombre supérieurs comparativements aux autres provinces&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-    &lt;style&gt;
-      select{
-      height: 40px;
-      }
-      option{
-        padding: 5px;
-      }
+body{
+    background: url("http://subtlepatterns.com/patterns/congruent_outline.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}	
+.preambule{
+  color: white;
+}
+.color-yellow{
+  background-color: #FFF000;
+  padding-right:20px;
+}
+.color-green{
+  background-color:#7CA721; 
+  padding-right:20px;
+}
+.color-red{
+  background-color: #8F4139;
+  padding-right:20px;
+}
+.color-orange{
+  background-color: #DA991C;
+  padding-right:20px;
+}
     &lt;/style&gt;
 
-
+  &lt;div class="container"&gt;
 &lt;div class="row"&gt;
-  &lt;div class="large-5"&gt;
-    &lt;h1&gt;Donnée brutes&lt;/h1&gt;
- &lt;p&gt; Sélectionner une province pour générer le tableau de donnée &lt;/p&gt;
-    &lt;select  multiple class="form-control" style="min-height:30px;" id="les_provinces_selection"&gt;
-      &lt;option&gt;Terre-Neuve-et-Labrador&lt;/option&gt;
-      &lt;option&gt;Île-du-Prince-Édouard&lt;/option&gt;
-      &lt;option&gt;Nouvelle-Écosse&lt;/option&gt;
-      &lt;option&gt;Nouveau-Brunswick&lt;/option&gt;
-      &lt;option value= "6"&gt;Québec&lt;/option&gt;
-      &lt;option value= "7"&gt;Ontario&lt;/option&gt;
-      &lt;option&gt;Manitoba&lt;/option&gt;
-      &lt;option&gt;Saskatchewan&lt;/option&gt;
-      &lt;option&gt;Alberta&lt;/option&gt;
-      &lt;option&gt;Colombie-Britannique&lt;/option&gt;
-      &lt;option selected="selected"&gt;Yukon&lt;/option&gt;
-      &lt;option selected="selected"&gt;Territoires du Nord-Ouest&lt;/option&gt;
-      &lt;option selected="selected"&gt;Nunavut&lt;/option&gt;
+ &lt;!-- Button trigger modal --&gt;
+&lt;button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"&gt;
+  Information
+&lt;/button&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;button type="button" class="close" data-dismiss="modal"&gt;&lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;&lt;span class="sr-only"&gt;Close&lt;/span&gt;&lt;/button&gt;
+        &lt;h4 class="modal-title" id="myModalLabel"&gt;Network Analysis of University of Ottawa MIS's professors&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        &lt;h2&gt;Preambule&lt;/h2&gt;
+        &lt;p&gt;This is a &lt;a href="https://github.com/mbostock/d3/wiki/Force-Layout" target='_blank'&gt; network or a graph diagram&lt;/a&gt; that shows which university each professors went to, either they are regular full-time, adjunct or part-time and cross-appointed professors&lt;/p&gt;
+        &lt;h3&gt;How does it Work ?&lt;/h3&gt;
+        &lt;p&gt;As you can see, there is a set of nodes of different size and colors.&lt;/p&gt;  
+        &lt;ul&gt;
+                &lt;li&gt;&lt;span class="color-yellow"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt; This color represents the university that most professors have in common. (UWO)&lt;/li&gt;
+                &lt;li&gt;&lt;span class="color-orange"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt; This color represents  a canadian university that offers a Master in Library and Information Studies program&lt;/li&gt;
+                &lt;li&gt;&lt;span class="color-green"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt; This color represents a university (canadian or not). In fact all the &lt;strong&gt;bigger nodes represents universities&lt;/strong&gt;. &lt;/li&gt;
+                &lt;li&gt;&lt;span class="color-red"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt; This colors represents all professors for 2014-2015 year&lt;/li&gt;
+              &lt;/ul&gt;      
+        &lt;p&gt;As you can see (the yellow node) 5 professors went to the University of Western Ontario. Following up for 4 professors that attends McGill University. &lt;/p&gt;
+        &lt;p&gt;What I do like about diagram it's that it will trigger questions. Why does &lt;a href="http://www.fims.uwo.ca/" target="_blank"&gt;UWO&lt;/a&gt; have the most attendances? Is UWO is the best school in IS in Canada? Where is &lt;a href="http://slais.ubc.ca/" target="_blank"&gt;UBC&lt;/a&gt;? Did UWO was the first university that offers MLIS program in Canada? If I add up all the professors that teaches in a Masters of Information Studies in Canada, will UWO will still be the one that most professors went to?&lt;/p&gt;
+        &lt;p&gt;Keep in mind that &lt;a href="http://en.wikipedia.org/wiki/Correlation_does_not_imply_causation" target="_blank"&gt; Correlation does not imply causation&lt;/a&gt;. This visualization does not imply that UWO or &lt;a href="http://www.mcgill.ca/sis/" target="_blank"&gt;McGill&lt;/a&gt; are the best university for a MLIS program neither that I'll have a better chance to get a job as a professor.&lt;/p&gt;
+        &lt;h3&gt;Gihub&lt;/h3&gt;
+        &lt;p&gt;The program is available on my &lt;a href="https://github.com/guinslym/uottawa_lis_teacher_network" target='_blank'&gt; github&lt;/a&gt; if you would like to play with it&lt;/p&gt;
+        &lt;h3&gt;Hack Safe!!! :)&lt;/h3&gt;
+
+      &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button type="button" class="btn btn-primary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt; 
+&lt;/div&gt;    
 
 
-    &lt;/select&gt;
+
+
+ &lt;div class="row preambule"&gt;
+ &lt;/div&gt; 
 
   &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="row"&gt;
-  &lt;div class="large-12"&gt;
-    &lt;div&gt;&lt;/div&gt;
-    &lt;table id="target_table_id" role="grid" summary="lorem"&gt;
-&lt;caption&gt;Migrants interprovinciaux, selon la province ou territoire d'origine et de la destination&lt;br&gt; pour l'année 2013
-&lt;/caption&gt;
-      &lt;thead&gt;
-        &lt;th&gt;Province d'origine&lt;/th&gt;
-        &lt;th&gt;Province de destination&lt;/th&gt;
-        &lt;th&gt;Trimestre : 1&lt;/th&gt;
-        &lt;th&gt;Trimestre : 2&lt;/th&gt;
-        &lt;th&gt;Trimestre : 3&lt;/th&gt;
-        &lt;th&gt;Trimestre : 4&lt;/th&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-
+    &lt;div class="row"&gt;
+      &lt;div id="main" class="col-md-12"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"&gt;&lt;/script&gt;
     &lt;script&gt;
-      $(document).ready(function(){
-          $( "select" )
-          .change(function () {
+      var width = 960, height = 700;
 
-            var str = "";
-            $( "select option:selected" ).each(function() {
-              str += $( this ).text();
-              var ext_data = _.where(provinces_json, {provOrigine: str});
-              var tbl_body = "";
-                  $.each(ext_data, function() {
-                            var tbl_row = "";
-                              var la_prov = 0
-                                      $.each(this, function(k , v) {
-                                                    tbl_row += "&lt;td&gt;"+v+"&lt;/td&gt;";
-                                                      
-                                                            });
-                                              tbl_body += "&lt;tr&gt;"+tbl_row+"&lt;/tr&gt;";                 
-                                                  }); 
-                      $("#target_table_id tbody").html(tbl_body);
+      var color = d3.scale.ordinal().range(['#3d4f53', '#8f4139', '#ab987a']);
 
-                      });
-            })
-      .change();
- 
+      var force = d3.layout.force()
+          .charge(-150)
+          .linkDistance(40)
+          .gravity(.05)
+          .size([width, height]);
+
+      var svg = d3.select("#main").append("svg")
+          .attr("id", "main-svg")
+          .attr("width", width)
+          .attr("height", height);
+
+      d3.json("https://gist.githubusercontent.com/guinslym/5fd33b30b8cb60feb0fe/raw/ca85f099cc8b69e616cb66fdcb6511758a50a820/professeurs.json", function(error, graph) {
+      
+        force.nodes(graph.nodes)
+          .links(graph.links)
+          .start();
+
+        var drag = force.drag()
+          .on("dragstart", dragstart);
+
+        var link = svg.selectAll(".link")
+            .data(graph.links)
+          .enter().append("line")
+            .attr("class", "link")
+            .attr("stroke-opacity", function(d) { if(d.label == 'is a') { return '0.8';} else{ return '0.2'; }; })
+            .attr("stroke-width","3")
+            .on("mouseover", function(){d3.select(this).style("stroke", "#999999").attr("stroke-opacity", "1.0");})
+            .on("mouseout", function(){d3.select(this).style("stroke", "#fff").attr("stroke-opacity", "1.0");});
+
+            link.append('title').text(function(d){
+              //console.log(d.name);
+            });
+
+        var node = svg.selectAll("g.node")
+              .data(graph.nodes)
+            .enter().append("svg:g")
+              .attr("class", "node")
+              .on("trigger_me", trigger_me)
+              .call(force.drag);
+
+        node.append("circle")
+          .attr("class",function (d) { return d.type + " nodecircle" })
+          .attr("r", function(d){if (d.mls){
+            return d.size;
+          }else if (d.type == 'school'){
+            return d.size;
+          }else{
+            return d.size;
+          }})
+          .style("fill", function (d) { 
+            if(d.name == 'University of Western Ontario'){
+              return '#fff000';
+            }else{
+              return d.color;
+            }
+             })
+          .on("mouseover", showPopover)
+          .on("mouseout", removePopovers);
+
+        
 
 
-//$("#les_provinces_selection").val(2);
+        force.on("tick", function() {
+          link.attr("x1", function (d) { return d.source.x; })
+              .attr("y1", function (d) { return d.source.y; })
+              .attr("x2", function (d) { return d.target.x; })
+              .attr("y2", function (d) { return d.target.y; });
+
+          node.attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
+        })
+        .attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; });
+
+        function trigger_me(d) {
+          force.start();
+        }
+
+        function dragstart(d) {
+          d3.select(this).classed("fixed", d.fixed = true);
+        }
+      });
+
+      function removePopovers () {
+        //bootstrap javascript
+        $('.popover').each(function() {
+          $(this).remove();
+        }); 
+      }
+
+      function showPopover (d) {
+        //bootstrap javascript
+        $(this).popover({
+          placement: 'auto top',
+          container: 'body',
+          trigger: 'manual',
+          html : true,
+          content: function() {
+            if (d.type == 'teacher'){
+              return 'Professor' + ": " + d.name 
+            }else{
+              return d.name;
+            }
+         }  
+        });
+        $(this).popover('show')
+      }
+
+    &lt;/script&gt;
+    &lt;script type="text/javascript"&gt;
+
+
+      function resize_the_svg_window () {
+        var chart = $("#main-svg");
+        chart.attr("width", chart.parent().width());
+        chart.attr("height", chart.parent().height());
+        force.size([chart.parent().width(), chart.parent().height()]);
+        force.start(); 
+      }
+
+      $(document).ready(function() {
+        resize_the_svg_window();
 
       });
-    &lt;/script&gt; 
 
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="queFaire"&gt;
-  &lt;div class="row"&gt;
-    &lt;h2&gt;Comment s'est fait?&lt;/h2&gt;
-    &lt;p&gt;J'ai voulu apprendre &lt;a target="_blank" href="http://d3js.org/"&gt;d3.js&lt;/a&gt; alors forte de ma compréhension de cette &lt;a target="_blank" href="https://github.com/mbostock/d3/wiki/Gallery"&gt; librairie&lt;/a&gt; pour les diagrammes à bandes, j'ai voulu en apprendre d'avantage en expérimentant un des diagrammes le les plus complexe à réaliser: &lt;a target="_blank" href="http://bl.ocks.org/mbostock/4062006"&gt;Le diagramme a Cord&lt;/a&gt;. &lt;/p&gt;
-
-    &lt;p&gt;J'ai tout d'abord fait une application ruby permettant d'extraire les données nécessaires pour pouvoir faire ces diagrammes. Les données brutes ont été acquis sur le site de &lt;a target="_blank" href="http://www5.statcan.gc.ca/cansim/a26?id=0510045&amp;p2=9&amp;tabMode=dataTable&amp;p1=-1&amp;retrLang=fra&amp;srchLan=-1&amp;lang=fra"&gt;statistique canada&lt;/a&gt;. &lt;/p&gt;
-    &lt;h4&gt;Ce qu'il faut savoir&lt;/h4&gt;
-    &lt;ul&gt;
-      &lt;li class="premier"&gt;Les matrices &lt;ul&gt;&lt;li&gt;pour les diagrammes a corde il faut avoir une compréhension minimale des matrices. Parce qu'il faudra représenter les données sous forme de matrice pour pouvoir créer les cordes.&lt;/li&gt;&lt;/ul&gt; &lt;/li&gt;
-      &lt;li class="premier"&gt;d3.js &lt;ul&gt;&lt;li&gt;Oui ça a l'air bête mais il faut quand même avoir une habilité avec cette librairie sinon bonjour les maux de têtes :(&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="queFaire"&gt;
-  &lt;div class="row"&gt;
-    &lt;h2&gt;Ce que ne dit pas les données&lt;/h2&gt;
-  &lt;p&gt;Ce que m'a appris cette excercice sur les données c'est que je me suis posé plusieurs questions que je n'ai pas pu répondre parce que l'intérêt première de cette article c'était de parfaire ma connaissance et mon expérience de la data visualization avec d3.js.&lt;/p&gt;
-  &lt;p&gt;Pour aller plus loin voci tout ce qui m'a trotté dans la tête en voyant ces données; Ce n'est plus un secret de polichinelle que l'Alberta a une forte croissance économique depuis plusieurs années déjà. Mais est-ce qu'il y a une relation entre la croissance économique et le nombre de migrants que cette province reçoit? &lt;/p&gt;
-&lt;p&gt;Est-ce que le fait d'avoir des migrants est plus avantageux que des immigrants? Pour l'instant les données ne donne aucune indice. Les données ne donne pas d'information sur ces migrants, leur revenu, la raison de leur départ, leur niveau d'éducation. Le Canada a déjà établi des barêmes au niveau de   l'Immigration mais au niveau de la migration provincial un barême n'aurait pas de sens puisse qu'il serait de facto discriminatoire. À défaut d'un barême est-ce que les provinces auraient à gagner de connaître ses migrants? Quel(s) travail(aux) occupe(nt) ses migrants? Vers quel secteur se tourne-t'il dès leur arrivé? Est-ce que cette occupation était celle que l'individu avait espéré avoir en migrant? Est-ce que ce sont des métiers pour lesquels la province de destination n'a pas assez de travailleur? Est-ce que ce sont des résidents qui n'avait pas de travail qui ont décider de faire leur valise pour une autre province? Est-ce que ce sont des migrants hautement qualifée dans un domaine?  Quelle taux de migration à chaque province? Est-ce qu'il y a eu de la part de la province d'accueil une campagne de recrutement de travailleur dans une autre province? Si oui, quel budget a été alloué pour cela.&lt;/p&gt;
+      $(window).on("resize_the_svg_window", function() {
+        resize_the_svg_window();
+      });
+    &lt;/script&gt;
  
-&lt;p&gt;J'ai fait aussi plusieurs rencontres de migrants qui travaillaient. dans leur province de destination mais qui n'étaient pas officiellement résident de la province. Il se pourrait qu'ils soient qualifiés pour être résident mais qu'ils n'ont pas fait de demande non plus. Donc leur donnée statistique ne sont pas pris en compte.&lt;/p&gt;
 
-&lt;h2&gt;Liens utiles et Références&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a target="_blank" href="http://d3js.org/"&gt;d3.js&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a target="_blank" href="http://www5.statcan.gc.ca/cansim/a26?id=0510045&amp;p2=9&amp;tabMode=dataTable&amp;p1=-1&amp;retrLang=fra&amp;srchLan=-1&amp;lang=fra"&gt;Migrants interprovinciaux, selon la province ou territoire d'origine et de la destination&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="http://en.wikipedia.org/wiki/List_of_regions_of_Canada#mediaviewer/File:Political_map_of_Canada.png" target="_blank"&gt;Image (carte du canada) Wikimedia Commons par Kaveh&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;footer&gt;
-  &lt;div class="row"&gt;
-    
-  &lt;h1&gt;Au revoir!!!&lt;/h1&gt;
-  &lt;h4&gt;&lt;a href="/" class="blog"&gt;-- retour au blog --&lt;/a&gt;&lt;/h4&gt;
-  &lt;/div&gt;
-&lt;/footer&gt;
-
-&lt;script&gt;
-/* here are two different ways to do this */
-//using jquery:
-$(document).ready(function(){
-  $('a:not(.blog)').attr('target', '_blank');
-});
-
-
-&lt;/script&gt;
 </content>
   </entry>
 </feed>
