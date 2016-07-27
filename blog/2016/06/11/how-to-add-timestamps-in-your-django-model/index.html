@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guinsly Mondésir</title>
+<meta name="description" content="Powerful website full of best practices and keywords" />
+<meta name="site" content="Guinsly Mondésir" />
+  <title>How to add Timestamps in your Django model — Blog de Guinsly Mondésir</title>
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+  <meta name="keywords" content="blog guinsly">
+ <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> 
+ <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+ <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed|Merriweather|Francois+One|Shadows+Into+Light|Bree+Serif' rel='stylesheet' type='text/css'>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
+  <link href="/stylesheets/2015/styles-864fbf6e.css" rel="stylesheet" />
+  <link href="/stylesheets/2015/homer-3227b47b.css" rel="stylesheet" />
+
+<style type="text/css">
+section.header_name h1{
+  font-family: 'Francois One', sans-serif;
+}
+section.header_name h1 span{
+  font-family: 'Shadows Into Light', cursive;
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js"></script><script src="/javascripts/scrollReveal.min-890fa766.js"></script><script src="/javascripts/jquery.particleground.min-e863295a.js"></script><script src="/javascripts/particle-71048f94.js"></script>
+
+
+</head>
+
+<body>
+
+<section class="header_name">
+	<div class="container">
+		<h1><a href="/" style="text-decoration:none;color:black;">Guinslym::<span>&nbsp;My Blog</span></a></h1>
+	</div>
+</section>
+
+
+
+<div id="particles-js"></div>
+
+
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">
+	pre{
+		margin: 18px 0;
+	}
+    p{
+        margin: 18px 0;
+    }
+    .article_title{
+        color:#B61924;text-transform: capitalize;
+        padding: 20px 0 40px 0;
+    }
+    p.prerequis{
+        font-weight: bolder;
+    }
+    ul.references li{
+      list-style: circle !important;
+    }
+    thead tr td{
+      font-weight: bolder;
+    }
+</style>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=desert"></script>
+
+<div class="container article_index">
+
+<div class="row">
+  <div class="col-lg-9 col-lg-offset-1">
+    <div class="row text-center">
+    <h1 class="article_title" style="  ">How to add Timestamps in your Django model</h1>
+    </div>
+
+    <div class="post-desc">
+      <p>If you want to add <strong>timestamps</strong> here a three options that you can take.</p>
+<hr>
+      <p>First let's create a new project and a new app.</p>
+<div class="row ">
+
+<pre class="prettyprint">
+ -> %  django-admin startproject blogproject && cd blogproject
+ -> %  python manage.py startapp blog
+</pre>
+
+</div>
+<hr>
+    <h3>Simplicity</h3>
+    <p>let's add the new app <strong>blog</strong> to our <em>installed apps</em></p>
+    <script src="https://gist.github.com/guinslym/c12deca06742ea1c499a29c3ef4f8e31.js"></script>
+    <p>Now we can start creating our model. We will have four fields: <strong>title</strong>, <strong>description</strong>, <strong>updated</strong>, <strong>created</strong></p>
+    <script src="https://gist.github.com/guinslym/8f5faf5647f7351c43d890deeb588c9d.js"></script>
+
+
+    <h3>Being smarter</h3>
+    <p>If you planned to use these fields often in other Models. i.e. <strong>Comments</strong>, <strong>Like</strong>, <strong>ShoppingCart</strong> etc. It would be smarter keep things <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">Dry</a></p>
+    <script src="https://gist.github.com/guinslym/b584b1ee7056a42ac14b5ba40dcccd8d.js"></script>
+
+    <h3>Being smarter (suite)</h3>
+    <p>There is an awesome package called <a href="https://django-extensions.readthedocs.io/en/latest/">Django extensions</a>. If you planned to use many of the functionnalities of this package you could add it to your project</p>
+
+    <pre class="prettyprint">
+     -> %  pip install django-extensions
+    </pre>
+    <script src="https://gist.github.com/guinslym/0002c01eca5a53cd22b88abe11a3033d.js"></script>
+    <p>After we will import it in your models.py</p>
+    <script src="https://gist.github.com/guinslym/de4a9b9e746d2bab1a25c5472890d63e.js"></script>
+
+
+
+<style type="text/css">
+	   .media
+    {
+        /*box-shadow:0px 0px 4px -2px #000;*/
+        margin: 20px 0;
+        padding:30px;
+    }
+    .dp
+    {
+        border:10px solid #eee;
+        transition: all 0.2s ease-in-out;
+    }
+    .dp:hover
+    {
+        border:2px solid #eee;
+        transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -webkit-transform:rotate(360deg);
+        /*-webkit-font-smoothing:antialiased;*/
+    }
+</style>
+<div class="row">
+
+
+    <div class="col-lg-6 col-lg-offset-1">
+        <div class="media">
+            <a class="pull-left" href="#">
+                <img class="media-object dp img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/guinslym/128.jpg" style="width: 100px;height:100px;">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">Guinsly Mondésir <small> Ottawa </i></small></h4>
+                <h5>Web developer - Pythonist - Rubyist</h5>
+                <a href="https://twitter.com/guinslym"><i class="fa fa-twitter fa-2x"></i></a>
+                <a href="https://github.com/guinslym"><i class="fa fa-github fa-2x"></i></a>
+                <hr style="margin:8px auto">
+
+                <span class="label label-default">doi</span>
+                <span class="label label-default">cli</span>
+                <span class="label label-info">curl</span>
+                <span class="label label-default">HTTP</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+   <footer>
+  <div class="row text-center">
+
+  <h1>Au revoir!!!</h1>
+  <h4><a href="/" class="blog">-- retour au blog --</a></h4>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  $('a').each(function() {
+   var a = new RegExp('/' + window.location.host + '/');
+   if (!a.test(this.href)) {
+      $(this).attr("target","_blank");
+   }
+});
+</script>
+
+
+<div id="homer">
+  <div class="head">
+            
+          <!-- Hair and top of head -->
+          <div class="hair1"></div>
+          <div class="hair2"></div>
+          <div class="body head-top"></div>
+          <div class="no-border body head-main"></div>
+
+          <!-- The 'M' above the ear -->
+          <div class="no-border m1"></div>
+          <div class="no-border m2"></div>
+          <div class="no-border m3"></div>
+          <div class="no-border m4"></div>
+
+          <!-- The neck parts -->
+          <div class="no-border neck1"></div>
+          <div class="body neck2"></div>
+
+          <!-- The ear -->
+          <div class="body ear">
+        <div class="no-border inner1"></div>
+        <div class="no-border inner2"></div>
+        <div class="no-border body clip"></div>
+          </div>
+
+          <!-- The mouth -->
+          <div class="mouth">
+        <div class="mouth5"></div>
+        <div class="mouth2"></div>
+        <div class="mouth1"></div>
+        <div class="mouth7"></div>
+        <div class="no-border mouth3"></div>
+        <div class="no-border mouth4"></div>
+        <div class="no-border mouth6"></div>
+        <div class="no-border mouth8"></div>
+          </div>
+
+          <!-- The right eye -->
+          <div class="right-eye">
+        <div class="no-border right-eye-pupil"></div>
+        <div class="no-border body eyelid-top"></div>
+        <div class="no-border body eyelid-bottom"></div>
+          </div>
+
+          <!-- The nose -->
+          <div class="body nose"></div>
+          <div class="body nose-tip"></div>
+
+          <!-- The left eye -->
+          <div class="left-eye">
+        <div class="no-border left-eye-pupil"></div>
+        <div class="no-border body eyelid-top"></div>
+        <div class="no-border body eyelid-bottom"></div>
+          </div>
+      </div>
+</div>
+</body>
+<script type="text/javascript">
+function pJS_desktop(){
+  particlesJS('particles-js', {
+    particles: {
+      color: '#fff',
+      shape: 'circle',
+      opacity: 1,
+      size: 2.5,
+      size_random: true,
+      nb: 100,
+      line_linked: {
+        enable_auto: true,
+        distance: 250,
+        color: '#fff',
+        opacity: 0.5,
+        width: 1,
+        condensed_mode: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 600
+        }
+      },
+      anim: {
+        enable: true,
+        speed: 3
+      }
+    },
+    interactivity: {
+      enable: true,
+      mouse: {
+        distance: 200
+      },
+      detect_on: 'canvas',
+      mode: 'grab',
+      line_linked: {
+        opacity: .5
+      },
+      events: {
+        onclick: {
+          enable: true,
+          mode: 'push',
+          nb: 4
+        }
+      }
+    },
+    retina_detect: true
+  });
+}
+
+
+if(window.innerWidth > 1100){
+  pJS_desktop();
+}else{
+  pJS_mobile();
+}
+
+/* on resize */
+
+window.addEventListener('resize', function() {
+  checkOnResize();
+}, true);
+
+function checkOnResize(){
+  if(window.innerWidth > 1100){
+    if(pJS.particles.nb != 150){
+      console.log('desktop mode')
+      pJS.fn.vendors.destroy();
+      pJS_desktop();
+    }
+  }else{
+    if(pJS.particles.nb == 150){
+      console.log('mobile mode');
+      pJS.fn.vendors.destroy();
+      pJS_mobile();
+    }
+  }
+}
+</script>
+
+
+
+</html>

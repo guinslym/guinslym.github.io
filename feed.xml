@@ -5,16 +5,43 @@
   <id>http://blog.url.com/blog</id>
   <link href="http://blog.url.com/blog"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2016-06-28T02:09:00-04:00</updated>
+  <updated>2016-07-17T03:41:00-04:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>How to install OBS-studio in Ubuntu</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2016/07/17/how-to-install-obs-studio-in-ubuntu/"/>
+    <id>http://blog.url.com/blog/2016/07/17/how-to-install-obs-studio-in-ubuntu/</id>
+    <published>2016-07-17T03:41:00-04:00</published>
+    <updated>2016-07-27T06:50:31-04:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">https://obsproject.com/forum/threads/obs-unstable-in-14-04-ffmpeg-not-installable.25388/
+
+sudo apt-get purge ffmpeg
+sudo apt-get autormeove
+sudo apt-get clean
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get install --reinstall ffmpeg obs-studio
+
+using ppa
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get install --reinstall ffmpeg obs-studio
+
+
+
+</content>
+  </entry>
   <entry>
     <title>Blisk a web browser for Mobile-First Web Design</title>
     <link rel="alternate" href="http://blog.url.com/blog/2016/06/28/blisk-a-mobile-first-web-browser/"/>
     <id>http://blog.url.com/blog/2016/06/28/blisk-a-mobile-first-web-browser/</id>
     <published>2016-06-28T02:09:00-04:00</published>
-    <updated>2016-06-30T03:26:30-04:00</updated>
+    <updated>2016-07-27T06:50:31-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -166,7 +193,7 @@
     <link rel="alternate" href="http://blog.url.com/blog/2016/06/15/mohamed-ali/"/>
     <id>http://blog.url.com/blog/2016/06/15/mohamed-ali/</id>
     <published>2016-06-15T02:39:00-04:00</published>
-    <updated>2016-06-30T03:52:45-04:00</updated>
+    <updated>2016-07-27T06:50:31-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -297,11 +324,153 @@ Dans mon enfance des années 80-90 j'entendais plus souvent parlé de Tyson que 
 </content>
   </entry>
   <entry>
+    <title>How to add Timestamps in your Django model</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2016/06/11/how-to-add-timestamps-in-your-django-model/"/>
+    <id>http://blog.url.com/blog/2016/06/11/how-to-add-timestamps-in-your-django-model/</id>
+    <published>2016-06-11T16:43:00-04:00</published>
+    <updated>2016-07-27T08:25:27-04:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">  &lt;link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"&gt;
+&lt;style type="text/css"&gt;
+	pre{
+		margin: 18px 0;
+	}
+    p{
+        margin: 18px 0;
+    }
+    .article_title{
+        color:#B61924;text-transform: capitalize;
+        padding: 20px 0 40px 0;
+    }
+    p.prerequis{
+        font-weight: bolder;
+    }
+    ul.references li{
+      list-style: circle !important;
+    }
+    thead tr td{
+      font-weight: bolder;
+    }
+&lt;/style&gt;
+&lt;script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&amp;skin=desert"&gt;&lt;/script&gt;
+
+&lt;div class="container article_index"&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="col-lg-9 col-lg-offset-1"&gt;
+    &lt;div class="row text-center"&gt;
+    &lt;h1 class="article_title" style="  "&gt;How to add Timestamps in your Django model&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;div class="post-desc"&gt;
+      &lt;p&gt;If you want to add &lt;strong&gt;timestamps&lt;/strong&gt; here a three options that you can take.&lt;/p&gt;
+&lt;hr&gt;
+      &lt;p&gt;First let's create a new project and a new app.&lt;/p&gt;
+&lt;div class="row "&gt;
+
+&lt;pre class="prettyprint"&gt;
+ -&gt; %  django-admin startproject blogproject &amp;&amp; cd blogproject
+ -&gt; %  python manage.py startapp blog
+&lt;/pre&gt;
+
+&lt;/div&gt;
+&lt;hr&gt;
+    &lt;h3&gt;Simplicity&lt;/h3&gt;
+    &lt;p&gt;let's add the new app &lt;strong&gt;blog&lt;/strong&gt; to our &lt;em&gt;installed apps&lt;/em&gt;&lt;/p&gt;
+    &lt;script src="https://gist.github.com/guinslym/c12deca06742ea1c499a29c3ef4f8e31.js"&gt;&lt;/script&gt;
+    &lt;p&gt;Now we can start creating our model. We will have four fields: &lt;strong&gt;title&lt;/strong&gt;, &lt;strong&gt;description&lt;/strong&gt;, &lt;strong&gt;updated&lt;/strong&gt;, &lt;strong&gt;created&lt;/strong&gt;&lt;/p&gt;
+    &lt;script src="https://gist.github.com/guinslym/8f5faf5647f7351c43d890deeb588c9d.js"&gt;&lt;/script&gt;
+
+
+    &lt;h3&gt;Being smarter&lt;/h3&gt;
+    &lt;p&gt;If you planned to use these fields often in other Models. i.e. &lt;strong&gt;Comments&lt;/strong&gt;, &lt;strong&gt;Like&lt;/strong&gt;, &lt;strong&gt;ShoppingCart&lt;/strong&gt; etc. It would be smarter keep things &lt;a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself"&gt;Dry&lt;/a&gt;&lt;/p&gt;
+    &lt;script src="https://gist.github.com/guinslym/b584b1ee7056a42ac14b5ba40dcccd8d.js"&gt;&lt;/script&gt;
+
+    &lt;h3&gt;Being smarter (suite)&lt;/h3&gt;
+    &lt;p&gt;There is an awesome package called &lt;a href="https://django-extensions.readthedocs.io/en/latest/"&gt;Django extensions&lt;/a&gt;. If you planned to use many of the functionnalities of this package you could add it to your project&lt;/p&gt;
+
+    &lt;pre class="prettyprint"&gt;
+     -&gt; %  pip install django-extensions
+    &lt;/pre&gt;
+    &lt;script src="https://gist.github.com/guinslym/0002c01eca5a53cd22b88abe11a3033d.js"&gt;&lt;/script&gt;
+    &lt;p&gt;After we will import it in your models.py&lt;/p&gt;
+    &lt;script src="https://gist.github.com/guinslym/de4a9b9e746d2bab1a25c5472890d63e.js"&gt;&lt;/script&gt;
+
+
+
+&lt;style type="text/css"&gt;
+	   .media
+    {
+        /*box-shadow:0px 0px 4px -2px #000;*/
+        margin: 20px 0;
+        padding:30px;
+    }
+    .dp
+    {
+        border:10px solid #eee;
+        transition: all 0.2s ease-in-out;
+    }
+    .dp:hover
+    {
+        border:2px solid #eee;
+        transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -webkit-transform:rotate(360deg);
+        /*-webkit-font-smoothing:antialiased;*/
+    }
+&lt;/style&gt;
+&lt;div class="row"&gt;
+
+
+    &lt;div class="col-lg-6 col-lg-offset-1"&gt;
+        &lt;div class="media"&gt;
+            &lt;a class="pull-left" href="#"&gt;
+                &lt;img class="media-object dp img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/guinslym/128.jpg" style="width: 100px;height:100px;"&gt;
+            &lt;/a&gt;
+            &lt;div class="media-body"&gt;
+                &lt;h4 class="media-heading"&gt;Guinsly Mondésir &lt;small&gt; Ottawa &lt;/i&gt;&lt;/small&gt;&lt;/h4&gt;
+                &lt;h5&gt;Web developer - Pythonist - Rubyist&lt;/h5&gt;
+                &lt;a href="https://twitter.com/guinslym"&gt;&lt;i class="fa fa-twitter fa-2x"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href="https://github.com/guinslym"&gt;&lt;i class="fa fa-github fa-2x"&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;hr style="margin:8px auto"&gt;
+
+                &lt;span class="label label-default"&gt;doi&lt;/span&gt;
+                &lt;span class="label label-default"&gt;cli&lt;/span&gt;
+                &lt;span class="label label-info"&gt;curl&lt;/span&gt;
+                &lt;span class="label label-default"&gt;HTTP&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+   &lt;footer&gt;
+  &lt;div class="row text-center"&gt;
+
+  &lt;h1&gt;Au revoir!!!&lt;/h1&gt;
+  &lt;h4&gt;&lt;a href="/" class="blog"&gt;-- retour au blog --&lt;/a&gt;&lt;/h4&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+
+&lt;script type="text/javascript"&gt;
+  $('a').each(function() {
+   var a = new RegExp('/' + window.location.host + '/');
+   if (!a.test(this.href)) {
+      $(this).attr("target","_blank");
+   }
+});
+&lt;/script&gt;
+</content>
+  </entry>
+  <entry>
     <title>Introduction aux Métadonnées d'une image</title>
     <link rel="alternate" href="http://blog.url.com/blog/2015/01/30/introduction-aux-metadonnees-d-une-image/"/>
     <id>http://blog.url.com/blog/2015/01/30/introduction-aux-metadonnees-d-une-image/</id>
     <published>2015-01-30T18:49:00-05:00</published>
-    <updated>2016-06-30T02:47:56-04:00</updated>
+    <updated>2016-07-27T06:50:31-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -555,7 +724,7 @@ Dans mon enfance des années 80-90 j'entendais plus souvent parlé de Tyson que 
     <link rel="alternate" href="http://blog.url.com/blog/2015/01/26/How-to-find-a-DOI-and-create-a-permanent-link-using-curl/"/>
     <id>http://blog.url.com/blog/2015/01/26/How-to-find-a-DOI-and-create-a-permanent-link-using-curl/</id>
     <published>2015-01-25T21:12:00-05:00</published>
-    <updated>2016-06-30T02:47:56-04:00</updated>
+    <updated>2016-07-27T06:50:31-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -959,404 +1128,5 @@ curl -D -s -L  "Accept: text/html;charset=UTF-8" "http://dx.doi.org/10.1002/asi.
    }
 });
 &lt;/script&gt;</content>
-  </entry>
-  <entry>
-    <title>l'Open Access en question</title>
-    <link rel="alternate" href="http://blog.url.com/blog/2014/10/26/open-access-en-question/"/>
-    <id>http://blog.url.com/blog/2014/10/26/open-access-en-question/</id>
-    <published>2014-10-25T22:01:00-04:00</published>
-    <updated>2016-06-30T02:47:56-04:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">   &lt;!-- Main jumbotron for a primary marketing message or call to action --&gt;
-    &lt;div class="jumbotron"&gt;
-    &lt;!--
-    &lt;canvas class="pg-canvas" width="1301" height="359"&gt;&lt;/canvas&gt;
-    --&gt;
-      &lt;div class="containeri Text-center"&gt;
-        &lt;h1 class="title" data-sr="enter from the top and hustle 50px over 1.5s"&gt;Open Access  &lt;small&gt;8 questions que je me suis pos&amp;eacute;&lt;/small&gt;&lt;/h1&gt;
-
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class="container"&gt;
-      &lt;!-- Example row of columns --&gt;
-      &lt;div class="row"&gt;
-        &lt;div class="col-lg-12" data-sr="enter top wait 2s"&gt;
-          &lt;p&gt;Je me suis pos&amp;eacute; plusieurs questions dont je tenterai d'avoir les r&amp;eacute;ponses pendant la semaine de promotion de l'Open Access.&lt;/p&gt;
-
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-
-      &lt;hr&gt;
-
-          &lt;div class="row"&gt;
-        &lt;div class="col-lg-12 text-center"&gt;
-        &lt;h1 class="question"&gt;Est-ce que l'Open Access fait qu'on embauche plus de bibliothécaire ou si tout devient automatisé?  &lt;/h1&gt;&lt;/div&gt;
-        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s "&gt;
-         &lt;iframe src="//giphy.com/embed/7qTGRW3LyydIQ" width="724" height="303" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-
-      &lt;div class="row"&gt;
-        &lt;div class="col-lg-12 text-center"&gt;
-        &lt;h1 class="question"&gt;Est-ce que l'Open Access augmente notre dépendance à l'internet.?  &lt;/h1&gt;&lt;/div&gt;
-        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s "&gt;
-         &lt;iframe src="//giphy.com/embed/bI9iVGCXzsllC" width="711" height="400" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt; 
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-            &lt;div class="row"&gt;
-        &lt;div class="col-lg-12 text-center"&gt;
-        &lt;h1 class="question"&gt;L'accès est Ouvert &amp;agrave; tous!  Ah Oui? Combien de gens sont au courant?  &lt;/h1&gt;&lt;/div&gt;
-        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s"&gt;
-         &lt;iframe src="//giphy.com/embed/14iokwptQPxSMw" width="711" height="400" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-                  &lt;div class="row"&gt;
-        &lt;div class="col-lg-12 text-center"&gt;
-        &lt;h1 class="question"&gt;L'accès est Ouvert &amp;agrave; tous, combien de gens ont la capacité de l'utiliser?  &lt;/h1&gt;&lt;/div&gt;
-        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s"&gt;
-         &lt;img src="http://i121.photobucket.com/albums/o205/guinslym/totrash/5232012052424iwsmt_zps78b8f3a5.jpeg" alt="image: for a fair selection everybody has to take the same exam: représentant l'inégalité" class="img-thumbnail"&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-            &lt;div class="row"&gt;
-        &lt;div class="col-lg-12 text-center"&gt;
-        &lt;h1 class="question"&gt; Do people really reads it? Quel est leur niveau d'int&amp;eacute;r&amp;ecirc;t? &lt;/h1&gt;&lt;/div&gt;
-        &lt;div class="col-lg-12 text-center"  data-sr="enter bottom  over 1.5s"&gt;
-         &lt;iframe src="//giphy.com/embed/ogyoTLLtAcxZS" width="711" height="400" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-            &lt;div class="row"&gt;
-        &lt;div class="col-lg-12 text-center"&gt;
-        &lt;h1 class="question"&gt;Yes, I accept that my thesis will be Open Access. But let's say that someone cite my Thesis, can I be sure that his Thesis will be Open Access too ?  &lt;/h1&gt;&lt;/div&gt;
-        &lt;div class="col-lg-12 text-center"  data-sr="enter bottom wait 1s over 1.5s"&gt;
-         &lt;iframe src="//giphy.com/embed/anB3cor0tgFX2" width="480" height="288" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-                &lt;div class="row"&gt;
-        &lt;div class="col-lg-12 text-center"&gt;
-        &lt;h1 class="question"&gt;Est-ce que Open Access == Open Source?  &lt;/h1&gt;&lt;/div&gt;
-        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s"&gt;
-         &lt;img src="http://i121.photobucket.com/albums/o205/guinslym/totrash/opensource-1_zpsc598a0c2.jpg" alt="image: my name is open source: représentant une image de open-source" class="img-thumbnail"&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-
-        &lt;div class="row"&gt;
-        &lt;div class="col-lg-12 text-center"&gt;
-        &lt;h1 class="question"&gt;What's up with Open? Seems to me everything is becoming Open, Are we building an Open Society?  &lt;/h1&gt;&lt;/div&gt;
-        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s"&gt;
-         &lt;img src="http://i121.photobucket.com/albums/o205/guinslym/totrash/opensourcewordcloud_zpse3e2761c.jpg" alt="image: tag cloud d'Open project" class="img-thumbnail"&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-         
-
-
-
-
-      &lt;footer&gt;
-        &lt;p&gt;Les gif ont été pris de &lt;a href="http://giphy.com" target="_blank"&gt;Giphy&lt;/a&gt;  l'image du cartoon a &amp;eacute;t&amp;eacute; prise de &lt;a href="http://iwastesomuchtime.com/on/?i=37716" target="_blank"&gt;iwastesomuchtime&lt;/a&gt;. Open Source; la source de l'image d'Open Source est de &lt;a href="http://www.smashingmagazine.com/2013/01/03/starting-an-open-source-project/" target="_blank"&gt;smashingmagazine&lt;/a&gt; et celui du nuage de mot est de &lt;a href="http://www.paulduane.net/2014/08/open-source-society/" target="_blank"&gt;paulduane&lt;/a&gt; .&lt;/p&gt;
-      &lt;/footer&gt;
-    &lt;/div&gt; &lt;!-- /container --&gt;
-
-
-    &lt;!-- Bootstrap core JavaScript
-    ================================================== --&gt;
-    &lt;!-- Placed at the end of the document so the pages load faster --&gt;
-
-    &lt;!-- IE10 viewport hack for Surface/desktop Windows 8 bug
-    &lt;script src="../../assets/js/ie10-viewport-bug-workaround.js"&gt;&lt;/script&gt;
-     --&gt;
-
-      &lt;script&gt;
-
-       (function($) {
-
-        'use strict';
-
-        window.sr= new scrollReveal({
-          reset: true,
-          move: '50px',
-          mobile: true
-        });
-
-
-      })();
-      /*
-
-        $('div.jumbotron').particleground({
-		    dotColor: '#ff0000',
-		    lineColor: '#ff0000'
-		});
-*/
-    &lt;/script&gt;
-
-    &lt;footer&gt;
-    &lt;div class="container"&gt;
-    	  &lt;div class="row text-center"&gt;
-    
-  &lt;h1&gt;Au revoir!!!&lt;/h1&gt;
-  &lt;h4&gt;&lt;a href="/" class="blog"&gt;-- retour au blog --&lt;/a&gt;&lt;/h4&gt;
-  &lt;/div&gt;
-    &lt;/div&gt;
-
-&lt;/footer&gt;</content>
-  </entry>
-  <entry>
-    <title>Graph diagram of all professors from MIS program at UOttawa</title>
-    <link rel="alternate" href="http://blog.url.com/blog/2014/09/25/Graph-diagram-of-professors-at-uottawa/"/>
-    <id>http://blog.url.com/blog/2014/09/25/Graph-diagram-of-professors-at-uottawa/</id>
-    <published>2014-09-25T18:12:00-04:00</published>
-    <updated>2016-06-30T02:47:56-04:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html"> &lt;style&gt;
-    .popover {
-      color: #333;
-    }
-    .node {
-      stroke: #ccc;
-      stroke-width: 1.5px;
-    }
-    .link {
-      stroke: #fff;
-      stroke-opacity: .8;
-    }
-
-	#main {
-		margin:0 auto;
-		width:960px;
-		color:#FFF;
-		border: 1px dashed #333;
-		fill: #000;
-		}		
-	
-  line {
-		stroke: #666;
-		}
-
-body{
-    background: url("http://subtlepatterns.com/patterns/congruent_outline.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
-}	
-.preambule{
-  color: white;
-}
-.color-yellow{
-  background-color: #FFF000;
-  padding-right:20px;
-}
-.color-green{
-  background-color:#7CA721; 
-  padding-right:20px;
-}
-.color-red{
-  background-color: #8F4139;
-  padding-right:20px;
-}
-.color-orange{
-  background-color: #DA991C;
-  padding-right:20px;
-}
-    &lt;/style&gt;
-
-  &lt;div class="container"&gt;
-&lt;div class="row"&gt;
- &lt;!-- Button trigger modal --&gt;
-&lt;button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"&gt;
-  Information
-&lt;/button&gt;
-
-&lt;!-- Modal --&gt;
-&lt;div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
-  &lt;div class="modal-dialog"&gt;
-    &lt;div class="modal-content"&gt;
-      &lt;div class="modal-header"&gt;
-        &lt;button type="button" class="close" data-dismiss="modal"&gt;&lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;&lt;span class="sr-only"&gt;Close&lt;/span&gt;&lt;/button&gt;
-        &lt;h4 class="modal-title" id="myModalLabel"&gt;Network Analysis of University of Ottawa MIS's professors&lt;/h4&gt;
-      &lt;/div&gt;
-      &lt;div class="modal-body"&gt;
-        &lt;h2&gt;Preambule&lt;/h2&gt;
-        &lt;p&gt;This is a &lt;a href="https://github.com/mbostock/d3/wiki/Force-Layout" target='_blank'&gt; network or a graph diagram&lt;/a&gt; that shows which university each professors went to, either they are regular full-time, adjunct or part-time and cross-appointed professors&lt;/p&gt;
-        &lt;h3&gt;How does it Work ?&lt;/h3&gt;
-        &lt;p&gt;As you can see, there is a set of nodes of different size and colors.&lt;/p&gt;  
-        &lt;ul&gt;
-                &lt;li&gt;&lt;span class="color-yellow"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt; This color represents the university that most professors have in common. (UWO)&lt;/li&gt;
-                &lt;li&gt;&lt;span class="color-orange"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt; This color represents  a canadian university that offers a Master in Library and Information Studies program&lt;/li&gt;
-                &lt;li&gt;&lt;span class="color-green"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt; This color represents a university (canadian or not). In fact all the &lt;strong&gt;bigger nodes represents universities&lt;/strong&gt;. &lt;/li&gt;
-                &lt;li&gt;&lt;span class="color-red"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt; This colors represents all professors for 2014-2015 year&lt;/li&gt;
-              &lt;/ul&gt;      
-        &lt;p&gt;As you can see (the yellow node) 5 professors went to the University of Western Ontario. Following up for 4 professors that attends McGill University. &lt;/p&gt;
-        &lt;p&gt;What I do like about diagram it's that it will trigger questions. Why does &lt;a href="http://www.fims.uwo.ca/" target="_blank"&gt;UWO&lt;/a&gt; have the most attendances? Is UWO is the best school in IS in Canada? Where is &lt;a href="http://slais.ubc.ca/" target="_blank"&gt;UBC&lt;/a&gt;? Did UWO was the first university that offers MLIS program in Canada? If I add up all the professors that teaches in a Masters of Information Studies in Canada, will UWO will still be the one that most professors went to?&lt;/p&gt;
-        &lt;p&gt;Keep in mind that &lt;a href="http://en.wikipedia.org/wiki/Correlation_does_not_imply_causation" target="_blank"&gt; Correlation does not imply causation&lt;/a&gt;. This visualization does not imply that UWO or &lt;a href="http://www.mcgill.ca/sis/" target="_blank"&gt;McGill&lt;/a&gt; are the best university for a MLIS program neither that I'll have a better chance to get a job as a professor.&lt;/p&gt;
-        &lt;h3&gt;Gihub&lt;/h3&gt;
-        &lt;p&gt;The program is available on my &lt;a href="https://github.com/guinslym/uottawa_lis_teacher_network" target='_blank'&gt; github&lt;/a&gt; if you would like to play with it&lt;/p&gt;
-        &lt;h3&gt;Hack Safe!!! :)&lt;/h3&gt;
-
-      &lt;/div&gt;
-      &lt;div class="modal-footer"&gt;
-        &lt;button type="button" class="btn btn-primary" data-dismiss="modal"&gt;Close&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt; 
-&lt;/div&gt;    
-
-
-
-
- &lt;div class="row preambule"&gt;
- &lt;/div&gt; 
-
-  &lt;/div&gt;
-    &lt;div class="row"&gt;
-      &lt;div id="main" class="col-md-12"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"&gt;&lt;/script&gt;
-    &lt;script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"&gt;&lt;/script&gt;
-    &lt;script&gt;
-      var width = 960, height = 700;
-
-      var color = d3.scale.ordinal().range(['#3d4f53', '#8f4139', '#ab987a']);
-
-      var force = d3.layout.force()
-          .charge(-150)
-          .linkDistance(40)
-          .gravity(.05)
-          .size([width, height]);
-
-      var svg = d3.select("#main").append("svg")
-          .attr("id", "main-svg")
-          .attr("width", width)
-          .attr("height", height);
-
-      d3.json("https://gist.githubusercontent.com/guinslym/5fd33b30b8cb60feb0fe/raw/ca85f099cc8b69e616cb66fdcb6511758a50a820/professeurs.json", function(error, graph) {
-      
-        force.nodes(graph.nodes)
-          .links(graph.links)
-          .start();
-
-        var drag = force.drag()
-          .on("dragstart", dragstart);
-
-        var link = svg.selectAll(".link")
-            .data(graph.links)
-          .enter().append("line")
-            .attr("class", "link")
-            .attr("stroke-opacity", function(d) { if(d.label == 'is a') { return '0.8';} else{ return '0.2'; }; })
-            .attr("stroke-width","3")
-            .on("mouseover", function(){d3.select(this).style("stroke", "#999999").attr("stroke-opacity", "1.0");})
-            .on("mouseout", function(){d3.select(this).style("stroke", "#fff").attr("stroke-opacity", "1.0");});
-
-            link.append('title').text(function(d){
-              //console.log(d.name);
-            });
-
-        var node = svg.selectAll("g.node")
-              .data(graph.nodes)
-            .enter().append("svg:g")
-              .attr("class", "node")
-              .on("trigger_me", trigger_me)
-              .call(force.drag);
-
-        node.append("circle")
-          .attr("class",function (d) { return d.type + " nodecircle" })
-          .attr("r", function(d){if (d.mls){
-            return d.size;
-          }else if (d.type == 'school'){
-            return d.size;
-          }else{
-            return d.size;
-          }})
-          .style("fill", function (d) { 
-            if(d.name == 'University of Western Ontario'){
-              return '#fff000';
-            }else{
-              return d.color;
-            }
-             })
-          .on("mouseover", showPopover)
-          .on("mouseout", removePopovers);
-
-        
-
-
-        force.on("tick", function() {
-          link.attr("x1", function (d) { return d.source.x; })
-              .attr("y1", function (d) { return d.source.y; })
-              .attr("x2", function (d) { return d.target.x; })
-              .attr("y2", function (d) { return d.target.y; });
-
-          node.attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
-        })
-        .attr("cx", function(d) { return d.x; })
-        .attr("cy", function(d) { return d.y; });
-
-        function trigger_me(d) {
-          force.start();
-        }
-
-        function dragstart(d) {
-          d3.select(this).classed("fixed", d.fixed = true);
-        }
-      });
-
-      function removePopovers () {
-        //bootstrap javascript
-        $('.popover').each(function() {
-          $(this).remove();
-        }); 
-      }
-
-      function showPopover (d) {
-        //bootstrap javascript
-        $(this).popover({
-          placement: 'auto top',
-          container: 'body',
-          trigger: 'manual',
-          html : true,
-          content: function() {
-            if (d.type == 'teacher'){
-              return 'Professor' + ": " + d.name 
-            }else{
-              return d.name;
-            }
-         }  
-        });
-        $(this).popover('show')
-      }
-
-    &lt;/script&gt;
-    &lt;script type="text/javascript"&gt;
-
-
-      function resize_the_svg_window () {
-        var chart = $("#main-svg");
-        chart.attr("width", chart.parent().width());
-        chart.attr("height", chart.parent().height());
-        force.size([chart.parent().width(), chart.parent().height()]);
-        force.start(); 
-      }
-
-      $(document).ready(function() {
-        resize_the_svg_window();
-
-      });
-
-      $(window).on("resize_the_svg_window", function() {
-        resize_the_svg_window();
-      });
-    &lt;/script&gt;
- 
-
-</content>
   </entry>
 </feed>
