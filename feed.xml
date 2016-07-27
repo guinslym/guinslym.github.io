@@ -301,7 +301,7 @@ Dans mon enfance des années 80-90 j'entendais plus souvent parlé de Tyson que 
     <link rel="alternate" href="http://blog.url.com/blog/2016/06/11/how-to-add-timestamps-in-your-django-model/"/>
     <id>http://blog.url.com/blog/2016/06/11/how-to-add-timestamps-in-your-django-model/</id>
     <published>2016-06-11T16:43:00-04:00</published>
-    <updated>2016-07-27T08:31:34-04:00</updated>
+    <updated>2016-07-27T08:38:49-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -362,10 +362,10 @@ Dans mon enfance des années 80-90 j'entendais plus souvent parlé de Tyson que 
     &lt;script src="https://gist.github.com/guinslym/b584b1ee7056a42ac14b5ba40dcccd8d.js"&gt;&lt;/script&gt;
 
     &lt;h3&gt;Being smarter (suite)&lt;/h3&gt;
-    &lt;p&gt;There is an awesome package called &lt;a href="https://django-extensions.readthedocs.io/en/latest/"&gt;Django extensions&lt;/a&gt;. If you planned to use many of the functionnalities of this package you could add it to your project&lt;/p&gt;
+    &lt;p&gt;There is an awesome package called &lt;a href="https://django-model-utils.readthedocs.io/en/latest/"&gt;Django extensions&lt;/a&gt;. If you planned to use many of the functionnalities offers in this package i.e. &lt;em&gt;shell_plus&lt;/em&gt; you might as well use this package to add the fields &lt;strong&gt;created&lt;/strong&gt; and &lt;strong&gt;updated&lt;/strong&gt;&lt;/p&gt;
 
     &lt;pre class="prettyprint"&gt;
-     -&gt; %  pip install django-extensions
+     -&gt; %  pip install django-model-utils
     &lt;/pre&gt;
     &lt;script src="https://gist.github.com/guinslym/0002c01eca5a53cd22b88abe11a3033d.js"&gt;&lt;/script&gt;
     &lt;p&gt;After we will import it in your models.py&lt;/p&gt;
