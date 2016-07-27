@@ -5,37 +5,10 @@
   <id>http://blog.url.com/blog</id>
   <link href="http://blog.url.com/blog"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2016-07-17T03:41:00-04:00</updated>
+  <updated>2016-06-28T02:09:00-04:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
-  <entry>
-    <title>How to install OBS-studio in Ubuntu</title>
-    <link rel="alternate" href="http://blog.url.com/blog/2016/07/17/how-to-install-obs-studio-in-ubuntu/"/>
-    <id>http://blog.url.com/blog/2016/07/17/how-to-install-obs-studio-in-ubuntu/</id>
-    <published>2016-07-17T03:41:00-04:00</published>
-    <updated>2016-07-27T06:50:31-04:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">https://obsproject.com/forum/threads/obs-unstable-in-14-04-ffmpeg-not-installable.25388/
-
-sudo apt-get purge ffmpeg
-sudo apt-get autormeove
-sudo apt-get clean
-sudo apt-get update
-sudo apt-get dist-upgrade
-sudo apt-get install --reinstall ffmpeg obs-studio
-
-using ppa
-sudo apt-get update
-sudo apt-get dist-upgrade
-sudo apt-get install --reinstall ffmpeg obs-studio
-
-
-
-</content>
-  </entry>
   <entry>
     <title>Blisk a web browser for Mobile-First Web Design</title>
     <link rel="alternate" href="http://blog.url.com/blog/2016/06/28/blisk-a-mobile-first-web-browser/"/>
@@ -328,7 +301,7 @@ Dans mon enfance des années 80-90 j'entendais plus souvent parlé de Tyson que 
     <link rel="alternate" href="http://blog.url.com/blog/2016/06/11/how-to-add-timestamps-in-your-django-model/"/>
     <id>http://blog.url.com/blog/2016/06/11/how-to-add-timestamps-in-your-django-model/</id>
     <published>2016-06-11T16:43:00-04:00</published>
-    <updated>2016-07-27T08:25:27-04:00</updated>
+    <updated>2016-07-27T08:31:34-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -1128,5 +1101,154 @@ curl -D -s -L  "Accept: text/html;charset=UTF-8" "http://dx.doi.org/10.1002/asi.
    }
 });
 &lt;/script&gt;</content>
+  </entry>
+  <entry>
+    <title>l'Open Access en question</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2014/10/26/open-access-en-question/"/>
+    <id>http://blog.url.com/blog/2014/10/26/open-access-en-question/</id>
+    <published>2014-10-25T22:01:00-04:00</published>
+    <updated>2016-07-27T06:50:31-04:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">   &lt;!-- Main jumbotron for a primary marketing message or call to action --&gt;
+    &lt;div class="jumbotron"&gt;
+    &lt;!--
+    &lt;canvas class="pg-canvas" width="1301" height="359"&gt;&lt;/canvas&gt;
+    --&gt;
+      &lt;div class="containeri Text-center"&gt;
+        &lt;h1 class="title" data-sr="enter from the top and hustle 50px over 1.5s"&gt;Open Access  &lt;small&gt;8 questions que je me suis pos&amp;eacute;&lt;/small&gt;&lt;/h1&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+      &lt;!-- Example row of columns --&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-lg-12" data-sr="enter top wait 2s"&gt;
+          &lt;p&gt;Je me suis pos&amp;eacute; plusieurs questions dont je tenterai d'avoir les r&amp;eacute;ponses pendant la semaine de promotion de l'Open Access.&lt;/p&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+
+      &lt;hr&gt;
+
+          &lt;div class="row"&gt;
+        &lt;div class="col-lg-12 text-center"&gt;
+        &lt;h1 class="question"&gt;Est-ce que l'Open Access fait qu'on embauche plus de bibliothécaire ou si tout devient automatisé?  &lt;/h1&gt;&lt;/div&gt;
+        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s "&gt;
+         &lt;iframe src="//giphy.com/embed/7qTGRW3LyydIQ" width="724" height="303" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+
+      &lt;div class="row"&gt;
+        &lt;div class="col-lg-12 text-center"&gt;
+        &lt;h1 class="question"&gt;Est-ce que l'Open Access augmente notre dépendance à l'internet.?  &lt;/h1&gt;&lt;/div&gt;
+        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s "&gt;
+         &lt;iframe src="//giphy.com/embed/bI9iVGCXzsllC" width="711" height="400" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+            &lt;div class="row"&gt;
+        &lt;div class="col-lg-12 text-center"&gt;
+        &lt;h1 class="question"&gt;L'accès est Ouvert &amp;agrave; tous!  Ah Oui? Combien de gens sont au courant?  &lt;/h1&gt;&lt;/div&gt;
+        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s"&gt;
+         &lt;iframe src="//giphy.com/embed/14iokwptQPxSMw" width="711" height="400" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+                  &lt;div class="row"&gt;
+        &lt;div class="col-lg-12 text-center"&gt;
+        &lt;h1 class="question"&gt;L'accès est Ouvert &amp;agrave; tous, combien de gens ont la capacité de l'utiliser?  &lt;/h1&gt;&lt;/div&gt;
+        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s"&gt;
+         &lt;img src="http://i121.photobucket.com/albums/o205/guinslym/totrash/5232012052424iwsmt_zps78b8f3a5.jpeg" alt="image: for a fair selection everybody has to take the same exam: représentant l'inégalité" class="img-thumbnail"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+            &lt;div class="row"&gt;
+        &lt;div class="col-lg-12 text-center"&gt;
+        &lt;h1 class="question"&gt; Do people really reads it? Quel est leur niveau d'int&amp;eacute;r&amp;ecirc;t? &lt;/h1&gt;&lt;/div&gt;
+        &lt;div class="col-lg-12 text-center"  data-sr="enter bottom  over 1.5s"&gt;
+         &lt;iframe src="//giphy.com/embed/ogyoTLLtAcxZS" width="711" height="400" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+            &lt;div class="row"&gt;
+        &lt;div class="col-lg-12 text-center"&gt;
+        &lt;h1 class="question"&gt;Yes, I accept that my thesis will be Open Access. But let's say that someone cite my Thesis, can I be sure that his Thesis will be Open Access too ?  &lt;/h1&gt;&lt;/div&gt;
+        &lt;div class="col-lg-12 text-center"  data-sr="enter bottom wait 1s over 1.5s"&gt;
+         &lt;iframe src="//giphy.com/embed/anB3cor0tgFX2" width="480" height="288" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+                &lt;div class="row"&gt;
+        &lt;div class="col-lg-12 text-center"&gt;
+        &lt;h1 class="question"&gt;Est-ce que Open Access == Open Source?  &lt;/h1&gt;&lt;/div&gt;
+        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s"&gt;
+         &lt;img src="http://i121.photobucket.com/albums/o205/guinslym/totrash/opensource-1_zpsc598a0c2.jpg" alt="image: my name is open source: représentant une image de open-source" class="img-thumbnail"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+
+        &lt;div class="row"&gt;
+        &lt;div class="col-lg-12 text-center"&gt;
+        &lt;h1 class="question"&gt;What's up with Open? Seems to me everything is becoming Open, Are we building an Open Society?  &lt;/h1&gt;&lt;/div&gt;
+        &lt;div class="col-lg-12 text-center" data-sr="enter bottom  over 1.5s"&gt;
+         &lt;img src="http://i121.photobucket.com/albums/o205/guinslym/totrash/opensourcewordcloud_zpse3e2761c.jpg" alt="image: tag cloud d'Open project" class="img-thumbnail"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+         
+
+
+
+
+      &lt;footer&gt;
+        &lt;p&gt;Les gif ont été pris de &lt;a href="http://giphy.com" target="_blank"&gt;Giphy&lt;/a&gt;  l'image du cartoon a &amp;eacute;t&amp;eacute; prise de &lt;a href="http://iwastesomuchtime.com/on/?i=37716" target="_blank"&gt;iwastesomuchtime&lt;/a&gt;. Open Source; la source de l'image d'Open Source est de &lt;a href="http://www.smashingmagazine.com/2013/01/03/starting-an-open-source-project/" target="_blank"&gt;smashingmagazine&lt;/a&gt; et celui du nuage de mot est de &lt;a href="http://www.paulduane.net/2014/08/open-source-society/" target="_blank"&gt;paulduane&lt;/a&gt; .&lt;/p&gt;
+      &lt;/footer&gt;
+    &lt;/div&gt; &lt;!-- /container --&gt;
+
+
+    &lt;!-- Bootstrap core JavaScript
+    ================================================== --&gt;
+    &lt;!-- Placed at the end of the document so the pages load faster --&gt;
+
+    &lt;!-- IE10 viewport hack for Surface/desktop Windows 8 bug
+    &lt;script src="../../assets/js/ie10-viewport-bug-workaround.js"&gt;&lt;/script&gt;
+     --&gt;
+
+      &lt;script&gt;
+
+       (function($) {
+
+        'use strict';
+
+        window.sr= new scrollReveal({
+          reset: true,
+          move: '50px',
+          mobile: true
+        });
+
+
+      })();
+      /*
+
+        $('div.jumbotron').particleground({
+		    dotColor: '#ff0000',
+		    lineColor: '#ff0000'
+		});
+*/
+    &lt;/script&gt;
+
+    &lt;footer&gt;
+    &lt;div class="container"&gt;
+    	  &lt;div class="row text-center"&gt;
+    
+  &lt;h1&gt;Au revoir!!!&lt;/h1&gt;
+  &lt;h4&gt;&lt;a href="/" class="blog"&gt;-- retour au blog --&lt;/a&gt;&lt;/h4&gt;
+  &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/footer&gt;</content>
   </entry>
 </feed>
