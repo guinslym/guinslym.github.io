@@ -301,7 +301,7 @@ Dans mon enfance des années 80-90 j'entendais plus souvent parlé de Tyson que 
     <link rel="alternate" href="http://blog.url.com/blog/2016/06/11/how-to-add-timestamps-in-your-django-model/"/>
     <id>http://blog.url.com/blog/2016/06/11/how-to-add-timestamps-in-your-django-model/</id>
     <published>2016-06-11T16:43:00-04:00</published>
-    <updated>2016-07-27T09:12:33-04:00</updated>
+    <updated>2016-07-28T05:32:40-04:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -358,7 +358,7 @@ Dans mon enfance des années 80-90 j'entendais plus souvent parlé de Tyson que 
 
 
     &lt;h3&gt;Being smarter&lt;/h3&gt;
-    &lt;p&gt;If you planned to use these fields often in other Models. i.e. &lt;strong&gt;Comments&lt;/strong&gt;, &lt;strong&gt;Like&lt;/strong&gt;, &lt;strong&gt;ShoppingCart&lt;/strong&gt; etc. It would be smarter keep things &lt;a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself"&gt;Dry&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;If you planned to use these fields often in other Models. i.e. &lt;strong&gt;Comments&lt;/strong&gt;, &lt;strong&gt;Like&lt;/strong&gt;, &lt;strong&gt;ShoppingCart&lt;/strong&gt; etc. It would be smarter keep things &lt;a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself"&gt;DRY&lt;/a&gt;&lt;/p&gt;
     &lt;script src="https://gist.github.com/guinslym/b584b1ee7056a42ac14b5ba40dcccd8d.js"&gt;&lt;/script&gt;
 
     &lt;h3&gt;Being smarter (suite)&lt;/h3&gt;
